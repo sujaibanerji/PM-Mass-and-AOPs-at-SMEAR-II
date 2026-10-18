@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": ".binder/environment.yml",
+      "bytes": 91,
+      "sha256": "7e3c76d9d608e288df6261658214c282c80320130e78f5db7aadbb5d02c04c3b"
+    },
+    {
+      "path": ".binder/postBuild",
+      "bytes": 167,
+      "sha256": "bddae030f34c1072082b7c327a2dd362e17fa2867ee70deb1a2cdcf33b694e18"
+    },
+    {
+      "path": ".binder/requirements.txt",
+      "bytes": 350,
+      "sha256": "ee67cb652472243060a06bc3b9561c9ad42fb1a1f12f77a262ffc4d17e73c062"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 137,
+      "sha256": "2c3023cd04548d242ca5d544e735c1ba3bbef1cdfec7dc410f802792ba364699"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 109,
+      "sha256": "93d80e1fc0d5edafafa6677a44b5554c6a7efbeb965b332789f797d13a284887"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6580,
+      "sha256": "5dcc87320d28208c914c937e5c2c836817d1cdfd56e34fd674de82a45f913326"
+    },
+    {
+      "path": "Start_here.ipynb",
+      "bytes": 5080,
+      "sha256": "14e3d5eaccf82ea807ada4bf832b1d63f4461b6f053276cb38f2c01995dc790c"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 5575,
+      "sha256": "6d18b48eafbf5e9c2580b382b0f4ba5a4268978966e97fea7e026845cd5b8012"
+    },
+    {
+      "path": "audit/README.md",
+      "bytes": 3429,
+      "sha256": "636ac7129160b40238d04f4265928f71d63dfe76aa7c9806b125237a609e6201"
+    },
+    {
+      "path": "audit/pdf_pages.json",
+      "bytes": 241468,
+      "sha256": "0b06c8f13626da0614ccb97cd1ee0ba40fb8f9e00d62d21c9e55d1792fdec71d"
+    },
+    {
+      "path": "audit/selection_decisions.json",
+      "bytes": 3651260,
+      "sha256": "a4c1af8cfd52e81511e74fa5539d6179166f50058b13eb987e6efe06a4886d93"
+    },
+    {
+      "path": "binder_release.json",
+      "bytes": 1000,
+      "sha256": "f5b6723a4b5197fcbd89cd3e294f2ae56c8e55f92d774cb51c1231dda6eb32ef"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-10-18-binder-launcher.md",
+      "bytes": 20532,
+      "sha256": "8a336cf3045e7ea5ade718985ab30ad4c0f35a7a1ec78dc80dcf198c436ed049"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-10-18-binder-launcher-design.md",
+      "bytes": 16505,
+      "sha256": "e4907ed5a11e357f38235759fafe4c01e03135d88c07473e6d9c5cee60e70d4e"
+    },
+    {
+      "path": "figure_exclusions.csv",
+      "bytes": 1725302,
+      "sha256": "ce085c8f873f4d5bc0c57adeaf4402aeb9d348b0f03c6f260946b42c8be20e5b"
+    },
+    {
+      "path": "figure_inventory.json",
+      "bytes": 1980397,
+      "sha256": "fd5934f09eafd800e2ee3b1e1f84ac1618ad20b5258b2579672d6556d4102fdf"
+    },
+    {
+      "path": "prepare_release.py",
+      "bytes": 905,
+      "sha256": "00525ac5467e170f06ebc0f0202d5fab7c21452be3306174f6c901539a2c2594"
+    },
+    {
+      "path": "production_entry.py",
+      "bytes": 1251,
+      "sha256": "bce3406024aea84ce2827e20af3634cafd39269d7fdfc4a1a6be99b3e47f2df8"
+    },
+    {
+      "path": "release_io.py",
+      "bytes": 6348,
+      "sha256": "cd47fb8bdfedfb44921c80712c35af53d52d665f4f8969e8a53bcbcb69570f1d"
+    },
+    {
+      "path": "reviewer.py",
+      "bytes": 12873,
+      "sha256": "e010b8b13613d5db41747a14b27c1af7b5a60e97ba1a8bd5b29be20367b3c2b0"
+    },
+    {
+      "path": "tests/test_figure_audit.py",
+      "bytes": 3574,
+      "sha256": "f4c29af9cdb49f0e504937ba0da3eb0201bb4ccfc506694867a4d52307e7ccea"
+    },
+    {
+      "path": "tests/test_figure_bundle.py",
+      "bytes": 2517,
+      "sha256": "b162b4f77c3bee5e7735b560d44a4d7362b77711f429dc88fd8d1fc5b0b2a432"
+    },
+    {
+      "path": "tests/test_production_entry.py",
+      "bytes": 1466,
+      "sha256": "8cefdeb4afdbf32e10a53ca1dc36ced712ed8bcd5fd122026f8ac0ca13ad3b3c"
+    },
+    {
+      "path": "tests/test_release_io.py",
+      "bytes": 3981,
+      "sha256": "0b790cd89c4a830d798874f378ec234806e22751c2b8c54f1628ac8b67e2eeda"
+    },
+    {
+      "path": "tests/test_reviewer.py",
+      "bytes": 3780,
+      "sha256": "32161d5ec3a4a0c395303a687e8447acf1e00a5a805af34627cdf920c00cacd9"
+    },
+    {
+      "path": "tools/audit_figures.py",
+      "bytes": 4256,
+      "sha256": "e28ee355988d624439594ea1eebf18d6a889681f3a2a270439d6ce9a1b45f88d"
+    },
+    {
+      "path": "tools/package_figures.py",
+      "bytes": 3561,
+      "sha256": "58b4868bf4fc82870bb9560b748dc00d615612f6626ed3d65b6f0f2b7912e566"
+    },
+    {
+      "path": "tools/package_launcher.py",
+      "bytes": 3158,
+      "sha256": "b3e92df2ad39efa1bbf68c7e2ec38100e7b6e8d36bc97e5f0c73fe743c7dcfd1"
+    },
+    {
+      "path": "tools/validate_linux.py",
+      "bytes": 4332,
+      "sha256": "c40f005e12d7b270b2efbf6decebc054be7b0bc1bccb7bc4ec6cd28523bf37c1"
+    }
+  ]
+}
