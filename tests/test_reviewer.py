@@ -1,6 +1,7 @@
 import hashlib
 import contextlib
 import io
+from html.parser import HTMLParser
 import json
 from pathlib import Path
 import tempfile
@@ -78,3 +79,22 @@ class ReviewerTests(unittest.TestCase):
         with contextlib.redirect_stdout(capture):
             run_live(command, self.root / 'launch.log', progress_directory=jobs)
         self.assertIn('[1/25] recalculated.', capture.getvalue())
+
+    def test_notebook_gallery_uses_static_srcdoc_with_authenticated_file_base(self):
+        from reviewer import notebook_gallery
+        gallery = build_gallery(self.manifest, self.root / 'gallery')
+        class Frames(HTMLParser):
+            def handle_starttag(self, tag, attrs):
+                if tag == 'iframe':
+                    self.frame = dict(attrs)
+        parser = Frames()
+        parser.feed(notebook_gallery(gallery, '/user/reviewer/files/outputs/run/gallery/'))
+        frame = parser.frame
+        self.assertNotIn('src', frame)
+        self.assertEqual(set(frame['sandbox'].split()), {'allow-same-origin', 'allow-downloads'})
+        self.assertIn('<base href="/user/reviewer/files/outputs/run/gallery/">', frame['srcdoc'])
+        self.assertIn('figures/main/figure_1.png', frame['srcdoc'])
+        self.assertNotIn('data:image', frame['srcdoc'])
+        self.assertNotIn('<script>alert(1)</script>', frame['srcdoc'])
+        with self.assertRaises(ValueError):
+            notebook_gallery(gallery, 'https://another.example/')

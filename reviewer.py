@@ -10,10 +10,31 @@ import subprocess
 import sys
 import threading
 import zipfile
+from urllib.parse import urlsplit
 
 from release_io import digest, relative_path, verify_additional
 
 HERE = Path(__file__).resolve().parent
+
+
+def notebook_gallery(gallery: Path, base_url: str) -> str:
+    """Display static gallery markup in the notebook origin; load images as files.
+
+    Jupyter deliberately sandboxes downloaded HTML files. Its opaque origin can
+    prevent authenticated image requests. A static srcdoc retains the notebook
+    origin without altering server policy or embedding image bytes.
+    """
+    parts = urlsplit(base_url)
+    if (not base_url.startswith('/') or base_url.startswith('//') or
+            parts.scheme or parts.netloc or parts.query or parts.fragment or not base_url.endswith('/')):
+        raise ValueError('Gallery base must be an absolute same-server directory path')
+    page = Path(gallery).read_text(encoding='utf-8')
+    page = page.replace('<meta charset="utf-8">',
+        f'<base href="{html.escape(base_url, quote=True)}"><meta charset="utf-8">', 1)
+    return ('<iframe title="Complete scientific figure gallery" '
+            'sandbox="allow-same-origin allow-downloads" '
+            'style="width:100%;height:850px;border:0" srcdoc="' +
+            html.escape(page, quote=True) + '"></iframe>')
 
 
 def estimate_origin(figure_id, regeneration, production):
