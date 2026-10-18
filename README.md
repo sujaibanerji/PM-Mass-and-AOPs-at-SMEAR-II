@@ -2,9 +2,9 @@
 
 This launcher presents **192 distinct scientific figures**: seven current main-manuscript figures, ten current supporting figures and 175 archived historical figures. The packaged supplementary information has no embedded figures. Available companion formats bring the complete download to 396 image assets.
 
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/26654b4870be0b01cba611acd3dfd977dac85209?urlpath=lab/tree/Start_here.ipynb)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/560c4e3264d217ca106818318ec03b6aecb0224e?urlpath=lab/tree/Start_here.ipynb)
 
-**[Launch the tested notebook](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/26654b4870be0b01cba611acd3dfd977dac85209?urlpath=lab/tree/Start_here.ipynb)**, then choose **Run → Run All Cells**. Open the complete gallery or download the result ZIP when rendering finishes. This link pins the exact tested commit. The [standard MyBinder link](https://mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/26654b4870be0b01cba611acd3dfd977dac85209?urlpath=lab/tree/Start_here.ipynb) is also available; during this test its browser event stream returned 403, while the direct GESIS provider above launched successfully.
+**[Launch the tested notebook](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/560c4e3264d217ca106818318ec03b6aecb0224e?urlpath=lab/tree/Start_here.ipynb)**, then choose **Run → Run All Cells**. Browse the gallery in the notebook or download the result ZIP when rendering finishes. This link pins the exact tested commit. The [standard MyBinder link](https://mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/560c4e3264d217ca106818318ec03b6aecb0224e?urlpath=lab/tree/Start_here.ipynb) is also available. The standard browser route returned 403 during the 18 October test; this update was tested through the direct GESIS provider above.
 
 Open `Start_here.ipynb` and run the normal cells to render the current 17 figures, browse the entire gallery and download individual images or the complete ZIP. The normal path uses processed observations and saved derived tables. Saved uncertainty estimates are labelled `saved_reference`; Figure 1 is fixed artwork. Historical figures retain their original cohorts, processing and geometry conventions and remain labelled `archived_image`.
 
@@ -12,9 +12,11 @@ Reviewers do not need a Binder account. Binder sessions have temporary storage, 
 
 ## Current delivery status
 
-The launcher passed an actual MyBinder build and complete online notebook test on **18 October 2026**, using Python 3.12.14 and all 16 scientific pins. All **192 figures and 396 image assets**, individual-image access and the complete ZIP download passed integrity checks. Run All skipped the optional production calculation. The original archives were also downloaded anonymously and matched their declared sizes and SHA-256 hashes. See [VALIDATION.md](VALIDATION.md) and [ONLINE_VALIDATION.json](ONLINE_VALIDATION.json) for the precise scope and tested commit.
+**Binder version `binder-20261019`**, tested on **19 October 2026**, fixes all three previously deferred minor issues: the IPython display advisory, the production-gallery introduction and the offline gallery's external ZIP link. All **30 focused Linux tests** passed, including the three regressions observed failing before the fixes.
 
-The tested build and launch took about 4.1 minutes. Normal notebook execution in the launched test server took about 17 seconds; this is one observation, not a timing guarantee.
+The new commit passed an actual MyBinder build, the complete normal notebook and browser image/download checks. It provides **192 distinct figures and 396 image assets**, using Python 3.12.14 and all 16 exact scientific package versions. Run All skips the optional full calculation. The browser-downloaded ZIP passed CRC, all asset hashes and every portable HTML download-link check. See [VALIDATION.md](VALIDATION.md) and [ONLINE_VALIDATION.json](ONLINE_VALIDATION.json).
+
+This build and launch took about 4.5 minutes; normal notebook execution took about 16 seconds in the test session. These are observations, not timing guarantees. The badge and launch links pin the tested code commit `560c4e3264d217ca106818318ec03b6aecb0224e`; the `binder-20261019` Git tag identifies that version.
 
 ## Local preparation
 
