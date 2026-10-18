@@ -1,4 +1,5 @@
 import hashlib
+import ast
 import contextlib
 import io
 from html.parser import HTMLParser
@@ -7,6 +8,7 @@ from pathlib import Path
 import tempfile
 import sys
 import unittest
+import warnings
 from unittest.mock import patch
 import zipfile
 
@@ -98,3 +100,52 @@ class ReviewerTests(unittest.TestCase):
         self.assertNotIn('<script>alert(1)</script>', frame['srcdoc'])
         with self.assertRaises(ValueError):
             notebook_gallery(gallery, 'https://another.example/')
+
+    def test_production_introduction_describes_recalculated_and_archived_scope(self):
+        self.manifest['production'] = True
+        page = build_gallery(self.manifest, self.root / 'gallery').read_text(encoding='utf-8')
+        self.assertIn('Current production estimates have been recalculated.', page)
+        self.assertIn('Figure 1 is fixed artwork; historical figures remain archived.', page)
+        self.assertNotIn('Saved-reference intervals have not been recalculated.', page)
+
+    def test_portable_export_links_resolve_without_external_zip(self):
+        gallery = build_gallery(self.manifest, self.root / 'gallery')
+        live = gallery.read_text(encoding='utf-8')
+        self.assertIn('../all_figures.zip', live)
+        archive = export_results(self.manifest, self.root / 'all_figures.zip')
+        class Links(HTMLParser):
+            def handle_starttag(self, tag, attrs):
+                if tag == 'a':
+                    self.links.append(dict(attrs)['href'])
+        parser = Links(); parser.links = []
+        with zipfile.ZipFile(archive) as z:
+            parser.feed(z.read('index.html').decode())
+            for link in parser.links:
+                self.assertIn(link, z.namelist(), f'Unresolved portable download link: {link}')
+        self.assertEqual(gallery.read_text(encoding='utf-8'), live)
+
+    def test_both_notebook_gallery_displays_emit_no_iframe_advisory(self):
+        try:
+            from IPython.display import HTML, display
+        except ImportError:
+            self.skipTest('Requires the notebook runtime; checked in Linux acceptance')
+        from reviewer import notebook_gallery
+        gallery = build_gallery(self.manifest, self.root / 'gallery')
+        notebook = json.loads((Path(__file__).resolve().parents[1] / 'Start_here.ipynb').read_text())
+        calls = []
+        for cell in notebook['cells']:
+            if cell['cell_type'] == 'code':
+                tree = ast.parse(''.join(cell['source']))
+                calls.extend(node for node in ast.walk(tree) if isinstance(node, ast.Call)
+                    and isinstance(node.func, ast.Name) and node.func.id == 'display'
+                    and any(isinstance(child, ast.Name) and child.id == 'notebook_gallery'
+                            for child in ast.walk(node)))
+        self.assertEqual(len(calls), 2)
+        scope = dict(HTML=HTML, display=display, notebook_gallery=notebook_gallery,
+                     gallery=gallery, full_output=self.root,
+                     file_url=lambda path: '/user/reviewer/files/outputs/gallery')
+        with warnings.catch_warnings(record=True) as emitted, contextlib.redirect_stdout(io.StringIO()):
+            warnings.simplefilter('always')
+            for call in calls:
+                eval(compile(ast.Expression(call), '<notebook-gallery>', 'eval'), scope)
+        self.assertFalse([str(w.message) for w in emitted if 'IPython.display.IFrame' in str(w.message)])

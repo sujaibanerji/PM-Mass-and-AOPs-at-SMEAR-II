@@ -15,6 +15,7 @@ from urllib.parse import urlsplit
 from release_io import digest, relative_path, verify_additional
 
 HERE = Path(__file__).resolve().parent
+ZIP_DOWNLOAD_LINK = '<a href="../all_figures.zip" download>Download complete figure set</a> · '
 
 
 def notebook_gallery(gallery: Path, base_url: str) -> str:
@@ -228,6 +229,10 @@ def build_gallery(manifest: dict, output: Path) -> Path:
         target = output / 'provenance' / f'{i+1}_{Path(source).name}'
         target.parent.mkdir(exist_ok=True)
         target.write_text(text, encoding='utf-8')
+    scope_notice = ('Current production estimates have been recalculated. '
+                    'Figure 1 is fixed artwork; historical figures remain archived.'
+                    if manifest.get('production', False) else
+                    'Saved-reference intervals have not been recalculated.')
     page = ('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" '
         'content="width=device-width, initial-scale=1"><title>Hyytiälä figure gallery</title>'
         '<style>body{font:17px/1.5 system-ui;max-width:1100px;margin:2em auto;padding:0 1em;'
@@ -235,8 +240,8 @@ def build_gallery(manifest: dict, output: Path) -> Path:
         'pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}a{color:#16577a}</style>'
         f'<h1>Hyytiälä figure gallery</h1><p>{len(figures)} distinct scientific figures. '
         'Historical figures retain their original methods and conventions. '
-        'Saved-reference intervals have not been recalculated. Click an image for full resolution.</p>'
-        '<p><a href="../all_figures.zip" download>Download complete figure set</a> · '
+        f'{scope_notice} Click an image for full resolution.</p>'
+        f'<p>{ZIP_DOWNLOAD_LINK}'
         '<a href="manifest.json">Figure manifest</a></p>' + ''.join(cards) + '</html>')
     (output / 'index.html').write_text(page, encoding='utf-8')
     (output / 'manifest.json').write_text(json.dumps(public, indent=2, ensure_ascii=False), encoding='utf-8')
@@ -255,5 +260,10 @@ def export_results(manifest: dict, output_zip: Path) -> Path:
     with zipfile.ZipFile(output_zip, 'x', compression=zipfile.ZIP_DEFLATED) as z:
         for p in sorted(root.rglob('*')):
             if p.is_file():
-                z.write(p, p.relative_to(root).as_posix())
+                relative = p.relative_to(root).as_posix()
+                if relative == 'index.html':
+                    page = p.read_text(encoding='utf-8').replace(ZIP_DOWNLOAD_LINK, '', 1)
+                    z.writestr(relative, page)
+                else:
+                    z.write(p, relative)
     return Path(output_zip)

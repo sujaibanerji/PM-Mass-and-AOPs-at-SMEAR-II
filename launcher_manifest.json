@@ -33,8 +33,8 @@
     },
     {
       "path": "Start_here.ipynb",
-      "bytes": 4883,
-      "sha256": "97adce451b7ae9c17fccd6f4981c7c5c606927110c0a5e909820f3f5402cbf24"
+      "bytes": 4919,
+      "sha256": "7da0b6fc269861bf8d1cde78411213682bf591803b02f8e096583d2dcb7b02dd"
     },
     {
       "path": "VALIDATION.md",
@@ -98,8 +98,8 @@
     },
     {
       "path": "reviewer.py",
-      "bytes": 14021,
-      "sha256": "56fe412d2fcd68e45d25b963d15f513a19ce47868ea466d415e0a6dcbc6a1144"
+      "bytes": 14571,
+      "sha256": "6545a216a5bb85b081ccb4ff5d911a8a15d62f7328d914572b7a8e79f45e3f40"
     },
     {
       "path": "tests/test_figure_audit.py",
@@ -123,8 +123,8 @@
     },
     {
       "path": "tests/test_reviewer.py",
-      "bytes": 4870,
-      "sha256": "b29ace008ac9ec98f06a62cfcbfe537cece1506d915acdfaa854c04d5b69e342"
+      "bytes": 7835,
+      "sha256": "8e909bfa3a6f4551cbf650f916191e11f7538bdec89cf3cd8286638b60f5803f"
     },
     {
       "path": "tools/audit_figures.py",
