@@ -2,13 +2,19 @@
 
 This launcher presents **192 distinct scientific figures**: seven current main-manuscript figures, ten current supporting figures and 175 archived historical figures. The packaged supplementary information has no embedded figures. Available companion formats bring the complete download to 396 image assets.
 
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/26654b4870be0b01cba611acd3dfd977dac85209?urlpath=lab/tree/Start_here.ipynb)
+
+**[Launch the tested notebook](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/26654b4870be0b01cba611acd3dfd977dac85209?urlpath=lab/tree/Start_here.ipynb)**, then choose **Run → Run All Cells**. Open the complete gallery or download the result ZIP when rendering finishes. This link pins the exact tested commit. The [standard MyBinder link](https://mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/26654b4870be0b01cba611acd3dfd977dac85209?urlpath=lab/tree/Start_here.ipynb) is also available; during this test its browser event stream returned 403, while the direct GESIS provider above launched successfully.
+
 Open `Start_here.ipynb` and run the normal cells to render the current 17 figures, browse the entire gallery and download individual images or the complete ZIP. The normal path uses processed observations and saved derived tables. Saved uncertainty estimates are labelled `saved_reference`; Figure 1 is fixed artwork. Historical figures retain their original cohorts, processing and geometry conventions and remain labelled `archived_image`.
 
 Reviewers do not need a Binder account. Binder sessions have temporary storage, so download results before leaving. See the official [Binder usage guidelines](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html).
 
 ## Current delivery status
 
-The launcher is locally prepared and tested under Linux Python 3.12.14. See [VALIDATION.md](VALIDATION.md) for actual checks and resource measurements. **A public MyBinder build has not been tested.** The archive URLs in `binder_release.json` point to the matching versioned GitHub release. Actual online build and notebook validation are in progress; the Linux acceptance record remains separate.
+The launcher passed an actual MyBinder build and complete online notebook test on **18 October 2026**, using Python 3.12.14 and all 16 scientific pins. All **192 figures and 396 image assets**, individual-image access and the complete ZIP download passed integrity checks. Run All skipped the optional production calculation. The original archives were also downloaded anonymously and matched their declared sizes and SHA-256 hashes. See [VALIDATION.md](VALIDATION.md) and [ONLINE_VALIDATION.json](ONLINE_VALIDATION.json) for the precise scope and tested commit.
+
+The tested build and launch took about 4.1 minutes. Normal notebook execution in the launched test server took about 17 seconds; this is one observation, not a timing guarantee.
 
 ## Local preparation
 
@@ -56,7 +62,7 @@ The two original ZIPs are unchanged. The additive bundle contains 175 canonical 
 
 Public repository: [sujaibanerji/hyytiala-binder-reviewer](https://github.com/sujaibanerji/hyytiala-binder-reviewer). The three matching archives use release `reviewer-20261015-binder-20261018`. The author approved public publication on 18 October 2026. No DOI is assigned by this GitHub release.
 
-The published repository starts from the reviewed, allowlisted launcher snapshot; local development history is excluded. The release preserves the three exact archive identities above. The online acceptance step checks downloaded archive hashes, an actual MyBinder build and the complete 192-figure normal notebook. A successful launch link will be pinned to an immutable commit. Do not treat local Linux validation as proof of online success.
+The published repository starts from the reviewed, allowlisted launcher snapshot; local development history is excluded. The release preserves the three exact archive identities above. Online acceptance checked downloaded archive hashes, an actual MyBinder build and the complete 192-figure normal notebook. The launch links above pin the tested immutable commit; subsequent documentation updates do not change that tested environment.
 
 When committing an extracted launcher snapshot, preserve the executable Git mode for `.binder/postBuild` (`git update-index --chmod=+x .binder/postBuild` after adding it).
 

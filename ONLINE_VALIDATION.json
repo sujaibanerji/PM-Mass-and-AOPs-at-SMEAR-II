@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-18",
+  "status": "passed",
+  "tested_commit": "26654b4870be0b01cba611acd3dfd977dac85209",
+  "standard_launch_url": "https://mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/26654b4870be0b01cba611acd3dfd977dac85209?urlpath=lab/tree/Start_here.ipynb",
+  "tested_browser_launch_url": "https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/26654b4870be0b01cba611acd3dfd977dac85209?urlpath=lab/tree/Start_here.ipynb",
+  "build": {
+    "commit": "26654b4870be0b01cba611acd3dfd977dac85209",
+    "build_url": "https://mybinder.org/build/gh/sujaibanerji/hyytiala-binder-reviewer/26654b4870be0b01cba611acd3dfd977dac85209",
+    "status": "ready",
+    "resolved_url": "https://gesis.mybinder.org/build/gh/sujaibanerji/hyytiala-binder-reviewer/26654b4870be0b01cba611acd3dfd977dac85209",
+    "seconds": 243.35711119999996
+  },
+  "notebook": {
+    "status": "passed",
+    "figures": 192,
+    "assets": 396,
+    "source_manifest_files": 29,
+    "python": "3.12.14",
+    "scientific_pins": {
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "et_xmlfile": "2.0.0",
+      "fonttools": "4.67.0",
+      "kiwisolver": "1.5.1",
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.4",
+      "openpyxl": "3.1.5",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "pillow": "12.3.0",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0",
+      "scipy": "1.18.1",
+      "six": "1.17.0",
+      "tzdata": "2026.5"
+    },
+    "production_guard": false,
+    "production_jobs_created": false,
+    "gallery_path": "outputs/saved_20261018T202236931724Z/gallery/index.html",
+    "zip_path": "outputs/saved_20261018T202236931724Z/all_figures.zip",
+    "zip_bytes": 74461615,
+    "zip_sha256": "d759617a5c3d42a5ab1dff0425275bb0c0d6aa2d41577d58a2dc77fc32984a0a",
+    "sample_asset": "outputs/saved_20261018T202236931724Z/gallery/figures/main_1/figure_1.png",
+    "sample_asset_sha256": "c94c267b77a7249984d3ce507db99e26d5627f16882fed0077a589a44051e93f",
+    "notebook_seconds": 17.253100999999788,
+    "gallery_http_status": 200,
+    "zip_http_status": 200,
+    "sample_asset_http_status": 200,
+    "seconds": 27.84009040000001
+  },
+  "public_archives": {
+    "status": "passed",
+    "archives": [
+      {
+        "filename": "codes.zip",
+        "bytes": 1758048,
+        "sha256": "da54154e80123d73818f8421a5fe3055effa154839648e0740eb0b59e61ee83b",
+        "status": "passed",
+        "seconds": 2.4384924000000865
+      },
+      {
+        "filename": "data.zip",
+        "bytes": 373657528,
+        "sha256": "c86ec82967021950bbd4b59c8ee3dbf133af6d89170a040a6957e731687d99b3",
+        "status": "passed",
+        "seconds": 21.48645069999975
+      },
+      {
+        "filename": "additional_figures.zip",
+        "bytes": 66991173,
+        "sha256": "66b437b3740fa724de6155a133fa766cd0296934cbdcc1047f61f60314174ef9",
+        "status": "passed",
+        "seconds": 5.2630323000003045
+      }
+    ]
+  },
+  "browser_download": {
+    "status": "passed",
+    "figures": 192,
+    "assets": 396,
+    "bytes": 74461615,
+    "sha256": "eceab2f50d30223d9fdf455f0796504c18fdd3ada0dfee40f9549661d05fdc98",
+    "method": "Click Download complete figure set inside the live notebook gallery; verify browser-downloaded ZIP CRC and all member hashes"
+  },
+  "browser": {
+    "provider_launch": "passed",
+    "run_all": "passed",
+    "gallery": "passed",
+    "central_launch": "403 event-stream error in the in-app browser; direct GESIS provider succeeded"
+  },
+  "online_display_fix": "Static same-origin notebook gallery frame; file-based images, no embedded image bytes or credentials. Regression test RED to GREEN; 27 Linux tests passed.",
+  "full_production_on_mybinder": "not tested; completed separately under WSL Linux"
+}
