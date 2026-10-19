@@ -37,9 +37,14 @@
       "sha256": "40ff7e19120abe1190131d2d8d956502f928bdd6ba3464c8bbd05af2b62bf267"
     },
     {
+      "path": "ONE_CLICK_VALIDATION.json",
+      "bytes": 14758,
+      "sha256": "d3c17bede95935022955d8c242f49bfa84c00ab626a1c493481452bb79260647"
+    },
+    {
       "path": "ONLINE_VALIDATION.json",
-      "bytes": 4740,
-      "sha256": "b8fb2d50c003ea3a3c0b19d6159a8447a3d4f2ae9d2d02756212df180b3c182c"
+      "bytes": 5186,
+      "sha256": "69b4fce7832445aef5a264e7a07c36d0a433bd94e72dcd23ef551c7e06c3de43"
     },
     {
       "path": "One_click.ipynb",
@@ -48,8 +53,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8781,
-      "sha256": "7585442af27960d3c9ac10ccaa9369c4857f44ef1f0878e345e8f5b3a7959012"
+      "bytes": 9267,
+      "sha256": "9f21eed7a8a12f67359dc38fc8cf0349fe864fe2d2721ab83212b659a8dc1264"
     },
     {
       "path": "Start_here.ipynb",
@@ -58,8 +63,8 @@
     },
     {
       "path": "VALIDATION.md",
-      "bytes": 13342,
-      "sha256": "ad82f99cbc93f2d3ba7eb8960d766d43c6e81e74cd359ad073adbc852a098dfa"
+      "bytes": 15981,
+      "sha256": "cb84457cbc74fbb03fce2a720e03177f2b410e674a95da40ce52be365d46d7b7"
     },
     {
       "path": "audit/README.md",
@@ -168,8 +173,8 @@
     },
     {
       "path": "tools/package_launcher.py",
-      "bytes": 3314,
-      "sha256": "e3a3ef807e5f9c8a92f70cce0084bc006f5b159c6afa7ba5ce36dd7f9bc870bd"
+      "bytes": 3343,
+      "sha256": "a266be86a5bd987210c09c35001d29cf5936c8fb3193131af1e171f91ea94e4a"
     },
     {
       "path": "tools/validate_linux.py",

@@ -2,9 +2,9 @@
 
 This launcher presents **192 distinct scientific figures**: seven current main-manuscript figures, ten current supporting figures and 175 archived historical figures. The packaged supplementary information has no embedded figures. Available companion formats bring the complete download to 396 image assets.
 
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/binder-20261019-oneclick?urlpath=voila/render/One_click.ipynb)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://bids.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/54af7d028cc7699b192b2362fd58629ddfae408c?urlpath=voila/render/One_click.ipynb)
 
-**[Open Binder and run the full analysis with one button](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/binder-20261019-oneclick?urlpath=voila/render/One_click.ipynb)**. Once the page opens, click **Run full analysis**. Progress, the complete gallery and downloads appear on that page. No notebook editing or individual-cell execution is needed. The calculation uses the original production settings; each run preserves earlier outputs.
+**[Open Binder and run the full analysis with one button](https://bids.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/54af7d028cc7699b192b2362fd58629ddfae408c?urlpath=voila/render/One_click.ipynb)**. Once the page opens, click **Run full analysis**. Progress, the complete gallery and downloads appear on that page. No notebook editing or individual-cell execution is needed. The calculation uses the original production settings; each run preserves earlier outputs.
 
 The full Python production calculation passed on actual MyBinder on 19 October 2026 in **9.5 minutes**: all five jobs, the numerical reference checks, 192 distinct figures and 396 assets passed. The session had one CPU and a 2 GiB memory limit; peak container memory was 1.63 GiB, with no memory-limit events. All 396 assets matched the prior validated production outputs byte for byte. See [FULL_ANALYSIS_VALIDATION.json](FULL_ANALYSIS_VALIDATION.json).
 
@@ -16,18 +16,18 @@ Reviewers do not need a Binder account. Binder sessions have temporary storage, 
 
 ## Current delivery status
 
-**Binder version `binder-20261019`**, tested on **19 October 2026**, fixes all three previously deferred minor issues: the IPython display advisory, the production-gallery introduction and the offline gallery's external ZIP link. All **30 focused Linux tests** passed, including the three regressions observed failing before the fixes.
+**Binder version `binder-20261019-oneclick`**, tested on **19 October 2026**, opens a ready-to-use **Run full analysis** button. The page explains the manuscript/SI connection, estimated runtime and temporary storage. The calculation runs on Binder's servers; internet speed mainly affects loading and downloads.
 
-The new commit passed an actual MyBinder build, the complete normal notebook and browser image/download checks. It provides **192 distinct figures and 396 image assets**, using Python 3.12.14 and all 16 exact scientific package versions. Run All skips the optional full calculation. The browser-downloaded ZIP passed CRC, all asset hashes and every portable HTML download-link check. See [VALIDATION.md](VALIDATION.md) and [ONLINE_VALIDATION.json](ONLINE_VALIDATION.json).
+The actual browser button completed all five production jobs in **23.2 minutes**, including all numerical reference checks at the original 5,000/2,000-draw settings. All 192 figures and 396 assets matched the prior completed production run. Both result ZIPs downloaded successfully through authenticated HTTP; the downloaded gallery also displayed correctly in a local browser view. All **35 focused tests** passed. See [ONE_CLICK_VALIDATION.json](ONE_CLICK_VALIDATION.json), [FULL_ANALYSIS_VALIDATION.json](FULL_ANALYSIS_VALIDATION.json) and [VALIDATION.md](VALIDATION.md).
 
-This build and launch took about 4.5 minutes; normal notebook execution took about 16 seconds in the test session. These are observations, not timing guarantees. The badge and launch links pin the tested code commit `560c4e3264d217ca106818318ec03b6aecb0224e`; the `binder-20261019` Git tag identifies that version.
+The full-test image build/startup took 4.9 minutes. These are observed timings, not guarantees. The launch links pin `54af7d028cc7699b192b2362fd58629ddfae408c`, which updates only the introductory runtime guidance from full-analysis-tested `c42423a658cca095790bf07b6ac73571bbb17410`. The button and calculation logic are identical, and the revised opening page was separately checked in the browser. The `binder-20261019-oneclick` tag identifies this version.
 
 ## Local preparation
 
 Keep the original `codes.zip` and `data.zip`, plus the additive `additional_figures.zip`, in a separate archive directory. Extract the launcher ZIP once. From that launcher directory, use an isolated Python 3.12.14 environment with Jupyter installed, then install the exact scientific dependencies:
 
 ```bash
-python -m pip install -r .binder/requirements.txt
+python -m pip install -r .binder/requirements.txt -r .binder/ui-requirements.txt
 python -m pip check
 python prepare_release.py --destination runtime \
   --codes-zip ../archives/codes.zip \
@@ -36,13 +36,13 @@ python prepare_release.py --destination runtime \
 jupyter lab Start_here.ipynb
 ```
 
-Use the same interpreter/kernel for installation and notebook execution. Jupyter is supplied by repo2docker online; the scientific requirements file preserves the original release's 16 exact pins. Archive byte sizes and SHA-256 hashes are checked before extraction. Preparation also runs the original 341-file data check and validates every additional asset. Matching verified releases can be reused; unrelated or changed destinations are refused. Use a fresh destination if a prepared release has changed.
+For the one-button page locally, run `voila One_click.ipynb` from this launcher directory. Use the same interpreter/kernel for installation and notebook execution. Jupyter is supplied by repo2docker online; the scientific requirements file preserves the original release's 16 exact pins. Archive byte sizes and SHA-256 hashes are checked before extraction. Preparation also runs the original 341-file data check and validates every additional asset. Matching verified releases can be reused; unrelated or changed destinations are refused. Use a fresh destination if a prepared release has changed.
 
 ## Optional production calculation
 
 Online execution covers the Python workflow.
 
-The final notebook cell has `RUN_FULL_ANALYSIS = False`. Run All leaves it disabled. To deliberately calculate the current production analyses, change that value to `True` and run the cell. This invokes the unchanged release launcher with `--language python --all-methods --size-bootstrap --native-size-bootstrap`, retaining defaults of 5,000 bootstrap draws and 2,000 year-block draws, plus the numerical reference checks. Each run uses a fresh analysis directory and retains progress, original logs and scope manifests. An additive compatibility wrapper preserves a symlinked Linux virtual environment for child jobs; it changes no scientific source or archive.
+The one-button page runs this workflow after its deliberate button click. In the advanced `Start_here.ipynb` notebook, the final cell has `RUN_FULL_ANALYSIS = False`. Run All leaves it disabled. To deliberately calculate the current production analyses, change that value to `True` and run the cell. This invokes the unchanged release launcher with `--language python --all-methods --size-bootstrap --native-size-bootstrap`, retaining defaults of 5,000 bootstrap draws and 2,000 year-block draws, plus the numerical reference checks. Each run uses a fresh analysis directory and retains progress, original logs and scope manifests. An additive compatibility wrapper preserves a symlinked Linux virtual environment for child jobs; it changes no scientific source or archive.
 
 The current 17 figures are regenerated from supplied processed inputs. Raw instrument corrections and original category attribution remain upstream. Historical figures are included as archived images; this current pipeline does not recreate their original historical analyses. The gallery and ZIP preserve these distinctions.
 

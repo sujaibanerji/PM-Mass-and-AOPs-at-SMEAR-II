@@ -117,5 +117,13 @@
     "figures": 192,
     "assets": 396,
     "evidence": "FULL_ANALYSIS_VALIDATION.json"
+  },
+  "one_click_full_analysis": {
+    "version": "binder-20261019-oneclick",
+    "status": "passed",
+    "tested_commit": "c42423a658cca095790bf07b6ac73571bbb17410",
+    "launch_commit": "54af7d028cc7699b192b2362fd58629ddfae408c",
+    "launch_url": "https://bids.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/54af7d028cc7699b192b2362fd58629ddfae408c?urlpath=voila/render/One_click.ipynb",
+    "evidence": "ONE_CLICK_VALIDATION.json"
   }
 }
