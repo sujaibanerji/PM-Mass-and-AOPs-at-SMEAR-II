@@ -103,8 +103,8 @@
     },
     {
       "path": "one_click.py",
-      "bytes": 6581,
-      "sha256": "c8d5f1722fb6cc1bf77e2fb340da4b016d521872053d1ebac54a7182cb5524d6"
+      "bytes": 6596,
+      "sha256": "dca9e8966b12beb77e65bb61fc1de3bb8f8d37f52111798ed9c04651a0884281"
     },
     {
       "path": "prepare_release.py",

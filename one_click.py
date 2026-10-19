@@ -22,8 +22,8 @@ INTRO = '''<h1>Run the manuscript analysis</h1>
 <p>This Python code accompanies the manuscript and its supplementary information.
 Click <strong>Run full analysis</strong> below to recalculate the current analyses
 and open the complete figure gallery. Archived figures are included in their original form.</p>
-<p><strong>Estimated calculation time: about 10 minutes on Binder.</strong>
-Initial startup may take another 4–5 minutes. The calculation runs on Binder’s servers;
+<p><strong>Estimated calculation time: 10–30 minutes, depending on the Binder server.</strong>
+Initial startup may take about 5 minutes. The calculation runs on Binder’s servers;
 your internet speed mainly affects page loading and downloads.</p>
 <p>The complete gallery contains 192 distinct figures and 396 image assets.
 Download your results before leaving: Binder sessions are temporary.</p>'''
