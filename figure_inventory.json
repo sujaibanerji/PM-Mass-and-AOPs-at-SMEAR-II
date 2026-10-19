@@ -258,6 +258,25 @@
     },
     {
       "id": "main_6",
+      "title": "Pollen grains per gram of measured PM",
+      "group": "Main manuscript",
+      "status": "current",
+      "canonical_source": "current_manuscript:figures/main/pollen_grains_per_gram.png",
+      "sha256": "066829341dc6fa1ecd586d6d7e4bdfbd6268e8b0c1a8314a581a4f3ace3d14b9",
+      "formats": [],
+      "placements": [
+        "current_manuscript:figures/main/pollen_grains_per_gram.png"
+      ],
+      "scope": "Recomputed from original two-hour pollen bins and recorded collection periods; full coverage, PM10 plus super-PM10 denominator; descriptive number-to-mass ratio.",
+      "provenance": [
+        "observations/pollen_bins.csv",
+        "observations/pollen_cases.csv",
+        "observations/intervals.csv"
+      ],
+      "regeneration": "registered"
+    },
+    {
+      "id": "main_7",
       "title": "Number, projected area and volume distributions",
       "group": "Main manuscript",
       "status": "current",
@@ -302,7 +321,7 @@
       "pixel_sha256": "dbd6d8be783a93a708a65fb50e9b808607e1d0a0de5cf8895f7de4d68ccb04eb"
     },
     {
-      "id": "main_7",
+      "id": "main_8",
       "title": "Scattering uncertainty and seasonal-adjustment sensitivity",
       "group": "Main manuscript",
       "status": "current",
@@ -21560,6 +21579,7 @@
     "main_5",
     "main_6",
     "main_7",
+    "main_8",
     "effect_sca550",
     "effect_abs550",
     "effect_ssa550",
@@ -21575,8 +21595,11 @@
     "date": "2026-10-19",
     "removed_figures": 62,
     "removed_assets": 115,
-    "figures": 130,
-    "assets": 281,
-    "reason": "Author requested removal of backscattering figures, including mixed figures"
+    "figures": 131,
+    "assets": 282,
+    "reason": "Author requested removal of backscattering figures, including mixed figures",
+    "version": "20261019-r3",
+    "new_figure": "main_6",
+    "note": "One new normalized-pollen figure; earlier exclusions remain in force. Historical images unchanged."
   }
 }

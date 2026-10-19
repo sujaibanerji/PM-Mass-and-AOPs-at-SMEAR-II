@@ -1209,7 +1209,7 @@
   },
   "baseline:main_manuscript/figure_6.png": {
     "decision": "keep",
-    "id": "main_6",
+    "id": "main_7",
     "title": "Number, projected area and volume distributions",
     "group": "Main manuscript",
     "status": "current",
@@ -1220,222 +1220,222 @@
   "project:author_voice_revision_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:backscatter_excluded_20261013/paper/figures/main/figure_4.png": {
     "decision": "presentation_variant",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:blank_placeholders_bold_titles_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:compact_spacing_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:figure_arrow_style_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:figure_connected_arrows_clean_footer_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:figure_layout_fix_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:figure_legend_spacing_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:figure_thick_arrows_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:heading_spacing_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:illustrated_workflow_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:inar_affiliations_figure_spacing_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:paper_rebuild_20261013/figures/main/figure_4.png": {
     "decision": "presentation_variant",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:paper_rebuild_20261013/history/before_collection_category_20261013/figures/main/figure_4.png": {
     "decision": "presentation_variant",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:paper_rebuild_20261013/history/before_computer_modern_20261013/figures/main/figure_4.png": {
     "decision": "presentation_variant",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:paper_rebuild_20261013/history/before_size_limit_20261013/figures/main/figure_4.png": {
     "decision": "presentation_variant",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:question_alignment_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:statistical_restoration_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:sujai_language_revision_20261015/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:supermass_closure_questions_20261014/paper/figures/main/figure_5.png": {
     "decision": "presentation_variant",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:workflow_clearance_900dpi_20261015/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:workflow_revision_20261014/paper/figures/main/figure_5.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/final_native_main_5000/figures/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/headless_native_reconstructed_20/main/figures/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "project:zenodo_reviewer_package_20261015/data/reference/main_manuscript/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_6"
+      "main_7"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_6"
+    "semantic_key": "main_7"
   },
   "baseline:main_manuscript/figure_7.png": {
     "decision": "keep",
-    "id": "main_7",
+    "id": "main_8",
     "title": "Scattering uncertainty and seasonal-adjustment sensitivity",
     "group": "Main manuscript",
     "status": "current",
@@ -1446,186 +1446,186 @@
   "project:author_voice_revision_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:blank_placeholders_bold_titles_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:compact_spacing_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:figure_arrow_style_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:figure_connected_arrows_clean_footer_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:figure_layout_fix_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:figure_legend_spacing_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:figure_thick_arrows_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:heading_spacing_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:illustrated_workflow_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:inar_affiliations_figure_spacing_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:question_alignment_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:statistical_restoration_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:sujai_language_revision_20261015/paper/figures/main/figure_7.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:supermass_closure_questions_20261014/paper/figures/main/figure_6.png": {
     "decision": "presentation_variant",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:supermass_closure_questions_20261014/paper/figures/main/figure_7.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:workflow_clearance_900dpi_20261015/paper/figures/main/figure_7.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:workflow_revision_20261014/paper/figures/main/figure_6.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/final_native_main_5000/figures/figure_7.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/headless_native_reconstructed_20/main/figures/figure_7.png": {
     "decision": "presentation_variant",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "project:zenodo_reviewer_package_20261015/data/reference/main_manuscript/figure_7.png": {
     "decision": "duplicate",
     "canonical_ids": [
-      "main_7"
+      "main_8"
     ],
     "evidence": "Byte-identical SHA-256",
-    "semantic_key": "main_7"
+    "semantic_key": "main_8"
   },
   "baseline:supporting_main_manuscript/supporting_figures/diagnostic_bubbles.png": {
     "decision": "keep",
@@ -64692,5 +64692,15 @@
     "regeneration": "registered",
     "scope": "Exact Figure 1 from the author-supplied manuscript archive; fixed artwork, no redraw or resampling",
     "evidence": "Exact bytes from the attached manuscript archive"
+  },
+  "current_manuscript:figures/main/pollen_grains_per_gram.png": {
+    "decision": "keep",
+    "id": "main_6",
+    "title": "Pollen grains per gram of measured PM",
+    "group": "Main manuscript",
+    "status": "current",
+    "regeneration": "registered",
+    "scope": "Recomputed from original two-hour pollen bins and recorded collection periods; full coverage, PM10 plus super-PM10 denominator; descriptive number-to-mass ratio.",
+    "evidence": "Author requested pollen grains per gram in the main manuscript; independently checked seven matched intervals."
   }
 }

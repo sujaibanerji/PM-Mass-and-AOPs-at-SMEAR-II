@@ -6,8 +6,8 @@ project:author_voice_revision_20261014/paper/figures/main/figure_1.png,supersede
 project:author_voice_revision_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:author_voice_revision_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:author_voice_revision_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:author_voice_revision_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:author_voice_revision_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:author_voice_revision_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:author_voice_revision_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:author_voice_revision_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:author_voice_revision_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:author_voice_revision_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -139,7 +139,7 @@ project:b550_overlap_diagnostic_20261008/run_20261008_170246_163785_UTC/monthly_
 project:b550_overlap_diagnostic_20261008/run_20261008_170246_163785_UTC/monthly_components.svg,out_of_scope,,"Author-requested removal of backscattering coefficient/fraction content, including mixed plots; see scope_revision.json"
 project:backscatter_excluded_20261013/paper/figures/main/figure_1.png,presentation_variant,main_3,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
 project:backscatter_excluded_20261013/paper/figures/main/figure_2.png,presentation_variant,main_2,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
-project:backscatter_excluded_20261013/paper/figures/main/figure_4.png,presentation_variant,main_6,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
+project:backscatter_excluded_20261013/paper/figures/main/figure_4.png,presentation_variant,main_7,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
 project:backscatter_excluded_20261013/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:backscatter_excluded_20261013/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:backscatter_excluded_20261013/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -301,8 +301,8 @@ project:blank_placeholders_bold_titles_20261014/paper/figures/main/figure_1.png,
 project:blank_placeholders_bold_titles_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:blank_placeholders_bold_titles_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:blank_placeholders_bold_titles_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:blank_placeholders_bold_titles_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:blank_placeholders_bold_titles_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:blank_placeholders_bold_titles_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:blank_placeholders_bold_titles_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:blank_placeholders_bold_titles_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:blank_placeholders_bold_titles_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:blank_placeholders_bold_titles_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -546,8 +546,8 @@ project:compact_spacing_20261014/paper/figures/main/figure_1.png,superseded,main
 project:compact_spacing_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:compact_spacing_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:compact_spacing_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:compact_spacing_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:compact_spacing_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:compact_spacing_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:compact_spacing_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:compact_spacing_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:compact_spacing_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:compact_spacing_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -697,8 +697,8 @@ project:figure_arrow_style_20261014/paper/figures/main/figure_1.png,superseded,m
 project:figure_arrow_style_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:figure_arrow_style_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:figure_arrow_style_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:figure_arrow_style_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:figure_arrow_style_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:figure_arrow_style_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:figure_arrow_style_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:figure_arrow_style_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:figure_arrow_style_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:figure_arrow_style_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -756,8 +756,8 @@ project:figure_connected_arrows_clean_footer_20261014/paper/figures/main/figure_
 project:figure_connected_arrows_clean_footer_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:figure_connected_arrows_clean_footer_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:figure_connected_arrows_clean_footer_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:figure_connected_arrows_clean_footer_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:figure_connected_arrows_clean_footer_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:figure_connected_arrows_clean_footer_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:figure_connected_arrows_clean_footer_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:figure_connected_arrows_clean_footer_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:figure_connected_arrows_clean_footer_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:figure_connected_arrows_clean_footer_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -815,8 +815,8 @@ project:figure_layout_fix_20261014/paper/figures/main/figure_1.png,superseded,ma
 project:figure_layout_fix_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:figure_layout_fix_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:figure_layout_fix_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:figure_layout_fix_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:figure_layout_fix_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:figure_layout_fix_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:figure_layout_fix_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:figure_layout_fix_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:figure_layout_fix_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:figure_layout_fix_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -874,8 +874,8 @@ project:figure_legend_spacing_20261014/paper/figures/main/figure_1.png,supersede
 project:figure_legend_spacing_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:figure_legend_spacing_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:figure_legend_spacing_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:figure_legend_spacing_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:figure_legend_spacing_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:figure_legend_spacing_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:figure_legend_spacing_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:figure_legend_spacing_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:figure_legend_spacing_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:figure_legend_spacing_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -935,8 +935,8 @@ project:figure_thick_arrows_20261014/paper/figures/main/figure_1.png,superseded,
 project:figure_thick_arrows_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:figure_thick_arrows_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:figure_thick_arrows_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:figure_thick_arrows_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:figure_thick_arrows_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:figure_thick_arrows_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:figure_thick_arrows_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:figure_thick_arrows_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:figure_thick_arrows_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:figure_thick_arrows_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -990,8 +990,8 @@ project:heading_spacing_20261014/paper/figures/main/figure_1.png,superseded,main
 project:heading_spacing_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:heading_spacing_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:heading_spacing_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:heading_spacing_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:heading_spacing_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:heading_spacing_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:heading_spacing_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:heading_spacing_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:heading_spacing_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:heading_spacing_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -1082,8 +1082,8 @@ project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20
 project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:illustrated_workflow_20261014/history/rejected_drafts/compact_spacing_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -1111,8 +1111,8 @@ project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_
 project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:illustrated_workflow_20261014/history/rejected_drafts/workflow_revision_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -1139,8 +1139,8 @@ project:illustrated_workflow_20261014/paper/figures/main/figure_1.png,superseded
 project:illustrated_workflow_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:illustrated_workflow_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:illustrated_workflow_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:illustrated_workflow_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:illustrated_workflow_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:illustrated_workflow_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:illustrated_workflow_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:illustrated_workflow_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:illustrated_workflow_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:illustrated_workflow_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -1225,8 +1225,8 @@ project:inar_affiliations_figure_spacing_20261014/paper/figures/main/figure_1.pn
 project:inar_affiliations_figure_spacing_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:inar_affiliations_figure_spacing_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:inar_affiliations_figure_spacing_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:inar_affiliations_figure_spacing_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:inar_affiliations_figure_spacing_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:inar_affiliations_figure_spacing_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:inar_affiliations_figure_spacing_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:inar_affiliations_figure_spacing_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:inar_affiliations_figure_spacing_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:inar_affiliations_figure_spacing_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -2206,7 +2206,7 @@ project:original_manuscript_audit_20261013/report_page_previews/page_9.png,non_s
 project:paper_rebuild_20261013/figures/main/figure_1.png,presentation_variant,main_3,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
 project:paper_rebuild_20261013/figures/main/figure_2.png,out_of_scope,,"Author-requested removal of backscattering coefficient/fraction content, including mixed plots; see scope_revision.json"
 project:paper_rebuild_20261013/figures/main/figure_3.png,out_of_scope,,"Author-requested removal of backscattering coefficient/fraction content, including mixed plots; see scope_revision.json"
-project:paper_rebuild_20261013/figures/main/figure_4.png,presentation_variant,main_6,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
+project:paper_rebuild_20261013/figures/main/figure_4.png,presentation_variant,main_7,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
 project:paper_rebuild_20261013/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:paper_rebuild_20261013/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:paper_rebuild_20261013/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -2224,7 +2224,7 @@ project:paper_rebuild_20261013/history/before_aerosol_particles_20261013/supplem
 project:paper_rebuild_20261013/history/before_collection_category_20261013/figures/main/figure_1.png,presentation_variant,main_3,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
 project:paper_rebuild_20261013/history/before_collection_category_20261013/figures/main/figure_2.png,out_of_scope,,"Author-requested removal of backscattering coefficient/fraction content, including mixed plots; see scope_revision.json"
 project:paper_rebuild_20261013/history/before_collection_category_20261013/figures/main/figure_3.png,out_of_scope,,"Author-requested removal of backscattering coefficient/fraction content, including mixed plots; see scope_revision.json"
-project:paper_rebuild_20261013/history/before_collection_category_20261013/figures/main/figure_4.png,presentation_variant,main_6,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
+project:paper_rebuild_20261013/history/before_collection_category_20261013/figures/main/figure_4.png,presentation_variant,main_7,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
 project:paper_rebuild_20261013/history/before_collection_category_20261013/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:paper_rebuild_20261013/history/before_collection_category_20261013/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:paper_rebuild_20261013/history/before_collection_category_20261013/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -2240,7 +2240,7 @@ project:paper_rebuild_20261013/history/before_collection_category_20261013/suppl
 project:paper_rebuild_20261013/history/before_computer_modern_20261013/figures/main/figure_1.png,presentation_variant,main_3,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
 project:paper_rebuild_20261013/history/before_computer_modern_20261013/figures/main/figure_2.png,out_of_scope,,"Author-requested removal of backscattering coefficient/fraction content, including mixed plots; see scope_revision.json"
 project:paper_rebuild_20261013/history/before_computer_modern_20261013/figures/main/figure_3.png,out_of_scope,,"Author-requested removal of backscattering coefficient/fraction content, including mixed plots; see scope_revision.json"
-project:paper_rebuild_20261013/history/before_computer_modern_20261013/figures/main/figure_4.png,presentation_variant,main_6,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
+project:paper_rebuild_20261013/history/before_computer_modern_20261013/figures/main/figure_4.png,presentation_variant,main_7,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
 project:paper_rebuild_20261013/history/before_computer_modern_20261013/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:paper_rebuild_20261013/history/before_computer_modern_20261013/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:paper_rebuild_20261013/history/before_computer_modern_20261013/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -2262,7 +2262,7 @@ project:paper_rebuild_20261013/history/before_reference_restoration_20261013/sup
 project:paper_rebuild_20261013/history/before_size_limit_20261013/figures/main/figure_1.png,presentation_variant,main_3,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
 project:paper_rebuild_20261013/history/before_size_limit_20261013/figures/main/figure_2.png,out_of_scope,,"Author-requested removal of backscattering coefficient/fraction content, including mixed plots; see scope_revision.json"
 project:paper_rebuild_20261013/history/before_size_limit_20261013/figures/main/figure_3.png,out_of_scope,,"Author-requested removal of backscattering coefficient/fraction content, including mixed plots; see scope_revision.json"
-project:paper_rebuild_20261013/history/before_size_limit_20261013/figures/main/figure_4.png,presentation_variant,main_6,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
+project:paper_rebuild_20261013/history/before_size_limit_20261013/figures/main/figure_4.png,presentation_variant,main_7,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
 project:paper_rebuild_20261013/history/before_size_limit_20261013/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:paper_rebuild_20261013/history/before_size_limit_20261013/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:paper_rebuild_20261013/history/before_size_limit_20261013/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -4679,8 +4679,8 @@ project:question_alignment_20261014/paper/figures/main/figure_1.png,superseded,m
 project:question_alignment_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:question_alignment_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:question_alignment_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:question_alignment_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:question_alignment_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:question_alignment_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:question_alignment_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:question_alignment_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:question_alignment_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:question_alignment_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -5669,8 +5669,8 @@ project:statistical_restoration_20261014/paper/figures/main/figure_1.png,superse
 project:statistical_restoration_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:statistical_restoration_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:statistical_restoration_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:statistical_restoration_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:statistical_restoration_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:statistical_restoration_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:statistical_restoration_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:statistical_restoration_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:statistical_restoration_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:statistical_restoration_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -5851,8 +5851,8 @@ project:sujai_language_revision_20261015/paper/figures/main/figure_2.png,duplica
 project:sujai_language_revision_20261015/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:sujai_language_revision_20261015/paper/figures/main/figure_4.png,duplicate,main_4,Byte-identical SHA-256
 project:sujai_language_revision_20261015/paper/figures/main/figure_5.png,duplicate,main_5,Byte-identical SHA-256
-project:sujai_language_revision_20261015/paper/figures/main/figure_6.png,duplicate,main_6,Byte-identical SHA-256
-project:sujai_language_revision_20261015/paper/figures/main/figure_7.png,duplicate,main_7,Byte-identical SHA-256
+project:sujai_language_revision_20261015/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:sujai_language_revision_20261015/paper/figures/main/figure_7.png,duplicate,main_8,Byte-identical SHA-256
 project:sujai_language_revision_20261015/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:sujai_language_revision_20261015/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:sujai_language_revision_20261015/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -5876,9 +5876,9 @@ project:supermass_closure_questions_20261014/paper/figures/main/figure_1.png,sup
 project:supermass_closure_questions_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:supermass_closure_questions_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:supermass_closure_questions_20261014/paper/figures/main/figure_4.png,presentation_variant,main_5,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
-project:supermass_closure_questions_20261014/paper/figures/main/figure_5.png,presentation_variant,main_6,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
-project:supermass_closure_questions_20261014/paper/figures/main/figure_6.png,presentation_variant,main_7,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
-project:supermass_closure_questions_20261014/paper/figures/main/figure_7.png,duplicate,main_7,Byte-identical SHA-256
+project:supermass_closure_questions_20261014/paper/figures/main/figure_5.png,presentation_variant,main_7,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
+project:supermass_closure_questions_20261014/paper/figures/main/figure_6.png,presentation_variant,main_8,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
+project:supermass_closure_questions_20261014/paper/figures/main/figure_7.png,duplicate,main_8,Byte-identical SHA-256
 project:supermass_closure_questions_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:supermass_closure_questions_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:supermass_closure_questions_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -6008,8 +6008,8 @@ project:workflow_clearance_900dpi_20261015/paper/figures/main/figure_2.png,dupli
 project:workflow_clearance_900dpi_20261015/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:workflow_clearance_900dpi_20261015/paper/figures/main/figure_4.png,duplicate,main_4,Byte-identical SHA-256
 project:workflow_clearance_900dpi_20261015/paper/figures/main/figure_5.png,duplicate,main_5,Byte-identical SHA-256
-project:workflow_clearance_900dpi_20261015/paper/figures/main/figure_6.png,duplicate,main_6,Byte-identical SHA-256
-project:workflow_clearance_900dpi_20261015/paper/figures/main/figure_7.png,duplicate,main_7,Byte-identical SHA-256
+project:workflow_clearance_900dpi_20261015/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:workflow_clearance_900dpi_20261015/paper/figures/main/figure_7.png,duplicate,main_8,Byte-identical SHA-256
 project:workflow_clearance_900dpi_20261015/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:workflow_clearance_900dpi_20261015/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:workflow_clearance_900dpi_20261015/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -6035,8 +6035,8 @@ project:workflow_revision_20261014/paper/figures/main/figure_1.png,superseded,ma
 project:workflow_revision_20261014/paper/figures/main/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:workflow_revision_20261014/paper/figures/main/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:workflow_revision_20261014/paper/figures/main/figure_4.png,duplicate,main_5,Byte-identical SHA-256
-project:workflow_revision_20261014/paper/figures/main/figure_5.png,duplicate,main_6,Byte-identical SHA-256
-project:workflow_revision_20261014/paper/figures/main/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:workflow_revision_20261014/paper/figures/main/figure_5.png,duplicate,main_7,Byte-identical SHA-256
+project:workflow_revision_20261014/paper/figures/main/figure_6.png,duplicate,main_8,Byte-identical SHA-256
 project:workflow_revision_20261014/paper/figures/qa/main_figure_1_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:workflow_revision_20261014/paper/figures/qa/main_figure_2_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
 project:workflow_revision_20261014/paper/figures/qa/main_figure_3_preview.png,non_scientific_artifact,,"QA render, screenshot/contact sheet, style/dummy preview, browser/tool icon, or component of a retained figure; not a separate scientific output"
@@ -6064,19 +6064,19 @@ project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/final_native_ma
 project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/final_native_main_5000/figures/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/final_native_main_5000/figures/figure_4.png,duplicate,main_4,Byte-identical SHA-256
 project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/final_native_main_5000/figures/figure_5.png,duplicate,main_5,Byte-identical SHA-256
-project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/final_native_main_5000/figures/figure_6.png,duplicate,main_6,Byte-identical SHA-256
-project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/final_native_main_5000/figures/figure_7.png,duplicate,main_7,Byte-identical SHA-256
+project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/final_native_main_5000/figures/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/final_native_main_5000/figures/figure_7.png,duplicate,main_8,Byte-identical SHA-256
 project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/headless_native_reconstructed_20/main/figures/figure_1.png,superseded,main_1,"Earlier flowchart superseded by the exact author-supplied manuscript PNG; semantic replacement, not byte identity with the new image"
 project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/headless_native_reconstructed_20/main/figures/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/headless_native_reconstructed_20/main/figures/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/headless_native_reconstructed_20/main/figures/figure_4.png,duplicate,main_4,Byte-identical SHA-256
 project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/headless_native_reconstructed_20/main/figures/figure_5.png,duplicate,main_5,Byte-identical SHA-256
-project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/headless_native_reconstructed_20/main/figures/figure_6.png,duplicate,main_6,Byte-identical SHA-256
-project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/headless_native_reconstructed_20/main/figures/figure_7.png,presentation_variant,main_7,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
+project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/headless_native_reconstructed_20/main/figures/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:zenodo_reviewer_package_20261015/codes/julia_codes/tests/headless_native_reconstructed_20/main/figures/figure_7.png,presentation_variant,main_8,"Documented same figure role/variable set/cohort/adjustment, with the current verified package preferred where superseded; see source contract and canonical image"
 project:zenodo_reviewer_package_20261015/data/reference/main_manuscript/figure_1.png,superseded,main_1,"Earlier flowchart superseded by the exact author-supplied manuscript PNG; semantic replacement, not byte identity with the new image"
 project:zenodo_reviewer_package_20261015/data/reference/main_manuscript/figure_2.png,duplicate,main_2,Byte-identical SHA-256
 project:zenodo_reviewer_package_20261015/data/reference/main_manuscript/figure_3.png,duplicate,main_3,Byte-identical SHA-256
 project:zenodo_reviewer_package_20261015/data/reference/main_manuscript/figure_4.png,duplicate,main_4,Byte-identical SHA-256
 project:zenodo_reviewer_package_20261015/data/reference/main_manuscript/figure_5.png,duplicate,main_5,Byte-identical SHA-256
-project:zenodo_reviewer_package_20261015/data/reference/main_manuscript/figure_6.png,duplicate,main_6,Byte-identical SHA-256
-project:zenodo_reviewer_package_20261015/data/reference/main_manuscript/figure_7.png,duplicate,main_7,Byte-identical SHA-256
+project:zenodo_reviewer_package_20261015/data/reference/main_manuscript/figure_6.png,duplicate,main_7,Byte-identical SHA-256
+project:zenodo_reviewer_package_20261015/data/reference/main_manuscript/figure_7.png,duplicate,main_8,Byte-identical SHA-256

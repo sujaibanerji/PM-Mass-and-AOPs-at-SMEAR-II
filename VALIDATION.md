@@ -1,3 +1,7 @@
+# Current revision
+
+The eight-main-figure revision has 131 figures and 282 assets. See [POLLEN_VALIDATION.json](POLLEN_VALIDATION.json) for its separate acceptance. Reports below describe their pinned earlier versions.
+
 # Local acceptance record — 18 October 2026
 
 The final launcher covers **192 figures and 396 image assets**: seven current main figures, ten current supporting figures, and 175 archived historical figures with 204 companion PDF/SVG exports. All 6,210 source candidates are accounted for, with no unresolved selection decisions. The 560 pages of 21 scientific figure books are mapped to individual exports and retained figures.

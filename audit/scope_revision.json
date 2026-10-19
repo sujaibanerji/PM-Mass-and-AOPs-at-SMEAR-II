@@ -395,5 +395,11 @@
       "sha256": "c2ab4189b28cba1b5a889c9715ecdf6249234ddb7776e7812c7a0c7972224d14",
       "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-no-backscatter/additional_figures.zip"
     }
+  },
+  "subsequent_presentation_revision": {
+    "version": "20261019-r3",
+    "figures_retained": 131,
+    "assets_retained": 282,
+    "added": "Pollen grains per gram of measured PM; no reversal of exclusions."
   }
 }

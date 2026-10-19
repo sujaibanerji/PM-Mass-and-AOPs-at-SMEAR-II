@@ -46,7 +46,7 @@ def estimate_origin(figure_id, regeneration, production):
         return 'fixed_artwork'
     if production:
         return 'recomputed_production'
-    if figure_id == 'main_7' or not figure_id.startswith('main_'):
+    if figure_id == 'main_8' or not figure_id.startswith('main_'):
         return 'saved_reference'
     return 'processed_observations_and_saved_tables'
 
@@ -141,7 +141,7 @@ def render_saved(prepared: dict, output: Path) -> dict:
     output = fresh(output)
     codes, data = Path(prepared['codes']), Path(prepared['data'])
     main, support = output / 'current/main_manuscript', output / 'current/supporting'
-    print('Rendering seven main figures from processed observations and saved tables.', flush=True)
+    print('Rendering eight main figures from processed observations and saved tables.', flush=True)
     run_live([sys.executable, '-B', codes / 'python_codes/main_manuscript.py',
               '--data-dir', data, '--output-dir', main], output / 'render_main.log')
     snippet = ('import sys; from pathlib import Path; sys.path.insert(0,sys.argv[1]); '

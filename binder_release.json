@@ -1,23 +1,23 @@
 {
-  "release_id": "binder-20261019-no-backscatter",
+  "release_id": "binder-20261019-pollen",
   "archives": {
     "codes": {
       "filename": "codes.zip",
-      "bytes": 2303874,
-      "sha256": "6e76f237634165f9a331260523482957bac3f6838ac929ff1e8c4bd360fc0447",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-no-backscatter/codes.zip"
+      "bytes": 2307358,
+      "sha256": "732e020a6f1df1fff4299ebdac4bc611f58635f0625a4827bb53861cca2b75d8",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-pollen/codes.zip"
     },
     "data": {
       "filename": "data.zip",
-      "bytes": 374534368,
-      "sha256": "eb3fa491aff7cdcdd5fb4c59568c24f47f26c452796ec8b210bad6d74c1eeffa",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-no-backscatter/data.zip"
+      "bytes": 374791899,
+      "sha256": "7eb650fb02b403430cf8f55f234311112573f56b781386f96890ffe2cd555826",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-pollen/data.zip"
     },
     "additional_figures": {
       "filename": "additional_figures.zip",
       "bytes": 39053830,
       "sha256": "c2ab4189b28cba1b5a889c9715ecdf6249234ddb7776e7812c7a0c7972224d14",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-no-backscatter/additional_figures.zip"
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-pollen/additional_figures.zip"
     }
   }
 }

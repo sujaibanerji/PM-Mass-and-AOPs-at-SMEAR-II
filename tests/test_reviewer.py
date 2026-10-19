@@ -52,7 +52,7 @@ class ReviewerTests(unittest.TestCase):
             build_gallery(self.manifest, self.root / 'gallery')
 
     def test_origins_preserve_saved_and_archived_status(self):
-        self.assertEqual(estimate_origin('main_7', 'registered', False), 'saved_reference')
+        self.assertEqual(estimate_origin('main_8', 'registered', False), 'saved_reference')
         self.assertEqual(estimate_origin('historical', 'archived_image', True), 'archived_image')
         self.assertEqual(estimate_origin('main_1', 'registered', True), 'fixed_artwork')
 
