@@ -16,5 +16,10 @@
   "main_and_SI_PDFs_unchanged": true,
   "main_and_SI_scientific_notation_checked": true,
   "all_figures_zip_sha256": "adbd133543ec8aff09ccbf8b1651ac1be746b0c77cb24c764891f8c733c0e531",
-  "independent_review": "Formatter safety, token boundaries and exact archive-member identity independently accepted."
+  "independent_review": "Accepted final source and export; no material issues. This is a formatting-only revision, not a new scientific run.",
+  "launcher_tests": {
+    "run": 37,
+    "passed": 37
+  },
+  "presentation_code_commit": "4f4332880a9bd810ae87e264adf62e238112f388"
 }

@@ -33,8 +33,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10685,
-      "sha256": "9b0caae92a418122a92b59153f20cfba2a57d8464004454ecabc76725b7d7713"
+      "bytes": 10761,
+      "sha256": "9c68008a4afa0a755155c855d1771041f397a22205a9bc91a683df72e74f6cd5"
     },
     {
       "path": "VALIDATION.md",
@@ -68,8 +68,8 @@
     },
     {
       "path": "SUBSCRIPT_VALIDATION.json",
-      "bytes": 886,
-      "sha256": "12239b917bcefbee5ec237e6d40a0533b2f02c3cb5f76ffa0ac87fe6463e52a2"
+      "bytes": 1042,
+      "sha256": "cefb1c6f0201d4ea1d886daa12cb53eb9ec1adcea58b3f95cab4650a475bbee4"
     },
     {
       "path": "binder_release.json",
