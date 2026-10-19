@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "fractions": [
+    {
+      "fraction": "PM1",
+      "hours": 101900,
+      "correction_applied_once": true,
+      "pre2018_unchanged_before_quality_screening": true,
+      "quality_flags_equal": true,
+      "channels": [
+        {
+          "channel": "abs370",
+          "finite_checked": 77216,
+          "max_absolute_difference": 1.4210854715202004e-14
+        },
+        {
+          "channel": "abs470",
+          "finite_checked": 77216,
+          "max_absolute_difference": 7.105427357601002e-15
+        },
+        {
+          "channel": "abs520",
+          "finite_checked": 77216,
+          "max_absolute_difference": 7.105427357601002e-15
+        },
+        {
+          "channel": "abs590",
+          "finite_checked": 77216,
+          "max_absolute_difference": 7.105427357601002e-15
+        },
+        {
+          "channel": "abs660",
+          "finite_checked": 77216,
+          "max_absolute_difference": 5.329070518200751e-15
+        },
+        {
+          "channel": "abs880",
+          "finite_checked": 77216,
+          "max_absolute_difference": 5.329070518200751e-15
+        },
+        {
+          "channel": "abs950",
+          "finite_checked": 77216,
+          "max_absolute_difference": 5.329070518200751e-15
+        }
+      ]
+    },
+    {
+      "fraction": "PM10",
+      "hours": 101900,
+      "correction_applied_once": true,
+      "pre2018_unchanged_before_quality_screening": true,
+      "quality_flags_equal": true,
+      "channels": [
+        {
+          "channel": "abs370",
+          "finite_checked": 77630,
+          "max_absolute_difference": 1.0658141036401503e-14
+        },
+        {
+          "channel": "abs470",
+          "finite_checked": 77630,
+          "max_absolute_difference": 7.105427357601002e-15
+        },
+        {
+          "channel": "abs520",
+          "finite_checked": 77630,
+          "max_absolute_difference": 8.881784197001252e-15
+        },
+        {
+          "channel": "abs590",
+          "finite_checked": 77630,
+          "max_absolute_difference": 7.105427357601002e-15
+        },
+        {
+          "channel": "abs660",
+          "finite_checked": 77630,
+          "max_absolute_difference": 5.329070518200751e-15
+        },
+        {
+          "channel": "abs880",
+          "finite_checked": 77630,
+          "max_absolute_difference": 3.552713678800501e-15
+        },
+        {
+          "channel": "abs950",
+          "finite_checked": 77630,
+          "max_absolute_difference": 3.552713678800501e-15
+        }
+      ]
+    }
+  ],
+  "hourly_rows": 204908,
+  "portable_byte_identical_to_production_input": true,
+  "portable_values_equal_to_corrected_hourly": true,
+  "row_order_note": "Production input sorts by time and fraction and reserializes CSV; comparisons align keys.",
+  "numerical_change_required": false,
+  "formula": "F_STP * (AE33 - 0.16) / 2.33 for the later era only; then established quality screening",
+  "boundary": "Checks stored raw-hourly to corrected-hourly arithmetic and portable-input identity; raw instrument aggregation is upstream."
+}

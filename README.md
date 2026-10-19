@@ -8,6 +8,16 @@ This Python code accompanies the manuscript and its supplementary information. T
 
 Estimated calculation time is **10–30 minutes**, depending on the Binder server, with about five minutes for initial startup. Calculation runs on Binder's servers; internet speed mainly affects page loading and downloads. These are estimates, not guarantees. Download results before leaving because Binder storage is temporary.
 
+## Calibration verification and Zenodo identifiers
+
+The author supplied separate archival identifiers: [data, 10.5281/zenodo.23383412](https://doi.org/10.5281/zenodo.23383412) and [code, 10.5281/zenodo.23401520](https://doi.org/10.5281/zenodo.23401520). They did not yet resolve publicly during the 19 October 2026 check and may be reserved draft identifiers.
+
+An independent check reproduces Figure S9 of [Banerji et al. (2025)](https://acp.copernicus.org/articles/25/16895/2025/acp-25-16895-2025-supplement.pdf) by OLS with an intercept on **37,020 paired hourly medians**: **AE33_660 = 2.33 × MAAP_637 + 0.16; R² = 0.96**. The original authored recipe uses equal-value runs of at least 10 records and strict two-sided ratios below 10. The historical mean-named plotting block reused the median inputs.
+
+The current inverse **(AE33 − 0.16) / 2.33** is already correct. An arithmetic audit of **204,908 inlet-hours**, all seven absorption channels in both inlets, STP scaling, hourly quality screening and the portable input passed. The numerical code/data archives and tested Binder execution remain unchanged. This reproduction checks the historical 660–637 nm fit; it does not independently calibrate every wavelength.
+
+The clean reproducer, fit, source hashes and audit are in [calibration/README.txt](https://github.com/sujaibanerji/hyytiala-binder-reviewer/blob/main/calibration/README.txt). The additional S9 plot is separate from the frozen 130-figure production gallery. Current manuscript/SI reading copies are supplied in the author's `manuscripts.zip`; reference manuscript copies inside `data.zip` remain the frozen inputs for the earlier renderer checks. The final local Zenodo preparation uses separate code/data records and includes this verification supplement.
+
 ## Current version
 
 `binder-20261019-no-backscatter-r1` implements the author's 19 October 2026 scope revision. It removes **62 historical figures and 115 assets**, including mixed plots containing backscattering coefficients, backscattering fractions, related uncertainty/baseline diagnostics and their companion formats. Mass-only comparisons with historical selection rules are retained because they do not plot those quantities.

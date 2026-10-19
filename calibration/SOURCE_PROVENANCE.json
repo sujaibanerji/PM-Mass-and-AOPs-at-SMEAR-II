@@ -1,0 +1,58 @@
+{
+  "original_sources": [
+    {
+      "source": "abs/ae33/smr_20180101.csv",
+      "sha256": "b0ff4b3138e43706de254186f473d77b0338e88469820f3981af7c53219e4111"
+    },
+    {
+      "source": "abs/maap/smr_20180101.csv",
+      "sha256": "f97ffd45c4ee30fae683d23efc141ab16eaeb577fb9e2ed95ec700cfbbf54d19"
+    },
+    {
+      "source": "abs/ae33/smr_20190101.csv",
+      "sha256": "5145070b0e5c2fa5040434b93b612fa313048e82c2aa489e8145e4d50d31c1f1"
+    },
+    {
+      "source": "abs/maap/smr_20190101.csv",
+      "sha256": "97b13cc1456afd1c0b581589b637482e12ae39bbdd273e49e12d907820a0fe5f"
+    },
+    {
+      "source": "abs/ae33/smr_20200101.csv",
+      "sha256": "90de2ef421381c1aa7cf815a8fd06142a4af75e81204229aecb3d284a5a5b238"
+    },
+    {
+      "source": "abs/maap/smr_20200101.csv",
+      "sha256": "3efd9ecefc2bad611d33386fb5f25b0dcf8066ee91caca2a10d9accbf6908ce0"
+    },
+    {
+      "source": "abs/ae33/smr_20210101.csv",
+      "sha256": "9d819a74d7cf749c550eb3eece79888afba98927985a7ffefaaaa66c65959eca"
+    },
+    {
+      "source": "abs/maap/smr_20210101.csv",
+      "sha256": "2e3e145ccd7b8895666bae68c67e238a97196e418f7aeb9acbfcd69e7b714cd4"
+    },
+    {
+      "source": "abs/ae33/smr_20220101.csv",
+      "sha256": "81722890591d1630688494561ec00509ef29d2fde9ef25d147f6d34582470386"
+    },
+    {
+      "source": "abs/maap/smr_20220101.csv",
+      "sha256": "53f5b97f6ab32a04e7efd8b0f380e0d281b1ff49567a8762a1a1f19e37f090db"
+    }
+  ],
+  "historical_recipe_source": "abs/revised_manuscript_ae33_correction.py",
+  "historical_recipe_sha256": "580063c0629c7c39b0163e22cabbe853c588804f7ed5dae1c63e7b468d69c43b",
+  "actual_authored_parameters": {
+    "equal_run_minimum": 10,
+    "min_ae": 0.05,
+    "min_maap": 0.05,
+    "strict_two_sided_ratio": 10,
+    "aggregation": "hourly median",
+    "bin_offset": "30min"
+  },
+  "exploratory_note": "An earlier private comparison mistakenly attributed a run threshold of 5 to this source. The actual threshold 10 was independently checked and rerun. Both give identical retained pairs here; only the authored threshold 10 is used in this delivery.",
+  "independent_review": "Authored threshold, paired values, OLS slope/intercept/R2 and inverse correction independently checked.",
+  "paired_input_sha256": "91bc5df38d5108534fdb4d81d40b297071b72522e07762b5e746dc4abd047d48",
+  "original_source_files_modified": false
+}
