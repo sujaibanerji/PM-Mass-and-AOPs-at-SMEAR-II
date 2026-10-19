@@ -8,8 +8,8 @@
     },
     {
       "path": ".binder/postBuild",
-      "bytes": 198,
-      "sha256": "81ed4d3872dd3c4a81d4382dad2d016fe3940c1a1d327d7d9644608c5068fcdf"
+      "bytes": 121,
+      "sha256": "bd46e460d6d8ac0aff692e83c2023c288a3820d309b6e0c7662f23b45df87e0e"
     },
     {
       "path": ".binder/requirements.txt",
@@ -37,11 +37,6 @@
       "sha256": "40ff7e19120abe1190131d2d8d956502f928bdd6ba3464c8bbd05af2b62bf267"
     },
     {
-      "path": "NO_BACKSCATTER_VALIDATION.json",
-      "bytes": 260,
-      "sha256": "0ea80b9c9b04b941b10456673def5f86f7f2a98825badd8af5b32acabb7b48ea"
-    },
-    {
       "path": "ONE_CLICK_VALIDATION.json",
       "bytes": 14758,
       "sha256": "d3c17bede95935022955d8c242f49bfa84c00ab626a1c493481452bb79260647"
@@ -58,8 +53,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 6418,
-      "sha256": "a0c876e61b34d143190d51faac2131a5060ca3fffcaf1d5047fa135014baa094"
+      "bytes": 6665,
+      "sha256": "65677268736a33f0726c827cd65aa9b4316fc66e17e13b19561664088a6749aa"
+    },
+    {
+      "path": "SCOPE_VALIDATION.json",
+      "bytes": 330,
+      "sha256": "0d93aa21d35a45633827e1972211ae7ef071802b9131a88a9300119e008c4954"
     },
     {
       "path": "Start_here.ipynb",
@@ -123,8 +123,8 @@
     },
     {
       "path": "one_click.py",
-      "bytes": 6596,
-      "sha256": "c8efcb068a2d0734a5620b127c5ab305f7038f69a84c36e33bcc435d89605aaa"
+      "bytes": 6673,
+      "sha256": "acd8665149db83edcbc8a43f5178449d53093792f799680550c7ac90ea9dc3e1"
     },
     {
       "path": "prepare_release.py",
@@ -148,8 +148,8 @@
     },
     {
       "path": "tests/test_figure_audit.py",
-      "bytes": 4711,
-      "sha256": "922b88da1dbbf6ffb04360ff4fa8623b63a502876bc9d3e85e7405bb5f203cf7"
+      "bytes": 4717,
+      "sha256": "d8351471a889a0dc363134e1e99f401a7da8142bcc080f252136da5c614b1ec1"
     },
     {
       "path": "tests/test_figure_bundle.py",
@@ -188,8 +188,8 @@
     },
     {
       "path": "tools/package_launcher.py",
-      "bytes": 3437,
-      "sha256": "bc785050110f95ea8cbb3bd260f71b9e5b6b1b8bf4158a17a6bb89882d09b551"
+      "bytes": 3428,
+      "sha256": "b6179d31d96cc0d5023c55edbdcabd0c2066857c6b82f22b0470e713e394468b"
     },
     {
       "path": "tools/validate_linux.py",

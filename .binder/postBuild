@@ -2,4 +2,3 @@
 set -eu
 python -m pip install -r .binder/requirements.txt -r .binder/ui-requirements.txt
 python -m pip check
-python prepare_release.py --config binder_release.json --destination runtime

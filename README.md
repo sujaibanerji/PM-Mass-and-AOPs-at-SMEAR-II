@@ -2,21 +2,23 @@
 
 This Python code accompanies the manuscript and its supplementary information. The current gallery contains **130 distinct scientific figures and 281 image assets**: seven main-manuscript figures, ten current supporting figures and 113 archived historical figures.
 
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/binder-20261019-no-backscatter?urlpath=voila/render/One_click.ipynb)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/binder-20261019-no-backscatter-r1?urlpath=voila/render/One_click.ipynb)
 
-**[Open Binder](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/binder-20261019-no-backscatter?urlpath=voila/render/One_click.ipynb)**, then click **Run full analysis**. Progress, the gallery and downloads appear on the same page. Reviewers do not need an account or notebook editing.
+**[Open Binder](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/binder-20261019-no-backscatter-r1?urlpath=voila/render/One_click.ipynb)**, then click **Run full analysis**. Progress, the gallery and downloads appear on the same page. Reviewers do not need an account or notebook editing.
 
 Estimated calculation time is **10–30 minutes**, depending on the Binder server, with about five minutes for initial startup. Calculation runs on Binder's servers; internet speed mainly affects page loading and downloads. These are estimates, not guarantees. Download results before leaving because Binder storage is temporary.
 
 ## Current version
 
-`binder-20261019-no-backscatter` implements the author's 19 October 2026 scope revision. It removes **62 historical figures and 115 assets**, including mixed plots containing backscattering coefficients, backscattering fractions, related uncertainty/baseline diagnostics and their companion formats. Mass-only comparisons with historical selection rules are retained because they do not plot those quantities.
+`binder-20261019-no-backscatter-r1` implements the author's 19 October 2026 scope revision. It removes **62 historical figures and 115 assets**, including mixed plots containing backscattering coefficients, backscattering fractions, related uncertainty/baseline diagnostics and their companion formats. Mass-only comparisons with historical selection rules are retained because they do not plot those quantities.
 
 Figure 1 is the **exact 5811 × 4250 PNG** from `manuscripts_significant_figures_20261019.zip`, member `figures/main/figure_1.png`. Its SHA-256 is `758441e4dcbd98788cf03024e3acd2c4f3bf0ec1c131d9238936aeed4b900c8e`. It is copied without redraw or resampling, including in full analysis exports. The same image is supplied in the code and data archives. Pollen corroboration checks remain active.
 
 The original registered scientific code already omitted backscattering-specific routines. The revised code archive keeps the numerical calculations and removes obsolete alternate flowchart artwork/source. Numerical observations and numerical reference tables are unchanged; the data archive changes only Figure 1 and its checksum record. All 113 retained historical images and companion formats preserve their original bytes.
 
-Current verification is recorded in [NO_BACKSCATTER_VALIDATION.json](NO_BACKSCATTER_VALIDATION.json). The detailed removal list, source hashes and code audit are in [audit/scope_revision.json](audit/scope_revision.json); the fixed-artwork code change is in [audit/renderer_artwork.diff](audit/renderer_artwork.diff). Earlier 192-figure tests remain historical evidence in [ONE_CLICK_VALIDATION.json](ONE_CLICK_VALIDATION.json) and [FULL_ANALYSIS_VALIDATION.json](FULL_ANALYSIS_VALIDATION.json). See [VALIDATION.md](VALIDATION.md).
+Current verification is recorded in [SCOPE_VALIDATION.json](SCOPE_VALIDATION.json). The detailed removal list, source hashes and code audit are in [audit/scope_revision.json](audit/scope_revision.json); the fixed-artwork code change is in [audit/renderer_artwork.diff](audit/renderer_artwork.diff). Earlier 192-figure tests remain historical evidence in [ONE_CLICK_VALIDATION.json](ONE_CLICK_VALIDATION.json) and [FULL_ANALYSIS_VALIDATION.json](FULL_ANALYSIS_VALIDATION.json). See [VALIDATION.md](VALIDATION.md).
+
+The first deliberate button click downloads and verifies the three supplied archives before calculation. They are prepared in temporary session storage. The Binder image contains the pinned software, which keeps startup independent of a large data layer.
 
 ## Local use
 

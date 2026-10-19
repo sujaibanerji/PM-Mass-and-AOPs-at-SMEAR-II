@@ -1,9 +1,0 @@
-{
-  "status": "pending_online_test",
-  "version": "binder-20261019-no-backscatter",
-  "figures": 130,
-  "assets": 281,
-  "removed_figures": 62,
-  "removed_assets": 115,
-  "flowchart_sha256": "758441e4dcbd98788cf03024e3acd2c4f3bf0ec1c131d9238936aeed4b900c8e"
-}

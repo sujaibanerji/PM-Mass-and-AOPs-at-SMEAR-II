@@ -33,7 +33,7 @@ class FigureAuditTests(unittest.TestCase):
         inventory = json.loads((Path(__file__).resolve().parents[1] / 'figure_inventory.json').read_text(encoding='utf-8'))
         selected = [f for f in inventory['figures'] if f['canonical_source'].endswith(
             ('/categories_all_channels_mass.png', '/categories_scattering_mass.png'))]
-        self.assertEqual(len(selected), 4, 'Preserve both before/after backscatter-removal cohorts')
+        self.assertEqual(len(selected), 4, 'Preserve the four distinct historical mass-selection cohorts')
 
     def test_historical_sphere_surface_composite_is_distinct_from_projected_area(self):
         inventory = json.loads((Path(__file__).resolve().parents[1] / 'figure_inventory.json').read_text(encoding='utf-8'))
