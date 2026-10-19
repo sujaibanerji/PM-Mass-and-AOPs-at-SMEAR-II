@@ -2,9 +2,13 @@
 
 This launcher presents **192 distinct scientific figures**: seven current main-manuscript figures, ten current supporting figures and 175 archived historical figures. The packaged supplementary information has no embedded figures. Available companion formats bring the complete download to 396 image assets.
 
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/560c4e3264d217ca106818318ec03b6aecb0224e?urlpath=lab/tree/Start_here.ipynb)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/binder-20261019-oneclick?urlpath=voila/render/One_click.ipynb)
 
-**[Launch the tested notebook](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/560c4e3264d217ca106818318ec03b6aecb0224e?urlpath=lab/tree/Start_here.ipynb)**, then choose **Run → Run All Cells**. Browse the gallery in the notebook or download the result ZIP when rendering finishes. This link pins the exact tested commit. The [standard MyBinder link](https://mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/560c4e3264d217ca106818318ec03b6aecb0224e?urlpath=lab/tree/Start_here.ipynb) is also available. The standard browser route returned 403 during the 18 October test; this update was tested through the direct GESIS provider above.
+**[Open Binder and run the full analysis with one button](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/binder-20261019-oneclick?urlpath=voila/render/One_click.ipynb)**. Once the page opens, click **Run full analysis**. Progress, the complete gallery and downloads appear on that page. No notebook editing or individual-cell execution is needed. The calculation uses the original production settings; each run preserves earlier outputs.
+
+The full Python production calculation passed on actual MyBinder on 19 October 2026 in **9.5 minutes**: all five jobs, the numerical reference checks, 192 distinct figures and 396 assets passed. The session had one CPU and a 2 GiB memory limit; peak container memory was 1.63 GiB, with no memory-limit events. All 396 assets matched the prior validated production outputs byte for byte. See [FULL_ANALYSIS_VALIDATION.json](FULL_ANALYSIS_VALIDATION.json).
+
+For code inspection or the quick saved-input workflow, [open the original notebook](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/560c4e3264d217ca106818318ec03b6aecb0224e?urlpath=lab/tree/Start_here.ipynb). The standard `mybinder.org` browser route returned 403 during the 18 October test; the direct GESIS provider above worked.
 
 Open `Start_here.ipynb` and run the normal cells to render the current 17 figures, browse the entire gallery and download individual images or the complete ZIP. The normal path uses processed observations and saved derived tables. Saved uncertainty estimates are labelled `saved_reference`; Figure 1 is fixed artwork. Historical figures retain their original cohorts, processing and geometry conventions and remain labelled `archived_image`.
 
@@ -42,7 +46,7 @@ The final notebook cell has `RUN_FULL_ANALYSIS = False`. Run All leaves it disab
 
 The current 17 figures are regenerated from supplied processed inputs. Raw instrument corrections and original category attribution remain upstream. Historical figures are included as archived images; this current pipeline does not recreate their original historical analyses. The gallery and ZIP preserve these distinctions.
 
-MyBinder guarantees at least 1 GB RAM and allows at most 2 GB, and intensive sessions are subject to an approximately one CPU-hour limit. These are service policies, not a successful online test of this launcher. Use a local environment if the optional long calculation exceeds available session resources. See [official resource limits](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html#resources-available).
+MyBinder guarantees at least 1 GB RAM and allows at most 2 GB, and intensive sessions are subject to an approximately one CPU-hour limit. The completed online test is recorded above; future session capacity and timing can vary. Use a local environment if the optional long calculation exceeds available session resources. See [official resource limits](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html#resources-available).
 
 ## Figure provenance and overlap decisions
 

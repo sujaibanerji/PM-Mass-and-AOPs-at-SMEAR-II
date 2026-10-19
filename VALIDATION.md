@@ -34,7 +34,7 @@ The standard `mybinder.org` browser launch returned a 403 event-stream error twi
 
 The complete-set link inside the embedded gallery was clicked in the browser. The resulting downloaded ZIP passed CRC and all 396 per-asset SHA-256 checks. ZIP-level hashes vary between runs because archive member timestamps vary. The initial notebook emitted an IPython IFrame advisory; the 19 October update below removes it.
 
-All three release assets were separately downloaded anonymously, with exact matching byte sizes and SHA-256 hashes. The public Git source's 29 manifest entries and executable `postBuild` mode were verified. The full 5,000/2,000-draw calculation was not repeated on MyBinder; its separate completed Linux acceptance remains recorded above. Future service availability, capacity and optional full-run resources remain outside this single online test.
+All three release assets were separately downloaded anonymously, with exact matching byte sizes and SHA-256 hashes. The public Git source's 29 manifest entries and executable `postBuild` mode were verified. That initial test did not repeat the full calculation; the completed online full-analysis test is recorded below. Future service availability, capacity and optional full-run resources remain outside this single online test.
 
 ## Binder update — 19 October 2026
 
@@ -44,6 +44,19 @@ The new commit completed a fresh actual MyBinder build and launch in 269.1 secon
 
 The direct GESIS browser launch opened the updated notebook. Run All completed, the embedded gallery loaded scientific images, and no IFrame advisory was present. Clicking the live complete-set link downloaded the ZIP successfully. The browser download passed all 396 asset checks and all 589 portable HTML links resolved to included ZIP members. See [ONLINE_VALIDATION.json](ONLINE_VALIDATION.json).
 
-The production gallery was also re-exported locally from the previously validated production outputs. Its corrected introduction passed inspection, all 396 image hashes matched the original validated gallery, and the portable download links passed the same checks. No scientific calculations were repeated for this display update. Original archive identities and the earlier complete production acceptance remain intact. The optional full calculation was not repeated on MyBinder.
+The production gallery was also re-exported locally from the previously validated production outputs. Its corrected introduction passed inspection, all 396 image hashes matched the original validated gallery, and the portable download links passed the same checks. No scientific calculations were repeated for this display update. Original archive identities and the earlier complete production acceptance remain intact. The later full MyBinder calculation is recorded below.
 
 The scientific boundary remains the original package's processed observations. Upstream instrument corrections, original category attribution, scalar physical definitions and the historical pipelines are not newly validated by this launcher. Read the inherited calculation/scope manifests.
+
+
+## Full production on actual MyBinder — 19 October 2026
+
+The original notebook was executed cell by cell on GESIS MyBinder at tested code commit `560c4e3264d217ca106818318ec03b6aecb0224e`, changing only the optional flag to `True` in the test copy. The distributed notebook's default stayed disabled. The full calculation/gallery cell passed in **567.4 seconds (9.5 minutes)**; all notebook cells took 584.1 seconds, and checks/downloads brought acceptance to 600.4 seconds. This reused the already launched online server, so those figures exclude image build/startup.
+
+All five jobs completed with exit code zero: main supporting analysis (337.8 s), supplementary supporting analysis (214.6 s), main figures (5.7 s), SI tables (0.7 s) and numerical reference verification (2.7 s). The original 5,000 bootstrap and 2,000 year-block draws, all methods, size bootstrap and native-size bootstrap were retained. Every declared numerical reference inventory passed under the original tolerances and scope limits.
+
+All 192 figure IDs and 396 image assets passed checksums, complete-ZIP CRC and all 589 portable links. All 396 assets were byte-identical to the previous verified production gallery; all 17 current images were also compared as decoded pixels. Sixteen current figures were recomputed, Figure 1 remained fixed artwork, and 175 historical figures remained archived. Python 3.12.14, all 16 scientific pins and all 29 source-manifest entries matched. Gallery/image/ZIP routes returned HTTP 200, and the downloaded ZIP hash matched the server.
+
+The live container exposed a 2,147,483,648-byte memory limit and a one-CPU quota. Kernel cgroup peak memory was 1,747,193,856 bytes (1.63 GiB); this is whole-container memory, not child-process RSS. No max/oom/oom_kill event occurred. Ten-second samples and final kernel counters were retained. The completed 77-file calculation/log archive and 396-asset figure archive were downloaded and independently checked before the temporary session ended. See [FULL_ANALYSIS_VALIDATION.json](FULL_ANALYSIS_VALIDATION.json).
+
+The one-click view adds a separate interface notebook and pinned Voilà/ipywidgets packages, leaving the original scientific requirements, archives and `run_full` calculation unchanged. Its first opening waits for the button. A running job disables repeat clicks, failures preserve logs and allow retry, and completed runs expose separate figure and calculation-table/log ZIP downloads. All 33 local tests and `pip check` passed before the online button test.

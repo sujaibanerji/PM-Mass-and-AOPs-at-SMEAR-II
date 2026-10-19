@@ -108,5 +108,14 @@
       "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/reviewer-20261015-binder-20261018/additional_figures.zip"
     }
   },
-  "full_production_on_mybinder": "Not repeated; presentation fixes only. Previous complete Linux production acceptance retained."
+  "full_production_on_mybinder": {
+    "status": "passed",
+    "date": "2026-10-19",
+    "tested_commit": "560c4e3264d217ca106818318ec03b6aecb0224e",
+    "analysis_cell_seconds": 567.406,
+    "jobs": 5,
+    "figures": 192,
+    "assets": 396,
+    "evidence": "FULL_ANALYSIS_VALIDATION.json"
+  }
 }
