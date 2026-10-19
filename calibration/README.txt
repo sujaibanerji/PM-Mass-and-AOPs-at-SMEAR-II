@@ -1,9 +1,9 @@
 FIGURE S9 REPLICATION — Banerji et al. (2025)
 
-The published relation is AE33_660 = 2.33 * MAAP_637 + 0.16, R2 = 0.96.
+The published relation is AE33_660 = 2.33 * MAAP_637 + 0.16, R² = 0.96.
 OLS with a freely fitted intercept on 37,020 paired hourly medians gives:
-slope 2.3315177741608997; intercept +0.1604597140968682 Mm^-1;
-R2 0.9597021427180543. Independent NumPy least squares agrees.
+slope 2.3315177741608997; intercept +0.1604597140968682 Mm⁻¹;
+R² 0.9597021427180543. Independent NumPy least squares agrees.
 The production inverse is (AE33 - 0.16) / 2.33, followed by STP scaling.
 The rounded published constants are retained, so no production values change.
 
@@ -15,14 +15,14 @@ python code/replicate_s9.py --paired-source data/paired_minute_observations.csv 
 
 The input CSV contains the exact UTC AE33/MAAP pairs before the historical
 selection, not the complete original instrument files. MAAP values are XR_A21
-equivalent black carbon multiplied by 6.6 m2/g; AE33 uses Ba5_A81 at 660 nm.
+equivalent black carbon multiplied by 6.6 m² g⁻¹; AE33 uses Ba5_A81 at 660 nm.
 Original source hashes are in SOURCE_PROVENANCE.json. All ten originals can be
 read instead using --project PATH_TO_ORIGINAL_PROJECT (with its abs folder).
 The raw export input timestamps are UTC and receive no inter-instrument shift.
 
 The authored recipe removes the single minimum AE value, then removes equal
 value runs of at least 10 records in MAAP and then AE33. It retains both values
->= 0.05 Mm^-1 and strict two-sided ratios < 10, then forms paired hourly
+>= 0.05 Mm⁻¹ and strict two-sided ratios < 10, then forms paired hourly
 medians in bins offset by 30 minutes. The historical mean-named plot reuses
 the preceding median x/y variables. This delivery computes the median fit
 explicitly and does not reuse plotting state. This recipe differs from the

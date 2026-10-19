@@ -28,6 +28,7 @@ def scientific_html(value):
                   lambda m: m[1] + '<sub>' + m[2] + '</sub>', text, flags=re.I)
     text = re.sub(r'(?<![A-Za-z0-9_])(N[_ ]Ait|S[_ ]acc|V[_ ]acc|V[_ ]coarse|R[_ ]V)(?![A-Za-z0-9_])',
                   lambda m: m[0][0] + '<sub>' + m[0][2:] + '</sub>', text)
+    text = re.sub(r'(?<![A-Za-z0-9_])D\^2(?![A-Za-z0-9_])', 'D<sup>2</sup>', text)
     return text
 
 

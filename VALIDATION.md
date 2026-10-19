@@ -1,3 +1,5 @@
+The superscript check is recorded in [SUPERSCRIPT_VALIDATION.json](SUPERSCRIPT_VALIDATION.json). Main/SI PDFs and scientific results are unchanged; gallery prose and calibration documentation now use raised exponents.
+
 The subscript formatting revision is documented in [SUBSCRIPT_VALIDATION.json](SUBSCRIPT_VALIDATION.json). It reuses the verified full-production results below; only gallery display markup changes.
 
 # Current revision

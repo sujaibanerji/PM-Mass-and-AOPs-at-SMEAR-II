@@ -20,6 +20,8 @@ The clean reproducer, fit, source hashes and audit are in [calibration/README.tx
 
 ## Current version
 
+The superscript follow-up renders the two area expressions in gallery prose as D², and formats the calibration README with R², Mm⁻¹ and m² g⁻¹. Main manuscript and SI sources, all 52 PDF pages and figure labels were checked; their superscripts are already correct. All 37 launcher tests and the browser rendering check pass. Only gallery HTML and calibration documentation change; calculations, image assets and numerical provenance are unchanged. See [SUPERSCRIPT_VALIDATION.json](SUPERSCRIPT_VALIDATION.json).
+
 The formatting revision uses true HTML subscripts for PM size fractions, wavelength indices and size-variable descriptors in gallery headings and prose. Source identifiers and machine-readable files retain their exact names. All 37 launcher tests and a browser rendering check passed. Re-rendering the completed production gallery changes only `index.html` in the figure ZIP; all images, the manifest and numerical provenance retain their bytes. The main manuscript and SI already contain proper scientific subscripts. See [SUBSCRIPT_VALIDATION.json](SUBSCRIPT_VALIDATION.json).
 
 `binder-20261019-pollen` adds the current main-manuscript pollen grains-per-gram Figure 6 and full-precision CSV. It generates eight main figures, ten current supporting figures and 113 archived figures. Size distributions and uncertainty are now Figures 7 and 8. The formula is `1e6 * mean_pollen / (PM10 + superPM10)` on fully covered, exactly matched collection periods. The seven ratios are descriptive number-to-mass measurements, not a pollen mass fraction. No nested masses are added.
