@@ -1,5 +1,6 @@
 """Reviewer rendering, complete figure gallery and explicitly opted-in production."""
 import hashlib
+from contextvars import copy_context
 import html
 import json
 import os
@@ -80,7 +81,8 @@ def run_live(command, log, cwd=None, progress_directory=None):
                 while not stop.wait(2):
                     show()
                 show()
-            watcher = threading.Thread(target=watch, daemon=True) if progress_directory else None
+            context = copy_context()
+            watcher = threading.Thread(target=context.run, args=(watch,), daemon=True) if progress_directory else None
             if watcher:
                 watcher.start()
             try:

@@ -1,5 +1,6 @@
 """The slow scientific calculation is replaced at its boundary, not the UI/state logic."""
 import hashlib
+from contextvars import ContextVar
 import importlib.util
 import json
 from pathlib import Path
@@ -94,3 +95,15 @@ class OneClickTests(unittest.TestCase):
         self.assertNotIn('<check log>', app.status.value)
         self.assertEqual(app.downloads.value, '')
         self.assertEqual(len(list((self.root/'outputs').glob('production_*/production.log'))), 1)
+
+    def test_background_calculation_keeps_kernel_request_context(self):
+        parent = ContextVar('shell_parent')
+        parent.set('button-request')
+        def contextual(prepared, output, *, confirmed):
+            self.assertEqual(parent.get(), 'button-request')
+            return self.fixture_run(prepared, output, confirmed=confirmed)
+        app = self.app(contextual)
+        with patch('one_click.prepare_release', return_value={'verified':True}):
+            app.button.click()
+            self.wait_finished(app)
+        self.assertIn('Complete', app.status.value)

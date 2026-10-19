@@ -8,7 +8,8 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 FILES = (
     '.gitattributes', '.gitignore', '.binder/environment.yml', '.binder/requirements.txt', '.binder/ui-requirements.txt', '.binder/postBuild',
-    'README.md', 'VALIDATION.md', 'binder_release.json', 'figure_inventory.json', 'figure_exclusions.csv',
+    'README.md', 'VALIDATION.md', 'ONLINE_VALIDATION.json', 'FULL_ANALYSIS_VALIDATION.json',
+    'binder_release.json', 'figure_inventory.json', 'figure_exclusions.csv',
     'release_io.py', 'prepare_release.py', 'production_entry.py', 'reviewer.py', 'Start_here.ipynb', 'one_click.py', 'One_click.ipynb',
     'audit/README.md', 'audit/selection_decisions.json', 'audit/pdf_pages.json',
     'tools/audit_figures.py', 'tools/package_figures.py', 'tools/package_launcher.py', 'tools/validate_linux.py',

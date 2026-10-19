@@ -32,6 +32,16 @@
       "sha256": "93d80e1fc0d5edafafa6677a44b5554c6a7efbeb965b332789f797d13a284887"
     },
     {
+      "path": "FULL_ANALYSIS_VALIDATION.json",
+      "bytes": 14649,
+      "sha256": "40ff7e19120abe1190131d2d8d956502f928bdd6ba3464c8bbd05af2b62bf267"
+    },
+    {
+      "path": "ONLINE_VALIDATION.json",
+      "bytes": 4740,
+      "sha256": "b8fb2d50c003ea3a3c0b19d6159a8447a3d4f2ae9d2d02756212df180b3c182c"
+    },
+    {
       "path": "One_click.ipynb",
       "bytes": 617,
       "sha256": "5370cb5892ad8bebbfe1e5f0ac90ca12b21bbcf7540f944146ab5cf2c6669637"
@@ -48,8 +58,8 @@
     },
     {
       "path": "VALIDATION.md",
-      "bytes": 12683,
-      "sha256": "b72ddb14edbb48dd57397b799a022e6e0b9ebc71bb4d474f1bafd59d4dc0982f"
+      "bytes": 13342,
+      "sha256": "ad82f99cbc93f2d3ba7eb8960d766d43c6e81e74cd359ad073adbc852a098dfa"
     },
     {
       "path": "audit/README.md",
@@ -93,8 +103,8 @@
     },
     {
       "path": "one_click.py",
-      "bytes": 6490,
-      "sha256": "80f41a1333f4dff6d9143179c8e01b7dd371aeee882bc12b87382ca2ff875c8f"
+      "bytes": 6581,
+      "sha256": "c8d5f1722fb6cc1bf77e2fb340da4b016d521872053d1ebac54a7182cb5524d6"
     },
     {
       "path": "prepare_release.py",
@@ -113,8 +123,8 @@
     },
     {
       "path": "reviewer.py",
-      "bytes": 14571,
-      "sha256": "6545a216a5bb85b081ccb4ff5d911a8a15d62f7328d914572b7a8e79f45e3f40"
+      "bytes": 14666,
+      "sha256": "b0b5f74a02fd6d58bc34f95206a26a20a241306084082895e9e969814c5e6ed7"
     },
     {
       "path": "tests/test_figure_audit.py",
@@ -128,8 +138,8 @@
     },
     {
       "path": "tests/test_one_click.py",
-      "bytes": 4541,
-      "sha256": "4d37252e44856002f37ff1f2d4ab903ce20064337fcba1b40397d9c3e348b832"
+      "bytes": 5157,
+      "sha256": "b1edc0e24c9fb9d21d2fce7dda8e952a459eb56fa9c4d42bfb2031b2c9c7a01c"
     },
     {
       "path": "tests/test_production_entry.py",
@@ -143,8 +153,8 @@
     },
     {
       "path": "tests/test_reviewer.py",
-      "bytes": 7835,
-      "sha256": "8e909bfa3a6f4551cbf650f916191e11f7538bdec89cf3cd8286638b60f5803f"
+      "bytes": 8705,
+      "sha256": "0177dfef1f43afe660f53a5c7eb0f607f1676e8d7f546f4e7b4ce12d8c94f84f"
     },
     {
       "path": "tools/audit_figures.py",
@@ -158,8 +168,8 @@
     },
     {
       "path": "tools/package_launcher.py",
-      "bytes": 3251,
-      "sha256": "6b86c68a3fa9fd546dfe733f607ccccca0384da5780680bed96fce1084236e81"
+      "bytes": 3314,
+      "sha256": "e3a3ef807e5f9c8a92f70cce0084bc006f5b159c6afa7ba5ce36dd7f9bc870bd"
     },
     {
       "path": "tools/validate_linux.py",

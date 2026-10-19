@@ -1,5 +1,6 @@
 """A single deliberate button for the existing full Python production workflow."""
 from contextlib import redirect_stdout, redirect_stderr
+from contextvars import copy_context
 from datetime import datetime, timezone
 import html
 import io
@@ -82,7 +83,8 @@ class Dashboard:
         self.gallery.value = ''
         self.logs.clear_output()
         self.status.value = '<p><strong>Verifying the supplied archives…</strong></p>'
-        threading.Thread(target=self.calculate, daemon=True).start()
+        context = copy_context()
+        threading.Thread(target=context.run, args=(self.calculate,), daemon=True).start()
 
     def calculate(self):
         started = datetime.now(timezone.utc)

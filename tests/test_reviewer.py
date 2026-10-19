@@ -1,6 +1,7 @@
 import hashlib
 import ast
 import contextlib
+from contextvars import ContextVar
 import io
 from html.parser import HTMLParser
 import json
@@ -81,6 +82,23 @@ class ReviewerTests(unittest.TestCase):
         with contextlib.redirect_stdout(capture):
             run_live(command, self.root / 'launch.log', progress_directory=jobs)
         self.assertIn('[1/25] recalculated.', capture.getvalue())
+
+    def test_job_log_watcher_keeps_kernel_request_context(self):
+        parent = ContextVar('shell_parent')
+        parent.set('button-request')
+        class ContextOutput(io.StringIO):
+            def write(self, text):
+                if text:
+                    parent.get()  # Real widget comms require this request context.
+                return super().write(text)
+        jobs = self.root / 'analysis'; jobs.mkdir()
+        command = [sys.executable, '-c',
+                   'import pathlib,sys; pathlib.Path(sys.argv[1]).write_text("watcher progress")',
+                   str(jobs / 'job.log')]
+        capture = ContextOutput()
+        with contextlib.redirect_stdout(capture):
+            run_live(command, self.root/'launch.log', progress_directory=jobs)
+        self.assertIn('watcher progress', capture.getvalue())
 
     def test_notebook_gallery_uses_static_srcdoc_with_authenticated_file_base(self):
         from reviewer import notebook_gallery
