@@ -51,5 +51,6 @@
   },
   "calibration_S9_plot_superscripts_checked": true,
   "calibration_archive_change_scope": "Only README.txt in code and verification-data calibration ZIPs; all other member bytes preserved.",
-  "independent_review": "Accepted source, boundaries, escaping, exact archive comparison and PDF evidence; no material issue introduced."
+  "independent_review": "Accepted source, boundaries, escaping, exact archive comparison and PDF evidence; no material issue introduced.",
+  "presentation_code_commit": "f772b3b6476e7cf72713be5736dbe6aa079404fd"
 }
