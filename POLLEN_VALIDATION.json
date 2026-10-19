@@ -1,5 +1,5 @@
 {
-  "status": "awaiting_actual_binder_test",
+  "status": "passed",
   "version": "20261019-r3",
   "figures": 131,
   "assets": 282,
@@ -37,10 +37,148 @@
       "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-pollen/additional_figures.zip"
     }
   },
-  "actual_binder_tested": false,
+  "actual_binder_tested": true,
   "orchestration_tests": {
     "run": 32,
     "passed": 32
   },
-  "independent_review": "Pollen arithmetic, unchanged observation data, figure counts, all37 launcher and all54 scientific tests independently verified; online/deposit acceptance pending."
+  "independent_review": "All 37 launcher and 54 scientific tests independently passed. Independent source/archive/arithmetic and visual checks passed; no unresolved material findings. Final delivery identities checked separately in PREPARATION_REPORT.json.",
+  "tested_commit": "fd08ceca941a26e49c6599491babe70d1a3e934f",
+  "actual_binder_build": {
+    "commit": "fd08ceca941a26e49c6599491babe70d1a3e934f",
+    "build_url": "https://gesis.mybinder.org/build/gh/sujaibanerji/hyytiala-binder-reviewer/fd08ceca941a26e49c6599491babe70d1a3e934f",
+    "status": "ready",
+    "resolved_url": "https://gesis.mybinder.org/build/gh/sujaibanerji/hyytiala-binder-reviewer/fd08ceca941a26e49c6599491babe70d1a3e934f",
+    "seconds": 125.50877000000037
+  },
+  "browser_open_waits_for_button": true,
+  "browser_single_button_completed": true,
+  "production_parameters": {
+    "draws": 5000,
+    "year_draws": 2000,
+    "all_methods": true,
+    "size_bootstrap": true,
+    "native_size_bootstrap": true
+  },
+  "one_click_run": {
+    "status": "completed",
+    "started_utc": "2026-10-19T05:17:24.433551+00:00",
+    "finished_utc": "2026-10-19T05:27:22.494146+00:00",
+    "seconds": 598.0605699084699,
+    "figures": 131
+  },
+  "estimate_origins": {
+    "fixed_artwork": 1,
+    "recomputed_production": 17,
+    "archived_image": 113
+  },
+  "downloads": {
+    "all_figures.zip": {
+      "bytes": 47499256,
+      "sha256": "548c33e0d8617ea17657a4778a68e0eb872f862621a71e05b219d3f076d08a85",
+      "http_status": 200
+    },
+    "analysis_tables_and_logs.zip": {
+      "bytes": 33849651,
+      "sha256": "4add30081013dd676618fb6e8f6b8a0dd17d7b2b3ad35898ea28bb333cdca0ff",
+      "http_status": 200
+    }
+  },
+  "pollen_summary": {
+    "formula": "1e6 * pollen_mean / (mass_pm10 + mass_super_pm10)",
+    "units": "grains g^-1 of measured PM",
+    "n": 7,
+    "minimum": 4961133.560459001,
+    "maximum": 61972353.084946774,
+    "median": 31814334.940401472,
+    "excluded": [
+      {
+        "interval_id": "row_1027",
+        "reason": "incomplete_pollen_coverage"
+      },
+      {
+        "interval_id": "row_1030",
+        "reason": "incomplete_pollen_coverage"
+      },
+      {
+        "interval_id": "row_1036",
+        "reason": "incomplete_pollen_coverage"
+      },
+      {
+        "interval_id": "row_1040",
+        "reason": "incomplete_pollen_coverage"
+      },
+      {
+        "interval_id": "row_1042",
+        "reason": "incomplete_pollen_coverage"
+      },
+      {
+        "interval_id": "row_1045",
+        "reason": "incomplete_pollen_coverage"
+      }
+    ],
+    "scope": "Descriptive airborne number-to-PM-mass ratio on matched collection periods; not a mass fraction or grains per gram of deposit."
+  },
+  "previous_281_assets_unchanged": true,
+  "exact_flowchart_sha256": "758441e4dcbd98788cf03024e3acd2c4f3bf0ec1c131d9238936aeed4b900c8e",
+  "environment": {
+    "status": "passed",
+    "python": "3.12.14",
+    "pins": {
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "et_xmlfile": "2.0.0",
+      "fonttools": "4.67.0",
+      "kiwisolver": "1.5.1",
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.4",
+      "openpyxl": "3.1.5",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "pillow": "12.3.0",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0",
+      "scipy": "1.18.1",
+      "six": "1.17.0",
+      "tzdata": "2026.5",
+      "voila": "0.5.13",
+      "ipywidgets": "8.1.9"
+    },
+    "resources": {
+      "memory.events": "low 0\nhigh 0\nmax 319\noom 0\noom_kill 0\noom_group_kill 0",
+      "memory.current": "2019176448",
+      "memory.peak": "2147491840",
+      "cpu.max": "100000 100000",
+      "memory.max": "2147483648"
+    },
+    "source_manifest_files": 41
+  },
+  "runtime_files_unchanged_since_tested_commit": [
+    ".binder/environment.yml",
+    ".binder/requirements.txt",
+    ".binder/ui-requirements.txt",
+    ".binder/postBuild",
+    "binder_release.json",
+    "figure_inventory.json",
+    "release_io.py",
+    "prepare_release.py",
+    "production_entry.py",
+    "reviewer.py",
+    "one_click.py",
+    "One_click.ipynb",
+    "Start_here.ipynb"
+  ],
+  "final_documentation_updated_after_test": true,
+  "browser_download_validation": {
+    "status": "passed",
+    "completed_text": "Complete: 131 figures ready. Calculation and packaging took 10.0 minutes.",
+    "both_download_controls_used": true,
+    "download_bytes_match_verified_http_archives": true,
+    "screenshot": "MyBinder_completed_20261019.png"
+  },
+  "packaged_launcher_tests": {
+    "run": 37,
+    "passed": 37
+  },
+  "independent_final_review": "Accepted: no material blockers. Actual MyBinder evidence, runtime identities, seven ratios, all282 exported assets, both record manifests/checksums, metadata, licensing and separate manuscripts independently verified."
 }

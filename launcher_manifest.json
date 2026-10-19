@@ -33,13 +33,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 9783,
-      "sha256": "ab8552f3e56622fda39c24484fa38409538d19ff57dc1e7ba89d5bbe3f0f4c31"
+      "bytes": 10105,
+      "sha256": "d590eafa71065492b23f45054f2c28b4749b7fe292370b2c0dad7ef429d98fdf"
     },
     {
       "path": "VALIDATION.md",
-      "bytes": 19578,
-      "sha256": "784190671542cb117103286e9a3ec2077e848146fb3a69819fd2a1e35b8bd4eb"
+      "bytes": 19992,
+      "sha256": "d06d785b8ee4229fef0b21986d1e465bf708c9f97f3e65c169f795ffa3e35a4d"
     },
     {
       "path": "ONLINE_VALIDATION.json",
@@ -63,8 +63,8 @@
     },
     {
       "path": "POLLEN_VALIDATION.json",
-      "bytes": 1747,
-      "sha256": "41719525e02b8fbebc333ee0a25e27120045bafb6f413e09d4a1b32818e7cd3a"
+      "bytes": 6319,
+      "sha256": "f4337c86147747c7e6eb7221fda67495b00aa3a0c68766023ec21c6c9da7c4fb"
     },
     {
       "path": "binder_release.json",
@@ -204,7 +204,7 @@
     {
       "path": "docs/superpowers/plans/2026-10-19-pollen-integration.md",
       "bytes": 1827,
-      "sha256": "061f0746575864beb2c51278932a4497beefa3ceef320ff2870656076e7c552d"
+      "sha256": "9b2b3e656af3e6f38759de8e876ba61c10166bb8812ccea8dddb553f740c87ff"
     }
   ]
 }

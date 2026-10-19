@@ -7,20 +7,20 @@ The author's subsequent scope decisions supersede the original plan's counts.
 
 Native implementation, followed by one independent final review:
 
-- [ ] Add a tested ratio calculation using actual collection boundaries, full
+- [x] Add a tested ratio calculation using actual collection boundaries, full
   pollen coverage and finite nonnegative PM10 plus super-PM10 masses. Keep zeros;
   exclude incomplete coverage and invalid denominators; never add nested masses.
-- [ ] Generate Figure 6 and its full-precision table in the existing production
+- [x] Generate Figure 6 and its full-precision table in the existing production
   workflow. Renumber size distributions to 7 and uncertainty to 8. Preserve the
   exact flowchart and all previously verified numerical estimates.
-- [ ] Update figure inventory and release manifests. Preserve old versions and
+- [x] Update figure inventory and release manifests. Preserve old versions and
   make an additive public release; do not publish private repository history.
-- [ ] Run relevant complete test suites and a fresh actual MyBinder one-button
+- [x] Run relevant complete test suites and a fresh actual MyBinder one-button
   production run with standard production settings; inspect the new plot,
   gallery, downloadable results, provenance and references.
-- [ ] Refresh the two Zenodo upload directories, copy-paste metadata and checksums.
+- [x] Refresh the two Zenodo upload directories, copy-paste metadata and checksums.
   Keep current manuscripts separately because prose licensing was not granted.
-- [ ] Obtain one independent final review, resolve material findings, and deliver
+- [x] Obtain one independent final review, resolve material findings, and deliver
   current manuscript/SI, ZIPs and immutable Binder launch link.
 
 The OLS calibration remains (AE33 - 0.16) / 2.33 followed by STP conversion.

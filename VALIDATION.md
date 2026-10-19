@@ -1,6 +1,6 @@
 # Current revision
 
-The eight-main-figure revision has 131 figures and 282 assets. See [POLLEN_VALIDATION.json](POLLEN_VALIDATION.json) for its separate acceptance. Reports below describe their pinned earlier versions.
+The eight-main-figure revision has 131 figures and 282 assets. The actual button completed five production jobs in 598.1 s (10.0 min), including first-run preparation, at `fd08ceca941a26e49c6599491babe70d1a3e934f`. All production reference checks, seven pollen ratios, 282 asset checksums and all portable gallery links passed. All earlier 281 assets remain byte-identical after figure renumbering. The tested environment has Python3.12.14 and original pins; no OOM kill occurred. See [POLLEN_VALIDATION.json](POLLEN_VALIDATION.json) for separate acceptance. Reports below describe their pinned earlier versions.
 
 # Local acceptance record — 18 October 2026
 
