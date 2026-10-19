@@ -181,5 +181,11 @@
   "browser_verified": true,
   "browser_images_loaded": 2,
   "browser_superscript_css": "super",
-  "independent_review": "Accepted final source and archives: all 144 series, 45 original CSV/log files, 282 asset hashes, companion formats and final code provenance verified. Seven raster-only exceptions remain explicit."
+  "independent_review": "Accepted final source and archives: all 144 series, 45 original CSV/log files, 282 asset hashes, companion formats and final code provenance verified. Seven raster-only exceptions remain explicit.",
+  "presentation_code_commit": "60f8a9ca4098ed75ef430f78a328300b8f386183",
+  "packaged_launcher_tests": {
+    "run": 37,
+    "passed": 37,
+    "fresh_extraction": true
+  }
 }
