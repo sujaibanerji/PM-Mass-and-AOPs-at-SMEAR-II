@@ -1,0 +1,1081 @@
+--- a/python_codes/figure_renderer.py
++++ b/python_codes/figure_renderer.py
+@@ -1,435 +1,437 @@
+-"""Portable rendering of the eight current main-manuscript figures.
+-
+-Inputs are frozen selected observations and derived category/interval tables.
+-This is a rendering layer, not raw-measurement reprocessing or new inference.
+-Only Figure 1 may use the explicitly declared supplied conceptual bitmap.
+-"""
+-import argparse
+-from contextlib import ExitStack
+-import io
+-import json
+-from pathlib import Path
+-import shutil
+-import subprocess
+-import sys
+-import tempfile
+-import os
+-import hashlib
+-
+-import numpy as np
+-import pandas as pd
+-import matplotlib
+-import plot_helpers as h
+-import matplotlib.pyplot as plt
+-from matplotlib.lines import Line2D
+-
+-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+-from package_checks import verify_data, prepare_output
+-
+-ASSETS = Path(__file__).resolve().parent.parent / 'assets'
+-METHODS = [('whole_year_reference', 'o', -.20, 'Raw: whole-year blocks'),
+-           ('calendar_duration', 's', 0., 'Raw: duration-based blocks'),
+-           ('monthly_baseline_calendar_duration', '^', .20, 'Month-adjusted: duration-based blocks')]
+-CONTRASTS = ['P-B', 'D-B', 'PD-B']
+-LABELS = ['P − B', 'D − B', 'P+D − B']
+-
+-
+-class Inputs:
+-    def __init__(self, root, statistics_dir=None, scalar_dir=None):
+-        self.root = Path(root).resolve()
+-        if not self.root.is_dir():
+-            raise FileNotFoundError(f'Data directory does not exist: {self.root}')
+-        self.records = []
+-        self.table_sources = {}
+-        self.statistics_dir = Path(statistics_dir).resolve() if statistics_dir is not None else None
+-        self.scalar_dir = Path(scalar_dir).resolve() if scalar_dir is not None else None
+-        for directory in [self.statistics_dir, self.scalar_dir]:
+-            if directory is not None and not directory.is_dir():
+-                raise FileNotFoundError(f'Export directory does not exist: {directory}')
+-
+-    def record(self, path, label=None):
+-        path = Path(path)
+-        item = {'file': label or path.relative_to(self.root).as_posix(), 'sha256': h.sha256(path)}
+-        if item not in self.records:
+-            self.records.append(item)
+-        return path
+-
+-    def table(self, relative):
+-        name = Path(relative).name
+-        directory = None
+-        if name in ['category_descriptives.csv', 'category_contrasts.csv', 'bootstrap_summary.csv', 'CATEGORY_CURVES.csv']:
+-            directory = self.statistics_dir
+-        elif name == 'collection_scalars.csv':
+-            directory = self.scalar_dir or self.statistics_dir
+-        # An explicit scalar directory is a required override. A statistics-only
+-        # run may omit scalar exports; that fallback is declared per table.
+-        if directory is not None and ((directory / name).is_file() or directory == self.scalar_dir):
+-            path = self.record(directory / name, ('scalars/' if directory == self.scalar_dir else 'statistics/') + name)
+-            provenance=directory/'run_manifest.json'
+-            self.table_sources[name]='supplied_export_unverified'
+-            if provenance.is_file():
+-                record=json.loads(provenance.read_text(encoding='utf-8'))
+-                if (record.get('job') in ['supporting_main_manuscript','supporting_supplementary_information']
+-                    and record.get('data_manifest_sha256')==h.sha256(self.root/'manifest.json')):
+-                    expected=record.get('outputs',{}).get(name)
+-                    if expected is None or expected!=h.sha256(path):
+-                        raise ValueError('Calculation export checksum mismatch: '+name)
+-                    self.record(provenance,('scalars/' if directory==self.scalar_dir else 'statistics/')+'run_manifest.json')
+-                    self.table_sources[name]='verified_calculation_export'
+-            native_provenance=directory/'JULIA_RUN_REPORT.json'
+-            if native_provenance.is_file():
+-                record=json.loads(native_provenance.read_text(encoding='utf-8'))
+-                if (record.get('status')!='failed'
+-                    and record.get('native_uncertainty_computed') is True
+-                    and record.get('input_sha256',{}).get('manifest.json')==h.sha256(self.root/'manifest.json')):
+-                    expected=record.get('output_sha256',{}).get(name)
+-                    if expected is None or expected!=h.sha256(path):
+-                        raise ValueError('Native calculation export checksum mismatch: '+name)
+-                    self.record(native_provenance,'native_statistics/JULIA_RUN_REPORT.json')
+-                    self.table_sources[name]='verified_native_calculation_export'
+-        elif directory is not None and name != 'collection_scalars.csv':
+-            raise FileNotFoundError(f'Missing required statistics export: {directory / name}')
+-        else:
+-            path = self.record(self.root / relative)
+-            self.table_sources[name] = 'saved_reference' if relative.startswith('reference/') else 'frozen_observations'
+-        return pd.read_csv(path, float_precision='round_trip')
+-
+-
+-def _select(table, **criteria):
+-    mask = np.ones(len(table), dtype=bool)
+-    for column, value in criteria.items():
+-        if column not in table:
+-            raise ValueError(f'Missing column {column}')
+-        mask &= table[column].eq(value).to_numpy()
+-    return table.loc[mask]
+-
+-
+-def _distributions(inputs, number):
+-    obs = inputs.table('observations/selected_metric_observations.csv')
+-    desc = inputs.table('reference/category_descriptives.csv')
+-    counts = inputs.table('reference/CATEGORY_COUNTS.csv')
+-    if number == 2:
+-        fig, axes = plt.subplots(2, 3, figsize=(h.WIDTH, 7.4))
+-        fig.subplots_adjust(left=.13, right=.98, bottom=.17, top=.81, wspace=.62, hspace=.85)
+-        specs = [('all_channels', f, metric, label, None) for metric, label in
+-                 [('sca550', r'Scattering (Mm$^{-1}$)'), ('sae', 'SAE (dimensionless)')] for f in h.FRACTIONS]
+-        footer = '550 nm scattering and scattering Ångström exponent. All finite selected points.\nBoxes: 25th–75th percentiles; whiskers: 10th–90th; counts: collections.'
+-    else:
+-        fractions = h.FRACTIONS if number == 3 else ['superPM10']
+-        fig, axes = plt.subplots(1, len(fractions), figsize=(h.WIDTH, 4.8 if number == 3 else 5.2), squeeze=False)
+-        fig.subplots_adjust(left=.13, right=.98, bottom=.25, top=.70, wspace=.62)
+-        specs = [('mass_only', f, 'mass', r'Mass ($\mu$g m$^{-3}$)', 1) for f in fractions]
+-        footer = 'All finite valid mass observations. Boxes: IQR; whiskers: 10th–90th.\nSymmetric-log axes are linear within ±1 µg m$^{-3}$; counts: collections.'
+-    h.category_legend(fig)
+-    panels = []
+-    for i, (ax, (cohort, fraction, metric, label, scale)) in enumerate(zip(axes.flat, specs)):
+-        criteria = dict(cohort=cohort, fraction=fraction, metric=metric)
+-        rows = _select(obs, **criteria)
+-        if rows.empty:
+-            raise ValueError(f'Missing observations for {cohort}:{fraction}:{metric}')
+-        panels.append(h.distribution_panel(ax, rows, chr(97+i), h.PM[fraction], label,
+-            f'{cohort}:{fraction}:{metric}', symlog=scale,
+-            descriptives=_select(desc, **criteria), counts=_select(counts, cohort=cohort, fraction=fraction)))
+-    fig.text(.02, .04 if number == 2 else .045, footer, fontsize=10)
+-    return fig, {'panels': panels}
+-
+-
+-def _scalars(inputs):
+-    table = inputs.table('observations/collection_scalars.csv')
+-    selected = table.selected.astype(str).str.lower()
+-    if not selected.isin(['true', 'false', '1', '0']).all():
+-        raise ValueError('Scalar selected must contain explicit Boolean values')
+-    table = table.loc[selected.isin(['true', '1'])]
+-    fig, axes = plt.subplots(3, 1, figsize=(h.WIDTH, 8.3))
+-    fig.subplots_adjust(left=.15, right=.98, bottom=.14, top=.84, hspace=.80)
+-    h.category_legend(fig)
+-    panels = []
+-    for i, (ax, adjustment, title) in enumerate(zip(axes, ['raw', 'month', 'month_hour'],
+-        ['Raw supplied scalar', 'Calendar-month anomaly', 'Calendar-month + hour anomaly'])):
+-        rows = _select(table, metric='S_acc', adjustment=adjustment)
+-        panels.append(h.distribution_panel(ax, rows, chr(97+i), title,
+-            r'$S_{acc}$ ($\mu$m$^2$ cm$^{-3}$)', f'S_acc:{adjustment}', symlog=1, scalar=True))
+-    fig.text(.02, .03, 'Anomalies are calculated at native hourly resolution, then averaged over collections.\nDeclared original units; supplied scalar geometry and bin integration remain unverified.', fontsize=10)
+-    return fig, {'panels': panels, 'adjustment': 'exported hourly anomalies; not recalculated by renderer'}
+-
+-
+-def _spectra(inputs):
+-    table = inputs.table('observations/CATEGORY_CURVES.csv')
+-    counts, groups = {}, {}
+-    if set(table.category) != set(h.CATS):
+-        raise ValueError('Size curves must contain the four declared categories')
+-    for category in h.CATS:
+-        group = table.loc[table.category.eq(category)].sort_values('diameter_m')
+-        n = group.n.to_numpy(dtype=float)
+-        if not len(n) or not np.isfinite(n).all() or len(set(n)) != 1 or n[0] < 1 or n[0] != int(n[0]):
+-            raise ValueError(f'Inconsistent collection count for {category}')
+-        if group.diameter_m.duplicated().any() or not np.isfinite(group[['diameter_m', 'number']]).all().all():
+-            raise ValueError(f'Invalid diameter bins or number values for {category}')
+-        counts[category] = int(n[0])
+-        diam, keep = h.convert_diameters(group.diameter_m.to_numpy())
+-        groups[category] = (diam[keep]*1e6, group.number.to_numpy()[keep])
+-    fig, axes = plt.subplots(3, 2, figsize=(h.WIDTH, 9.0))
+-    fig.subplots_adjust(left=.14, right=.98, bottom=.16, top=.85, wspace=.47, hspace=.72)
+-    h.category_legend(fig, counts)
+-    for row, (symbol, power) in enumerate([('N', 0), ('A', 2), ('V', 3)]):
+-        for col in range(2):
+-            ax, high = axes[row, col], 0.
+-            for category, color, fill in zip(h.CATS, h.COLORS, h.FILLS):
+-                x, number = groups[category]
+-                y = number if symbol == 'N' else number*(np.pi*x*x/4 if symbol == 'A' else np.pi*x**3/6)
+-                visible = x >= 1 if col else np.ones(len(x), dtype=bool)
+-                if not len(x) or not visible.any():
+-                    raise ValueError(f'No visible size bins for {category}')
+-                high = max(high, float(y[visible].max()))
+-                ax.scatter(x, y, s=6, facecolor=fill, edgecolor=color, linewidth=.3, zorder=2)
+-                ax.plot(x, y, color=color, linewidth=1.4, zorder=4)
+-            ax.set_xscale('log')
+-            ax.set_xlim((.003, 15) if col == 0 else (1, 15))
+-            ax.set_xticks([.01, .1, 1, 10] if col == 0 else [1, 2, 5, 10, 15],
+-                          ['0.01', '0.1', '1', '10'] if col == 0 else ['1', '2', '5', '10', '15'])
+-            ax.set_ylim(0, high*1.12 if high > 0 else 1)
+-            ax.set_ylabel(rf'$\mathrm{{d{symbol}/d\log_{{10}}D_p}}$'+'\n'+('cm$^{-3}$' if power == 0 else rf'$\mu$m$^{power}$ cm$^{{-3}}$'))
+-            ax.set_xlabel(r'Equivalent diameter ($\mu$m)')
+-            h.axes_style(ax)
+-            h.panel_title(ax, chr(97+row*2+col), ['Number', 'Cross-sectional area', 'Volume'][row]+(' — zoom' if col else ''))
+-    fig.text(.02, .04, 'Equal collection weights; no curve confidence bands. APS conversion: density 1.5 g cm$^{-3}$.\nMerge at 0.6 µm equivalent diameter. APS retained only to 15 µm aerodynamic diameter.\nPer-log normalization is adopted from station metadata; particle geometry remains an assumption.', fontsize=10)
+-    return fig, {'category_counts': counts, 'diameter_conversion': 'APS >=777 nm divided once by sqrt(1.5); merge 0.6 um equivalent; upper 15 um native aerodynamic',
+-                 'area_definition': 'projected spherical cross-section N*pi*D_um^2/4; not total spherical surface',
+-                 'bins_retained': {c: len(groups[c][0]) for c in h.CATS}}
+-
+-
+-def replacement_data(summary, contrasts):
+-    """Reverse saved B-minus-event estimates, bounds and category counts."""
+-    year = _select(contrasts, cohort='all_channels', metric='sca550', category_a='background').copy()
+-    year = year.loc[year.category_b.isin(h.CATS[1:])].copy()
+-    year['contrast'] = year.category_b.map(dict(zip(h.CATS[1:], CONTRASTS)))
+-    year['cliffs_delta'] = -year.cliffs_delta
+-    low = -year.delta_ci_high.copy()
+-    year['delta_ci_high'] = -year.delta_ci_low
+-    year['delta_ci_low'] = low
+-    old_a = year.n_a.copy()
+-    year['n_a'], year['n_b'] = year.n_b, old_a
+-    year['method'] = 'whole_year_reference'
+-    chosen = _select(summary, cohort='all_channels', metric='sca550')
+-    chosen = chosen.loc[chosen.method.isin([x[0] for x in METHODS[1:]]) & chosen.contrast.isin(CONTRASTS)]
+-    return pd.concat([year, chosen], ignore_index=True)
+-
+-
+-def _effects(inputs):
+-    summary = inputs.table('reference/bootstrap_summary.csv')
+-    table = replacement_data(summary, inputs.table('reference/category_contrasts.csv'))
+-    fig, axes = plt.subplots(1, 3, figsize=(h.WIDTH, 5.9))
+-    panels = []
+-    for fraction, ax, letter in zip(h.FRACTIONS, axes, 'abc'):
+-        h.axes_style(ax)
+-        ax.grid(axis='y', color='#E1E1E1', linestyle='-', linewidth=.6, zorder=0)
+-        ax.axvline(0, color='#777777', linewidth=.8, linestyle='--', zorder=1)
+-        estimates = []
+-        for y, (contrast, color) in enumerate(zip(CONTRASTS, h.COLORS[1:])):
+-            counts = []
+-            for method, marker, offset, _ in METHODS:
+-                found = _select(table, fraction=fraction, contrast=contrast, method=method)
+-                if len(found) != 1:
+-                    raise ValueError(f'Expected one row for {fraction}:{contrast}:{method}')
+-                r = found.iloc[0]
+-                low, high, point = map(float, [r.delta_ci_low, r.delta_ci_high, r.cliffs_delta])
+-                if np.isfinite(low) and np.isfinite(high):
+-                    if low > high or low < -1 or high > 1:
+-                        raise ValueError('Invalid saved Cliff interval')
+-                    ax.plot([low, high], [y+offset]*2, color=color, linewidth=1.25, zorder=3)
+-                if np.isfinite(point):
+-                    if abs(point) > 1:
+-                        raise ValueError('Invalid Cliff effect')
+-                    ax.plot([point], [y+offset], marker=marker, markerfacecolor='white' if method == 'whole_year_reference' else color,
+-                            markeredgecolor=color, markersize=5, linestyle='none', zorder=5)
+-                counts.append(f'{int(r.n_a)} / {int(r.n_b)}')
+-                estimates.append(dict(contrast=contrast, method=method, cliffs_delta=point if np.isfinite(point) else None,
+-                    delta_ci_low=low if np.isfinite(low) else None, delta_ci_high=high if np.isfinite(high) else None,
+-                    n_a=int(r.n_a), n_b=int(r.n_b), interval_available=bool(np.isfinite([low, high]).all())))
+-                if not np.isfinite([low, high]).all():
+-                    ax.text(.98, y+offset, 'CI unavailable', transform=ax.get_yaxis_transform(), ha='right', fontsize=8)
+-            label = counts[0] if len(set(counts)) == 1 else 'year '+counts[0]+'; duration '+counts[1]+'; adjusted '+counts[2]
+-            ax.text(1.01, y+.42, label, transform=ax.get_yaxis_transform(), ha='right', va='top', fontsize=9)
+-        ax.set_yticks(range(3), LABELS)
+-        ax.set_ylim(2.82, -.48)
+-        ax.set_xlim(-1.04, 1.04)
+-        ax.set_xticks([-1, 0, 1])
+-        ax.set_xlabel("Cliff's delta")
+-        ax.set_title(f'({letter})  {h.PM[fraction]}', loc='left', weight='normal')
+-        panels.append({'fraction': fraction, 'estimates': estimates})
+-    handles = [Line2D([], [], marker=marker, linestyle='none', color='black',
+-        markerfacecolor='white' if method == 'whole_year_reference' else 'black', markersize=5, label=label)
+-        for method, marker, _, label in METHODS]
+-    fig.legend(handles=handles, loc='upper left', bbox_to_anchor=(.015, .97), frameon=False, ncol=1,
+-               fontsize=10, title='550 nm scattering: uncertainty sensitivity')
+-    fig.subplots_adjust(left=.12, right=.97, bottom=.31, top=.69, wspace=.70)
+-    fig.text(.02, .14, 'Collection category: B background; P plant material only; D dust only; P+D both.\nPositive delta: first category tends to be higher. Numbers: first / background n.', fontsize=10, linespacing=1.)
+-    fig.text(.02, .045, 'Nominal 95% intervals; pointwise, not causal or simultaneous.\nRaw methods use identical measurements. Month adjustment changes the comparison.', fontsize=10, linespacing=1.)
+-    return fig, {'panels': panels, 'interval_sources': {name: inputs.table_sources[name]
+-                 for name in ['bootstrap_summary.csv', 'category_contrasts.csv']}}
+-
+-
+-def _schematic(inputs):
+-    """Preserve the exact author-supplied manuscript flowchart, with pollen checks."""
+-    pollen_files=[inputs.root/'observations/pollen_bins.csv',
+-                  inputs.root/'observations/pollen_cases.csv',
+-                  inputs.root/'reference/pollen_corroboration.csv']
+-    corroboration={'pollen_counts_recomputed':False}
+-    if any(p.exists() for p in pollen_files):
+-        if not all(p.is_file() for p in pollen_files):
+-            raise ValueError('Incomplete pollen corroboration inputs for Figure 1')
+-        from pollen_corroboration import calculate,read_csv,verify_reference
+-        for path in pollen_files:
+-            inputs.record(path)
+-        rows,counts=calculate(read_csv(pollen_files[0]),read_csv(pollen_files[1]))
+-        verify_reference(rows,read_csv(pollen_files[2]))
+-        corroboration={'pollen_counts_recomputed':True,'pollen_corroboration':counts}
+-    path = inputs.record(ASSETS / 'manuscript_flowchart.png', 'codes/assets/manuscript_flowchart.png')
+-    payload = path.read_bytes()
+-    if hashlib.sha256(payload).hexdigest() != '758441e4dcbd98788cf03024e3acd2c4f3bf0ec1c131d9238936aeed4b900c8e':
+-        raise ValueError('Manuscript flowchart checksum does not match the author-supplied image')
+-    return payload, {'mode': 'fixed_schematic_bitmap',
+-                     'description': 'Exact author-supplied manuscript Figure 1; no redraw or resampling',
+-                     'source_archive': 'manuscripts_significant_figures_20261019.zip',
+-                     'source_member': 'figures/main/figure_1.png', **corroboration}
+-
+-
+-def _preflight(data_dir, output_dir, figures):
+-    figures = list(range(1, 9)) if figures is None else list(figures)
+-    if not figures or any(type(n) is not int or n not in range(1, 9) for n in figures) or len(set(figures)) != len(figures):
+-        raise ValueError('Select unique figure numbers from 1 through 8')
+-    data_dir, output_dir = Path(data_dir).resolve(), Path(output_dir).resolve()
+-    if output_dir.is_relative_to(data_dir) or data_dir.is_relative_to(output_dir):
+-        raise ValueError('Output directory must be separate from the input data tree')
+-    for name in ['run_manifest.json'] + [f'figure_{n}.png' for n in figures]:
+-        if (output_dir / name).exists():
+-            raise FileExistsError(f'Refusing to overwrite {output_dir / name}; choose a fresh output directory')
+-    return figures, output_dir
+-
+-
+-def _pollen_mass(inputs):
+-    from pollen_corroboration import calculate, mass_normalized, read_csv
+-    paths = [inputs.record(inputs.root / name) for name in
+-             ['observations/pollen_bins.csv', 'observations/pollen_cases.csv', 'observations/intervals.csv']]
+-    rows, coverage = calculate(read_csv(paths[0]), read_csv(paths[1]))
+-    values, excluded = mass_normalized(rows, read_csv(paths[2]))
+-    if not values:
+-        raise ValueError('No fully pollen-covered collections with valid parent masses')
+-    fig, ax = plt.subplots(figsize=(h.WIDTH, 4.3))
+-    fig.subplots_adjust(left=.16, right=.98, bottom=.19, top=.79)
+-    colors = ['#365f80', '#28896f', '#9b63a8']
+-    blocks = sorted({r['source_block'] for r in values})
+-    for i, block in enumerate(blocks):
+-        selected = [(j+1, r['pollen_grains_per_g_pm']/1e6) for j,r in enumerate(values) if r['source_block']==block]
+-        ax.scatter(*zip(*selected), s=55, color=colors[i % len(colors)], label=f'Sampling block {block}')
+-    ax.set_xticks(range(1,len(values)+1), [f'P{i+1}' for i in range(len(values))])
+-    ax.set_xlabel('Fully pollen-covered collection (2011)')
+-    ax.set_ylabel('Pollen grains per gram of measured PM\n($10^6$ grains g$^{-1}$)')
+-    ax.set_ylim(bottom=0)
+-    ax.grid(axis='y', color='#e1e1e1')
+-    ax.set_axisbelow(True)
+-    fig.legend(*ax.get_legend_handles_labels(), loc='upper center', bbox_to_anchor=(.55,.98),
+-               frameon=False, ncol=3, fontsize=10)
+-    return fig, dict(collections=values, excluded=excluded, coverage=coverage,
+-        formula='1e6 * pollen_mean / (mass_pm10 + mass_super_pm10)',
+-        units='grains g^-1 of measured PM',
+-        scope='Descriptive ratio from separate pollen and gravimetric samplers on matched collection periods; not a mass fraction or grains per gram of deposit.')
+-
+-
+-def render(data_dir: Path, output_dir: Path, figures=None, statistics_dir=None, scalar_dir=None):
+-    """Render selected current figures, refusing to replace outputs or manifests.
+-
+-    Returns the JSON-serializable manifest also saved as run_manifest.json.
+-    Paths in the manifest are relative to the data directory or package assets.
+-    """
+-    figures, output_dir = _preflight(data_dir, output_dir, figures)
+-    release = verify_data(data_dir)
+-    inputs = Inputs(data_dir, statistics_dir, scalar_dir)
+-    inputs.record(inputs.root / 'manifest.json')
+-    for directory in [inputs.statistics_dir, inputs.scalar_dir]:
+-        if directory is not None and (output_dir.is_relative_to(directory) or directory.is_relative_to(output_dir)):
+-            raise ValueError('Output and statistics/scalar exports must be separate, non-nested paths')
+-    # prepare_output also rejects unrelated files, not just our named products.
+-    output_dir = prepare_output(output_dir, data_dir)
+-    settings, font_name = h.style_settings(ASSETS / 'fonts/lmroman12-regular.otf')
+-    font_path = ASSETS / 'fonts/lmroman12-regular.otf'
+-    if font_path.is_file():
+-        inputs.record(font_path, 'codes/assets/fonts/lmroman12-regular.otf')
+-    manifest = {'document': 'main_manuscript', 'reproducibility_level': 'frozen-observation-and-derived-table rendering',
+-        'bootstrap_intervals': 'not displayed',
+-        'raw_measurement_reprocessing': False, 'figures': [], 'inputs': inputs.records,
+-        'font': font_name, 'bundled_font_used': font_path.is_file(), 'dpi': h.DPI,
+-        'release': release.get('release'), 'data_checksums_verified': True,
+-        'verified_data_file_count': len(release['files']), 'table_sources': inputs.table_sources,
+-        'intended_width_mm': 164, 'effective_font_pt_at_intended_width': 10,
+-        'software': {'python': sys.version.split()[0], 'numpy': np.__version__, 'pandas': pd.__version__, 'matplotlib': matplotlib.__version__}}
+-    rendered = []
+-    # Prepare and validate every figure before creating persistent output files.
+-    with matplotlib.rc_context(settings):
+-        existing_figures = set(plt.get_fignums())
+-        try:
+-            for number in figures:
+-                if number == 1:
+-                    payload, record = _schematic(inputs)
+-                else:
+-                    if number in [2, 3, 4]:
+-                        fig, record = _distributions(inputs, number)
+-                    elif number == 5:
+-                        fig, record = _scalars(inputs)
+-                    elif number == 6:
+-                        fig, record = _pollen_mass(inputs)
+-                    elif number == 7:
+-                        fig, record = _spectra(inputs)
+-                    else:
+-                        fig, record = _effects(inputs)
+-                    buffer = io.BytesIO()
+-                    fig.savefig(buffer, format='png', dpi=h.DPI)
+-                    payload = buffer.getvalue()
+-                    plt.close(fig)
+-                    record['mode'] = 'native_matplotlib'
+-                if number == 8:
+-                    source = inputs.table_sources['bootstrap_summary.csv']
+-                    manifest['bootstrap_intervals'] = (
+-                        'saved reference intervals; not recomputed' if source=='saved_reference' else
+-                        'recomputed statistics exports with verified input/output provenance; renderer reads intervals' if source in ['verified_calculation_export','verified_native_calculation_export'] else
+-                        'supplied statistics exports; calculation provenance unverified')
+-                record.update(number=number, file=f'figure_{number}.png', sha256=hashlib.sha256(payload).hexdigest())
+-                manifest['figures'].append(record)
+-                rendered.append((record['file'], payload))
+-        finally:
+-            for number in set(plt.get_fignums()) - existing_figures:
+-                plt.close(number)
+-    # Exclusive creation also protects against concurrent invocations.
+-    with ExitStack() as stack:
+-        manifest_file = stack.enter_context((output_dir / 'run_manifest.json').open('x', encoding='utf-8'))
+-        handles = [(stack.enter_context((output_dir / name).open('xb')), payload) for name, payload in rendered]
+-        for handle, payload in handles:
+-            handle.write(payload)
+-        json.dump(manifest, manifest_file, indent=2, ensure_ascii=False, allow_nan=False)
+-        manifest_file.write('\n')
+-        if 6 in figures:
+-            import csv
+-            from pollen_corroboration import MASS_FIELDS
+-            record = next(r for r in manifest['figures'] if r['number']==6)
+-            with (output_dir/'pollen_grains_per_gram.csv').open('x', encoding='utf-8', newline='') as stream:
+-                writer = csv.DictWriter(stream, fieldnames=MASS_FIELDS, extrasaction='ignore')
+-                writer.writeheader()
+-                writer.writerows(record['collections'])
+-    return manifest
+-
+-
+-def cli(argv=None):
+-    parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument('--data-dir', type=Path, required=True, help='Extracted data directory')
+-    parser.add_argument('--output-dir', type=Path, required=True, help='Fresh output directory; existing files are protected')
+-    parser.add_argument('--figure', type=int, choices=range(1, 9), action='append', help='Figure number; repeat to select several (default: all eight)')
+-    parser.add_argument('--statistics-dir', type=Path, help='Recomputed category_descriptives, category_contrasts and bootstrap_summary CSV exports')
+-    parser.add_argument('--scalar-dir', type=Path, help='Recomputed SI collection_scalars.csv directory (overrides statistics-dir scalar selection)')
+-    args = parser.parse_args(argv)
+-    manifest = render(args.data_dir, args.output_dir, args.figure, args.statistics_dir, args.scalar_dir)
+-    print(f"Rendered {len(manifest['figures'])} figures; manifest: {args.output_dir / 'run_manifest.json'}")
+-    return 0
+-
+-
+-if __name__ == '__main__':
+-    raise SystemExit(cli())
++"""Portable rendering of the eight current main-manuscript figures.
++
++Inputs are frozen selected observations and derived category/interval tables.
++This is a rendering layer, not raw-measurement reprocessing or new inference.
++Only Figure 1 may use the explicitly declared supplied conceptual bitmap.
++"""
++import argparse
++from contextlib import ExitStack
++import io
++import json
++from pathlib import Path
++import shutil
++import subprocess
++import sys
++import tempfile
++import os
++import hashlib
++
++import numpy as np
++import pandas as pd
++import matplotlib
++import plot_helpers as h
++import matplotlib.pyplot as plt
++from matplotlib.lines import Line2D
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from package_checks import verify_data, prepare_output
++
++ASSETS = Path(__file__).resolve().parent.parent / 'assets'
++METHODS = [('whole_year_reference', 'o', -.20, 'Raw: whole-year blocks'),
++           ('calendar_duration', 's', 0., 'Raw: duration-based blocks'),
++           ('monthly_baseline_calendar_duration', '^', .20, 'Month-adjusted: duration-based blocks')]
++CONTRASTS = ['P-B', 'D-B', 'PD-B']
++LABELS = ['P − B', 'D − B', 'P+D − B']
++
++
++class Inputs:
++    def __init__(self, root, statistics_dir=None, scalar_dir=None):
++        self.root = Path(root).resolve()
++        if not self.root.is_dir():
++            raise FileNotFoundError(f'Data directory does not exist: {self.root}')
++        self.records = []
++        self.table_sources = {}
++        self.statistics_dir = Path(statistics_dir).resolve() if statistics_dir is not None else None
++        self.scalar_dir = Path(scalar_dir).resolve() if scalar_dir is not None else None
++        for directory in [self.statistics_dir, self.scalar_dir]:
++            if directory is not None and not directory.is_dir():
++                raise FileNotFoundError(f'Export directory does not exist: {directory}')
++
++    def record(self, path, label=None):
++        path = Path(path)
++        item = {'file': label or path.relative_to(self.root).as_posix(), 'sha256': h.sha256(path)}
++        if item not in self.records:
++            self.records.append(item)
++        return path
++
++    def table(self, relative):
++        name = Path(relative).name
++        directory = None
++        if name in ['category_descriptives.csv', 'category_contrasts.csv', 'bootstrap_summary.csv', 'CATEGORY_CURVES.csv']:
++            directory = self.statistics_dir
++        elif name == 'collection_scalars.csv':
++            directory = self.scalar_dir or self.statistics_dir
++        # An explicit scalar directory is a required override. A statistics-only
++        # run may omit scalar exports; that fallback is declared per table.
++        if directory is not None and ((directory / name).is_file() or directory == self.scalar_dir):
++            path = self.record(directory / name, ('scalars/' if directory == self.scalar_dir else 'statistics/') + name)
++            provenance=directory/'run_manifest.json'
++            self.table_sources[name]='supplied_export_unverified'
++            if provenance.is_file():
++                record=json.loads(provenance.read_text(encoding='utf-8'))
++                if (record.get('job') in ['supporting_main_manuscript','supporting_supplementary_information']
++                    and record.get('data_manifest_sha256')==h.sha256(self.root/'manifest.json')):
++                    expected=record.get('outputs',{}).get(name)
++                    if expected is None or expected!=h.sha256(path):
++                        raise ValueError('Calculation export checksum mismatch: '+name)
++                    self.record(provenance,('scalars/' if directory==self.scalar_dir else 'statistics/')+'run_manifest.json')
++                    self.table_sources[name]='verified_calculation_export'
++            native_provenance=directory/'JULIA_RUN_REPORT.json'
++            if native_provenance.is_file():
++                record=json.loads(native_provenance.read_text(encoding='utf-8'))
++                if (record.get('status')!='failed'
++                    and record.get('native_uncertainty_computed') is True
++                    and record.get('input_sha256',{}).get('manifest.json')==h.sha256(self.root/'manifest.json')):
++                    expected=record.get('output_sha256',{}).get(name)
++                    if expected is None or expected!=h.sha256(path):
++                        raise ValueError('Native calculation export checksum mismatch: '+name)
++                    self.record(native_provenance,'native_statistics/JULIA_RUN_REPORT.json')
++                    self.table_sources[name]='verified_native_calculation_export'
++        elif directory is not None and name != 'collection_scalars.csv':
++            raise FileNotFoundError(f'Missing required statistics export: {directory / name}')
++        else:
++            path = self.record(self.root / relative)
++            self.table_sources[name] = 'saved_reference' if relative.startswith('reference/') else 'frozen_observations'
++        return pd.read_csv(path, float_precision='round_trip')
++
++
++def _select(table, **criteria):
++    mask = np.ones(len(table), dtype=bool)
++    for column, value in criteria.items():
++        if column not in table:
++            raise ValueError(f'Missing column {column}')
++        mask &= table[column].eq(value).to_numpy()
++    return table.loc[mask]
++
++
++def _distributions(inputs, number):
++    obs = inputs.table('observations/selected_metric_observations.csv')
++    desc = inputs.table('reference/category_descriptives.csv')
++    counts = inputs.table('reference/CATEGORY_COUNTS.csv')
++    if number == 2:
++        fig, axes = plt.subplots(2, 3, figsize=(h.WIDTH, 7.4))
++        fig.subplots_adjust(left=.13, right=.98, bottom=.17, top=.81, wspace=.62, hspace=.85)
++        specs = [('all_channels', f, metric, label, None) for metric, label in
++                 [('sca550', r'Scattering (Mm$^{-1}$)'), ('sae', 'SAE (dimensionless)')] for f in h.FRACTIONS]
++        footer = '550 nm scattering and scattering Ångström exponent. All finite selected points.\nBoxes: 25th–75th percentiles; whiskers: 10th–90th; counts: collections.'
++    else:
++        fractions = h.FRACTIONS if number == 3 else ['superPM10']
++        fig, axes = plt.subplots(1, len(fractions), figsize=(h.WIDTH, 4.8 if number == 3 else 5.2), squeeze=False)
++        fig.subplots_adjust(left=.13, right=.98, bottom=.25, top=.70, wspace=.62)
++        specs = [('mass_only', f, 'mass', r'Mass ($\mu$g m$^{-3}$)', 1) for f in fractions]
++        footer = 'All finite valid mass observations. Boxes: IQR; whiskers: 10th–90th.\nSymmetric-log axes are linear within ±1 µg m$^{-3}$; counts: collections.'
++    h.category_legend(fig)
++    panels = []
++    for i, (ax, (cohort, fraction, metric, label, scale)) in enumerate(zip(axes.flat, specs)):
++        criteria = dict(cohort=cohort, fraction=fraction, metric=metric)
++        rows = _select(obs, **criteria)
++        if rows.empty:
++            raise ValueError(f'Missing observations for {cohort}:{fraction}:{metric}')
++        panels.append(h.distribution_panel(ax, rows, chr(97+i), h.PM[fraction], label,
++            f'{cohort}:{fraction}:{metric}', symlog=scale,
++            descriptives=_select(desc, **criteria), counts=_select(counts, cohort=cohort, fraction=fraction)))
++    fig.text(.02, .04 if number == 2 else .045, footer, fontsize=10)
++    return fig, {'panels': panels}
++
++
++def _scalars(inputs):
++    table = inputs.table('observations/collection_scalars.csv')
++    selected = table.selected.astype(str).str.lower()
++    if not selected.isin(['true', 'false', '1', '0']).all():
++        raise ValueError('Scalar selected must contain explicit Boolean values')
++    table = table.loc[selected.isin(['true', '1'])]
++    fig, axes = plt.subplots(3, 1, figsize=(h.WIDTH, 8.3))
++    fig.subplots_adjust(left=.15, right=.98, bottom=.14, top=.84, hspace=.80)
++    h.category_legend(fig)
++    panels = []
++    for i, (ax, adjustment, title) in enumerate(zip(axes, ['raw', 'month', 'month_hour'],
++        ['Raw supplied scalar', 'Calendar-month anomaly', 'Calendar-month + hour anomaly'])):
++        rows = _select(table, metric='S_acc', adjustment=adjustment)
++        panels.append(h.distribution_panel(ax, rows, chr(97+i), title,
++            r'$S_{acc}$ ($\mu$m$^2$ cm$^{-3}$)', f'S_acc:{adjustment}', symlog=1, scalar=True))
++    fig.text(.02, .03, 'Anomalies are calculated at native hourly resolution, then averaged over collections.\nDeclared original units; supplied scalar geometry and bin integration remain unverified.', fontsize=10)
++    return fig, {'panels': panels, 'adjustment': 'exported hourly anomalies; not recalculated by renderer'}
++
++
++def _spectra(inputs):
++    table = inputs.table('observations/CATEGORY_CURVES.csv')
++    counts, groups = {}, {}
++    if set(table.category) != set(h.CATS):
++        raise ValueError('Size curves must contain the four declared categories')
++    for category in h.CATS:
++        group = table.loc[table.category.eq(category)].sort_values('diameter_m')
++        n = group.n.to_numpy(dtype=float)
++        if not len(n) or not np.isfinite(n).all() or len(set(n)) != 1 or n[0] < 1 or n[0] != int(n[0]):
++            raise ValueError(f'Inconsistent collection count for {category}')
++        if group.diameter_m.duplicated().any() or not np.isfinite(group[['diameter_m', 'number']]).all().all():
++            raise ValueError(f'Invalid diameter bins or number values for {category}')
++        counts[category] = int(n[0])
++        diam, keep = h.convert_diameters(group.diameter_m.to_numpy())
++        groups[category] = (diam[keep]*1e6, group.number.to_numpy()[keep])
++    fig, axes = plt.subplots(3, 2, figsize=(h.WIDTH, 9.0))
++    fig.subplots_adjust(left=.14, right=.98, bottom=.16, top=.85, wspace=.47, hspace=.72)
++    h.category_legend(fig, counts)
++    for row, (symbol, power) in enumerate([('N', 0), ('A', 2), ('V', 3)]):
++        for col in range(2):
++            ax, high = axes[row, col], 0.
++            for category, color, fill in zip(h.CATS, h.COLORS, h.FILLS):
++                x, number = groups[category]
++                y = number if symbol == 'N' else number*(np.pi*x*x/4 if symbol == 'A' else np.pi*x**3/6)
++                visible = x >= 1 if col else np.ones(len(x), dtype=bool)
++                if not len(x) or not visible.any():
++                    raise ValueError(f'No visible size bins for {category}')
++                high = max(high, float(y[visible].max()))
++                ax.scatter(x, y, s=6, facecolor=fill, edgecolor=color, linewidth=.3, zorder=2)
++                ax.plot(x, y, color=color, linewidth=1.4, zorder=4)
++            ax.set_xscale('log')
++            ax.set_xlim((.003, 15) if col == 0 else (1, 15))
++            ax.set_xticks([.01, .1, 1, 10] if col == 0 else [1, 2, 5, 10, 15],
++                          ['0.01', '0.1', '1', '10'] if col == 0 else ['1', '2', '5', '10', '15'])
++            ax.set_ylim(0, high*1.12 if high > 0 else 1)
++            ax.set_ylabel(rf'$\mathrm{{d{symbol}/d\log_{{10}}D_p}}$'+'\n'+('cm$^{-3}$' if power == 0 else rf'$\mu$m$^{power}$ cm$^{{-3}}$'))
++            ax.set_xlabel(r'Equivalent diameter ($\mu$m)')
++            h.axes_style(ax)
++            h.panel_title(ax, chr(97+row*2+col), ['Number', 'Cross-sectional area', 'Volume'][row]+(' — zoom' if col else ''))
++    fig.text(.02, .04, 'Equal collection weights; no curve confidence bands. APS conversion: density 1.5 g cm$^{-3}$.\nMerge at 0.6 µm equivalent diameter. APS retained only to 15 µm aerodynamic diameter.\nPer-log normalization is adopted from station metadata; particle geometry remains an assumption.', fontsize=10)
++    from tick_format import match_size_ticks
++    match_size_ticks(fig, h.DPI)
++    return fig, {'category_counts': counts, 'diameter_conversion': 'APS >=777 nm divided once by sqrt(1.5); merge 0.6 um equivalent; upper 15 um native aerodynamic',
++                 'area_definition': 'projected spherical cross-section N*pi*D_um^2/4; not total spherical surface',
++                 'bins_retained': {c: len(groups[c][0]) for c in h.CATS}}
++
++
++def replacement_data(summary, contrasts):
++    """Reverse saved B-minus-event estimates, bounds and category counts."""
++    year = _select(contrasts, cohort='all_channels', metric='sca550', category_a='background').copy()
++    year = year.loc[year.category_b.isin(h.CATS[1:])].copy()
++    year['contrast'] = year.category_b.map(dict(zip(h.CATS[1:], CONTRASTS)))
++    year['cliffs_delta'] = -year.cliffs_delta
++    low = -year.delta_ci_high.copy()
++    year['delta_ci_high'] = -year.delta_ci_low
++    year['delta_ci_low'] = low
++    old_a = year.n_a.copy()
++    year['n_a'], year['n_b'] = year.n_b, old_a
++    year['method'] = 'whole_year_reference'
++    chosen = _select(summary, cohort='all_channels', metric='sca550')
++    chosen = chosen.loc[chosen.method.isin([x[0] for x in METHODS[1:]]) & chosen.contrast.isin(CONTRASTS)]
++    return pd.concat([year, chosen], ignore_index=True)
++
++
++def _effects(inputs):
++    summary = inputs.table('reference/bootstrap_summary.csv')
++    table = replacement_data(summary, inputs.table('reference/category_contrasts.csv'))
++    fig, axes = plt.subplots(1, 3, figsize=(h.WIDTH, 5.9))
++    panels = []
++    for fraction, ax, letter in zip(h.FRACTIONS, axes, 'abc'):
++        h.axes_style(ax)
++        ax.grid(axis='y', color='#E1E1E1', linestyle='-', linewidth=.6, zorder=0)
++        ax.axvline(0, color='#777777', linewidth=.8, linestyle='--', zorder=1)
++        estimates = []
++        for y, (contrast, color) in enumerate(zip(CONTRASTS, h.COLORS[1:])):
++            counts = []
++            for method, marker, offset, _ in METHODS:
++                found = _select(table, fraction=fraction, contrast=contrast, method=method)
++                if len(found) != 1:
++                    raise ValueError(f'Expected one row for {fraction}:{contrast}:{method}')
++                r = found.iloc[0]
++                low, high, point = map(float, [r.delta_ci_low, r.delta_ci_high, r.cliffs_delta])
++                if np.isfinite(low) and np.isfinite(high):
++                    if low > high or low < -1 or high > 1:
++                        raise ValueError('Invalid saved Cliff interval')
++                    ax.plot([low, high], [y+offset]*2, color=color, linewidth=1.25, zorder=3)
++                if np.isfinite(point):
++                    if abs(point) > 1:
++                        raise ValueError('Invalid Cliff effect')
++                    ax.plot([point], [y+offset], marker=marker, markerfacecolor='white' if method == 'whole_year_reference' else color,
++                            markeredgecolor=color, markersize=5, linestyle='none', zorder=5)
++                counts.append(f'{int(r.n_a)} / {int(r.n_b)}')
++                estimates.append(dict(contrast=contrast, method=method, cliffs_delta=point if np.isfinite(point) else None,
++                    delta_ci_low=low if np.isfinite(low) else None, delta_ci_high=high if np.isfinite(high) else None,
++                    n_a=int(r.n_a), n_b=int(r.n_b), interval_available=bool(np.isfinite([low, high]).all())))
++                if not np.isfinite([low, high]).all():
++                    ax.text(.98, y+offset, 'CI unavailable', transform=ax.get_yaxis_transform(), ha='right', fontsize=8)
++            label = counts[0] if len(set(counts)) == 1 else 'year '+counts[0]+'; duration '+counts[1]+'; adjusted '+counts[2]
++            ax.text(1.01, y+.42, label, transform=ax.get_yaxis_transform(), ha='right', va='top', fontsize=9)
++        ax.set_yticks(range(3), LABELS)
++        ax.set_ylim(2.82, -.48)
++        ax.set_xlim(-1.04, 1.04)
++        ax.set_xticks([-1, 0, 1])
++        ax.set_xlabel("Cliff's delta")
++        ax.set_title(f'({letter})  {h.PM[fraction]}', loc='left', weight='normal')
++        panels.append({'fraction': fraction, 'estimates': estimates})
++    handles = [Line2D([], [], marker=marker, linestyle='none', color='black',
++        markerfacecolor='white' if method == 'whole_year_reference' else 'black', markersize=5, label=label)
++        for method, marker, _, label in METHODS]
++    fig.legend(handles=handles, loc='upper left', bbox_to_anchor=(.015, .97), frameon=False, ncol=1,
++               fontsize=10, title='550 nm scattering: uncertainty sensitivity')
++    fig.subplots_adjust(left=.12, right=.97, bottom=.31, top=.69, wspace=.70)
++    fig.text(.02, .14, 'Collection category: B background; P plant material only; D dust only; P+D both.\nPositive delta: first category tends to be higher. Numbers: first / background n.', fontsize=10, linespacing=1.)
++    fig.text(.02, .045, 'Nominal 95% intervals; pointwise, not causal or simultaneous.\nRaw methods use identical measurements. Month adjustment changes the comparison.', fontsize=10, linespacing=1.)
++    return fig, {'panels': panels, 'interval_sources': {name: inputs.table_sources[name]
++                 for name in ['bootstrap_summary.csv', 'category_contrasts.csv']}}
++
++
++def _schematic(inputs):
++    """Preserve the exact author-supplied manuscript flowchart, with pollen checks."""
++    pollen_files=[inputs.root/'observations/pollen_bins.csv',
++                  inputs.root/'observations/pollen_cases.csv',
++                  inputs.root/'reference/pollen_corroboration.csv']
++    corroboration={'pollen_counts_recomputed':False}
++    if any(p.exists() for p in pollen_files):
++        if not all(p.is_file() for p in pollen_files):
++            raise ValueError('Incomplete pollen corroboration inputs for Figure 1')
++        from pollen_corroboration import calculate,read_csv,verify_reference
++        for path in pollen_files:
++            inputs.record(path)
++        rows,counts=calculate(read_csv(pollen_files[0]),read_csv(pollen_files[1]))
++        verify_reference(rows,read_csv(pollen_files[2]))
++        corroboration={'pollen_counts_recomputed':True,'pollen_corroboration':counts}
++    path = inputs.record(ASSETS / 'manuscript_flowchart.png', 'codes/assets/manuscript_flowchart.png')
++    payload = path.read_bytes()
++    if hashlib.sha256(payload).hexdigest() != '758441e4dcbd98788cf03024e3acd2c4f3bf0ec1c131d9238936aeed4b900c8e':
++        raise ValueError('Manuscript flowchart checksum does not match the author-supplied image')
++    return payload, {'mode': 'fixed_schematic_bitmap',
++                     'description': 'Exact author-supplied manuscript Figure 1; no redraw or resampling',
++                     'source_archive': 'manuscripts_significant_figures_20261019.zip',
++                     'source_member': 'figures/main/figure_1.png', **corroboration}
++
++
++def _preflight(data_dir, output_dir, figures):
++    figures = list(range(1, 9)) if figures is None else list(figures)
++    if not figures or any(type(n) is not int or n not in range(1, 9) for n in figures) or len(set(figures)) != len(figures):
++        raise ValueError('Select unique figure numbers from 1 through 8')
++    data_dir, output_dir = Path(data_dir).resolve(), Path(output_dir).resolve()
++    if output_dir.is_relative_to(data_dir) or data_dir.is_relative_to(output_dir):
++        raise ValueError('Output directory must be separate from the input data tree')
++    for name in ['run_manifest.json'] + [f'figure_{n}.png' for n in figures]:
++        if (output_dir / name).exists():
++            raise FileExistsError(f'Refusing to overwrite {output_dir / name}; choose a fresh output directory')
++    return figures, output_dir
++
++
++def _pollen_mass(inputs):
++    from pollen_corroboration import calculate, mass_normalized, read_csv
++    paths = [inputs.record(inputs.root / name) for name in
++             ['observations/pollen_bins.csv', 'observations/pollen_cases.csv', 'observations/intervals.csv']]
++    rows, coverage = calculate(read_csv(paths[0]), read_csv(paths[1]))
++    values, excluded = mass_normalized(rows, read_csv(paths[2]))
++    if not values:
++        raise ValueError('No fully pollen-covered collections with valid parent masses')
++    fig, ax = plt.subplots(figsize=(h.WIDTH, 4.3))
++    fig.subplots_adjust(left=.16, right=.98, bottom=.19, top=.79)
++    colors = ['#365f80', '#28896f', '#9b63a8']
++    blocks = sorted({r['source_block'] for r in values})
++    for i, block in enumerate(blocks):
++        selected = [(j+1, r['pollen_grains_per_g_pm']/1e6) for j,r in enumerate(values) if r['source_block']==block]
++        ax.scatter(*zip(*selected), s=55, color=colors[i % len(colors)], label=f'Sampling block {block}')
++    ax.set_xticks(range(1,len(values)+1), [f'P{i+1}' for i in range(len(values))])
++    ax.set_xlabel('Fully pollen-covered collection (2011)')
++    ax.set_ylabel('Pollen grains per gram of measured PM\n($10^6$ grains g$^{-1}$)')
++    ax.set_ylim(bottom=0)
++    ax.grid(axis='y', color='#e1e1e1')
++    ax.set_axisbelow(True)
++    fig.legend(*ax.get_legend_handles_labels(), loc='upper center', bbox_to_anchor=(.55,.98),
++               frameon=False, ncol=3, fontsize=10)
++    return fig, dict(collections=values, excluded=excluded, coverage=coverage,
++        formula='1e6 * pollen_mean / (mass_pm10 + mass_super_pm10)',
++        units='grains g^-1 of measured PM',
++        scope='Descriptive ratio from separate pollen and gravimetric samplers on matched collection periods; not a mass fraction or grains per gram of deposit.')
++
++
++def render(data_dir: Path, output_dir: Path, figures=None, statistics_dir=None, scalar_dir=None):
++    """Render selected current figures, refusing to replace outputs or manifests.
++
++    Returns the JSON-serializable manifest also saved as run_manifest.json.
++    Paths in the manifest are relative to the data directory or package assets.
++    """
++    figures, output_dir = _preflight(data_dir, output_dir, figures)
++    release = verify_data(data_dir)
++    inputs = Inputs(data_dir, statistics_dir, scalar_dir)
++    inputs.record(inputs.root / 'manifest.json')
++    for directory in [inputs.statistics_dir, inputs.scalar_dir]:
++        if directory is not None and (output_dir.is_relative_to(directory) or directory.is_relative_to(output_dir)):
++            raise ValueError('Output and statistics/scalar exports must be separate, non-nested paths')
++    # prepare_output also rejects unrelated files, not just our named products.
++    output_dir = prepare_output(output_dir, data_dir)
++    settings, font_name = h.style_settings(ASSETS / 'fonts/lmroman12-regular.otf')
++    font_path = ASSETS / 'fonts/lmroman12-regular.otf'
++    if font_path.is_file():
++        inputs.record(font_path, 'codes/assets/fonts/lmroman12-regular.otf')
++    manifest = {'document': 'main_manuscript', 'reproducibility_level': 'frozen-observation-and-derived-table rendering',
++        'bootstrap_intervals': 'not displayed',
++        'raw_measurement_reprocessing': False, 'figures': [], 'inputs': inputs.records,
++        'font': font_name, 'bundled_font_used': font_path.is_file(), 'dpi': h.DPI,
++        'release': release.get('release'), 'data_checksums_verified': True,
++        'verified_data_file_count': len(release['files']), 'table_sources': inputs.table_sources,
++        'intended_width_mm': 164, 'effective_font_pt_at_intended_width': 10,
++        'software': {'python': sys.version.split()[0], 'numpy': np.__version__, 'pandas': pd.__version__, 'matplotlib': matplotlib.__version__}}
++    rendered = []
++    # Prepare and validate every figure before creating persistent output files.
++    with matplotlib.rc_context(settings):
++        existing_figures = set(plt.get_fignums())
++        try:
++            for number in figures:
++                if number == 1:
++                    payload, record = _schematic(inputs)
++                else:
++                    if number in [2, 3, 4]:
++                        fig, record = _distributions(inputs, number)
++                    elif number == 5:
++                        fig, record = _scalars(inputs)
++                    elif number == 6:
++                        fig, record = _pollen_mass(inputs)
++                    elif number == 7:
++                        fig, record = _spectra(inputs)
++                    else:
++                        fig, record = _effects(inputs)
++                    buffer = io.BytesIO()
++                    fig.savefig(buffer, format='png', dpi=h.DPI)
++                    payload = buffer.getvalue()
++                    plt.close(fig)
++                    record['mode'] = 'native_matplotlib'
++                if number == 8:
++                    source = inputs.table_sources['bootstrap_summary.csv']
++                    manifest['bootstrap_intervals'] = (
++                        'saved reference intervals; not recomputed' if source=='saved_reference' else
++                        'recomputed statistics exports with verified input/output provenance; renderer reads intervals' if source in ['verified_calculation_export','verified_native_calculation_export'] else
++                        'supplied statistics exports; calculation provenance unverified')
++                record.update(number=number, file=f'figure_{number}.png', sha256=hashlib.sha256(payload).hexdigest())
++                manifest['figures'].append(record)
++                rendered.append((record['file'], payload))
++        finally:
++            for number in set(plt.get_fignums()) - existing_figures:
++                plt.close(number)
++    # Exclusive creation also protects against concurrent invocations.
++    with ExitStack() as stack:
++        manifest_file = stack.enter_context((output_dir / 'run_manifest.json').open('x', encoding='utf-8'))
++        handles = [(stack.enter_context((output_dir / name).open('xb')), payload) for name, payload in rendered]
++        for handle, payload in handles:
++            handle.write(payload)
++        json.dump(manifest, manifest_file, indent=2, ensure_ascii=False, allow_nan=False)
++        manifest_file.write('\n')
++        if 6 in figures:
++            import csv
++            from pollen_corroboration import MASS_FIELDS
++            record = next(r for r in manifest['figures'] if r['number']==6)
++            with (output_dir/'pollen_grains_per_gram.csv').open('x', encoding='utf-8', newline='') as stream:
++                writer = csv.DictWriter(stream, fieldnames=MASS_FIELDS, extrasaction='ignore')
++                writer.writeheader()
++                writer.writerows(record['collections'])
++    return manifest
++
++
++def cli(argv=None):
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--data-dir', type=Path, required=True, help='Extracted data directory')
++    parser.add_argument('--output-dir', type=Path, required=True, help='Fresh output directory; existing files are protected')
++    parser.add_argument('--figure', type=int, choices=range(1, 9), action='append', help='Figure number; repeat to select several (default: all eight)')
++    parser.add_argument('--statistics-dir', type=Path, help='Recomputed category_descriptives, category_contrasts and bootstrap_summary CSV exports')
++    parser.add_argument('--scalar-dir', type=Path, help='Recomputed SI collection_scalars.csv directory (overrides statistics-dir scalar selection)')
++    args = parser.parse_args(argv)
++    manifest = render(args.data_dir, args.output_dir, args.figure, args.statistics_dir, args.scalar_dir)
++    print(f"Rendered {len(manifest['figures'])} figures; manifest: {args.output_dir / 'run_manifest.json'}")
++    return 0
++
++
++if __name__ == '__main__':
++    raise SystemExit(cli())
+--- a/README.md
++++ b/README.md
+@@ -214,3 +214,8 @@
+ 
+ 
+ 2026-10-19 revision: eight current main figures. Figure 6 recomputes pollen grains per gram of measured PM from complete pollen coverage and matched PM10 plus super-PM10 masses. Figures 7 and 8 are the unchanged size and uncertainty plots. The original frozen validation reports describe earlier versions.
++
++
++2026-10-19 display revision: current main Figure 7 uses the manuscript mathematical tick formatter and axis-title clearance. The six-panel number, projected-area and volume figure matches the manuscript pixels. Observations, selection, diameter conversion, curve values and uncertainty calculations are unchanged.
++
++Optional historical curve redraw: python python_codes/style_size_distributions.py --inputs ../additional_figures/style_inputs --output NEW_DIRECTORY. Uses exact original saved curve tables; six supplied heatmaps and the original HYY/Turku comparison raster remain archival originals because their exact generator/data were not recovered.
+--- a/release.json
++++ b/release.json
+@@ -1,8 +1,8 @@
+-{
+-  "code_release": "20261019-r3",
+-  "required_data_release": "20261015",
+-  "visibility": "public",
+-  "public_deposit": false,
+-  "independent_uncertainty_verification": "Read the language-specific scope and validation reports.",
+-  "presentation_revision": "Eight current main figures including pollen grains per gram as Figure 6; existing scientific estimates unchanged."
+-}
++{
++  "code_release": "20261019-r6",
++  "required_data_release": "20261015",
++  "visibility": "public",
++  "public_deposit": false,
++  "independent_uncertainty_verification": "Read the language-specific scope and validation reports.",
++  "presentation_revision": "Manuscript Figure 7 mathematical tick labels; numerical calculations unchanged."
++}
+--- a/python_codes/number_format_snapshot.py
++++ b/python_codes/number_format_snapshot.py
+@@ -0,0 +1,19 @@
++"""Display-only formatter; calculations and source data are not modified."""
++from decimal import Decimal, ROUND_HALF_UP, localcontext
++
++
++def display_number(value):
++    number = Decimal(str(value))
++    if not number.is_finite():
++        raise ValueError('A displayed result must be finite')
++    if number.is_zero():
++        return '0'
++    with localcontext() as ctx:
++        ctx.prec = max(50, len(number.as_tuple().digits) + 5)
++        quantum = Decimal(1).scaleb(number.copy_abs().adjusted() - 2)
++        rounded = number.quantize(quantum, rounding=ROUND_HALF_UP)
++        exponent = rounded.copy_abs().adjusted()
++        if -2 <= exponent < 3:
++            return format(rounded, f'.{max(0, 2 - exponent)}f')
++        coefficient = rounded.scaleb(-exponent)
++        return rf'{coefficient:.2f}\times10^{{{exponent}}}'
+--- a/python_codes/tick_format.py
++++ b/python_codes/tick_format.py
+@@ -0,0 +1,37 @@
++"""Compact exact-grid labels using the approved decimal HALF_UP formatter."""
++from number_format_snapshot import display_number
++
++
++def compact(value):
++    return value.rstrip('0').rstrip('.') if '.' in value else value
++
++
++def tick_label(value, position=None):
++    label = display_number(value)
++    if r'\times' in label:
++        coefficient, power = label.split(r'\times', 1)
++        return '$' + compact(coefficient) + r'\times' + power + '$'
++    return compact(label)
++
++
++def match_size_ticks(fig, dpi):
++    """Use the manuscript's mathematical number-axis labels and title clearance."""
++    from matplotlib.ticker import FuncFormatter
++    fig.set_dpi(dpi)
++    fig.canvas.draw()
++    ax = fig.axes[0]
++    axis = ax.yaxis
++    x, y = axis.label.get_position()
++    axis.set_label_coords(x, y, transform=axis.label.get_transform())
++    axis.set_major_formatter(FuncFormatter(tick_label))
++    fig.canvas.draw()
++    title_box = axis.label.get_window_extent(fig.canvas.get_renderer())
++    ticks = [t for t, value in zip(ax.get_yticklabels(), ax.get_yticks())
++             if ax.get_ylim()[0] <= value <= ax.get_ylim()[1]]
++    tick_left = min(t.get_window_extent(fig.canvas.get_renderer()).x0 for t in ticks)
++    shift = max(0.0, title_box.x1 - tick_left + 8.0)
++    transform = axis.label.get_transform()
++    location = transform.transform(axis.label.get_position())
++    location[0] -= shift
++    x, y = transform.inverted().transform(location)
++    axis.set_label_coords(x, y, transform=transform)
+--- a/python_codes/style_size_distributions.py
++++ b/python_codes/style_size_distributions.py
+@@ -0,0 +1,111 @@
++"""Restyle saved historical size curves without recalculating their selection."""
++import argparse
++import hashlib
++import json
++from pathlib import Path
++import numpy as np
++import pandas as pd
++import matplotlib.pyplot as plt
++from matplotlib.ticker import FuncFormatter
++import plot_helpers as h
++from tick_format import tick_label
++
++SPECS = [
++    ('archive_87e47254ed07','PM1-10','PM1-10',True),
++    ('archive_c8b91b6d34bf','PM1','PM1',True),
++    ('archive_c716d286e5a3','PM10','PM10',True),
++    ('archive_eac5ace40a7c','all_collections','all_collections',True),
++    ('archive_0ff38bca8541','superPM10','superPM10',True),
++    ('archive_9a0993e7af7e',None,'FOUR_CATEGORY_DISTRIBUTIONS',True),
++]
++
++
++def array_hash(values):
++    return hashlib.sha256(np.asarray(values,dtype='float64').tobytes()).hexdigest()
++
++
++def render(inputs, output):
++    inputs,output=Path(inputs),Path(output)
++    if output.exists() and any(output.iterdir()):
++        raise ValueError('Choose a fresh output directory')
++    output.mkdir(parents=True,exist_ok=True)
++    source_manifest=json.loads((inputs/'manifest.json').read_text())
++    tables={}
++    for name in ('category_cohort_curves.csv','full_selection_curves.csv'):
++        data=(inputs/name).read_bytes()
++        if hashlib.sha256(data).hexdigest()!=source_manifest['files'][name]:
++            raise ValueError('Changed saved curve table: '+name)
++        tables[name]=pd.read_csv(inputs/name,float_precision='round_trip')
++    settings,font=h.style_settings(Path(__file__).resolve().parents[1]/'assets/fonts/lmroman12-regular.otf')
++    report=dict(style='Current manuscript typography, colours, markers and line layering',
++                saved_values_recalculated=False,font=font,figures=[])
++    with plt.rc_context(settings):
++        for identity,cohort,stem,pdf in SPECS:
++            table=tables['full_selection_curves.csv'] if cohort is None else tables['category_cohort_curves.csv']
++            if cohort is not None:table=table.loc[table.mass_cohort.eq(cohort)]
++            if set(table.category)!=set(h.CATS):raise ValueError('Missing category')
++            counts={}; groups={}
++            for category in h.CATS:
++                group=table.loc[table.category.eq(category)].sort_values('diameter_m')
++                if group.diameter_m.duplicated().any() or not np.isfinite(group[['diameter_m','number','surface','volume']]).all().all():
++                    raise ValueError('Invalid saved curve')
++                if group.n.nunique()!=1:raise ValueError('Ambiguous collection count')
++                groups[category]=group
++                counts[category]=int(group.n.iloc[0])
++            fig,axes=plt.subplots(3,2,figsize=(h.WIDTH,9.0))
++            fig.subplots_adjust(left=.16,right=.98,bottom=.17,top=.85,wspace=.53,hspace=.76)
++            h.category_legend(fig,counts)
++            values=[]
++            for row,(field,symbol,power,title) in enumerate([
++                ('number','N',0,'Number'),('surface','S',2,'Sphere surface area'),('volume','V',3,'Volume')]):
++                for col in range(2):
++                    ax=axes[row,col];high=0.;low_diam=[];high_diam=[]
++                    for category,color,fill in zip(h.CATS,h.COLORS,h.FILLS):
++                        group=groups[category]
++                        x=group.diameter_m.to_numpy()*1e6
++                        y=group[field].to_numpy()
++                        visible=x>=.777 if col else np.ones(len(x),dtype=bool)
++                        if not visible.any():raise ValueError('Empty zoom')
++                        ax.scatter(x[visible],y[visible],s=6,facecolor=fill,edgecolor=color,linewidth=.3,zorder=2)
++                        line,=ax.plot(x[visible],y[visible],color=color,linewidth=1.4,zorder=4)
++                        assert np.array_equal(line.get_ydata(),y[visible])
++                        assert np.array_equal(line.get_xdata()/1e6,x[visible]/1e6)
++                        high=max(high,float(y[visible].max()));low_diam.append(x.min());high_diam.append(x.max())
++                        values.append(dict(panel=chr(97+row*2+col),category=category,
++                            saved_y_sha256=array_hash(y[visible]),plotted_y_sha256=array_hash(line.get_ydata()),
++                            points=int(visible.sum())))
++                    ax.set_xscale('log')
++                    ticks=[1,2,5,10] if col else [.01,.1,1,10]
++                    ax.set_xticks(ticks,[f'{v:g}' for v in ticks])
++                    ax.set_xlim((.777 if col else min(low_diam)),max(high_diam))
++                    ax.set_ylim(0,high*1.12 if high else 1)
++                    ax.yaxis.set_major_formatter(FuncFormatter(tick_label))
++                    units='cm$^{-3}$' if not power else rf'$\mu$m$^{power}$ cm$^{{-3}}$'
++                    ax.set_ylabel(rf'$\mathrm{{d{symbol}/d\log D_p}}$'+'\n'+units)
++                    ax.set_xlabel(r'Diameter ($\mu$m)')
++                    h.axes_style(ax)
++                    h.panel_title(ax,chr(97+row*2+col),title+(' — zoom' if col else ''))
++            if cohort is None:
++                cohort_name='Size-available collections'
++            elif cohort=='all_collections':
++                cohort_name='Original mass-availability selection: all collections'
++            else:
++                cohort_name='Original mass-availability selection: '+h.PM[cohort]
++            fig.text(.02,.055,cohort_name+'\nSaved numerical curves and original diameter treatment; no new density conversion.\n'+r'Surface area retains the original sphere definition ($\pi D^{2}$), distinct from projected area ($\pi D^{2}/4$).',fontsize=9)
++            destination=output/identity;destination.mkdir()
++            fig.savefig(destination/(stem+'.png'),dpi=h.DPI)
++            if pdf:fig.savefig(destination/(stem+'.pdf'),dpi=h.DPI)
++            report['figures'].append(dict(id=identity,cohort=cohort,counts=counts,series=values,
++                files=[dict(name=p.name,sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in sorted(destination.iterdir())]))
++            plt.close(fig)
++    (output/'STYLE_MANIFEST.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
++    return report
++
++
++if __name__=='__main__':
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--inputs',type=Path,required=True)
++    parser.add_argument('--output',type=Path,required=True)
++    args=parser.parse_args()
++    result=render(args.inputs,args.output)
++    print('Restyled',len(result['figures']),'saved historical curve figures; every plotted ordinate matches its table.')

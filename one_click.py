@@ -21,7 +21,7 @@ from reviewer import run_full, notebook_gallery
 INTRO = '''<h1>Run the manuscript analysis</h1>
 <p>This Python code accompanies the manuscript and its supplementary information.
 Click <strong>Run full analysis</strong> below to recalculate the current analyses
-and open the complete figure gallery. Archived figures are included in their original form.</p>
+and open the complete figure gallery. Historical figures retain their original methods and cohorts.</p>
 <p><strong>Estimated calculation time: 10–30 minutes, depending on the Binder server.</strong>
 Initial startup may take a few minutes. The first run downloads and verifies the supplied archives before calculation.
 The calculation runs on Binder’s servers;

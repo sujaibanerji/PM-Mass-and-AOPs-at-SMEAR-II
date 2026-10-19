@@ -1,8 +1,18 @@
+# Presentation revision r6 - 19 October 2026
+
+The fresh subscript check covers 52 manuscript/SI pages, 88 figure PDFs and 553 glyphs with no unresolved candidates. Main/SI PDFs are unchanged; prose now uses AE33₆₆₀ and MAAP₆₃₇. The current number/area/volume figure is pixel-identical to manuscript Figure 7. Six historical curve figures have matching manuscript styling in both PNG and PDF; every one of 144 plotted series matches its saved CSV. Six PDF pages were rendered and checked for clipping and missing glyphs.
+
+The final code/additional-figure archives passed fresh extraction, hash verification and complete saved-input gallery rendering (131 figures, 282 assets). Scientific tests: 54 passed. Launcher tests: 37 passed. Thirteen image assets change; the other 269 retain their bytes. All numerical CSVs, production logs, original requirements and processed observations remain unchanged. The new historical renderer and its exact two CSV inputs are included for reproducibility.
+
+Seven supplied rasters remain unchanged: six number/area/volume event heatmaps and the older HYY/Turku comparison. Their exact source scripts and plotted tables were not recovered. These exceptions are explicit in the gallery; the complete size-plot style request is therefore only partially fulfilled. No new full numerical run is claimed: the actual 10.0-minute MyBinder baseline remains commit `fd08ceca941a26e49c6599491babe70d1a3e934f`. See [PRESENTATION_VALIDATION.json](PRESENTATION_VALIDATION.json) and [audit/size_style_revision.json](audit/size_style_revision.json).
+
+## Earlier presentation and numerical acceptance records
+
 The superscript check is recorded in [SUPERSCRIPT_VALIDATION.json](SUPERSCRIPT_VALIDATION.json). Main/SI PDFs and scientific results are unchanged; gallery prose and calibration documentation now use raised exponents.
 
 The subscript formatting revision is documented in [SUBSCRIPT_VALIDATION.json](SUBSCRIPT_VALIDATION.json). It reuses the verified full-production results below; only gallery display markup changes.
 
-# Current revision
+# Earlier pollen revision
 
 The eight-main-figure revision has 131 figures and 282 assets. The actual button completed five production jobs in 598.1 s (10.0 min), including first-run preparation, at `fd08ceca941a26e49c6599491babe70d1a3e934f`. All production reference checks, seven pollen ratios, 282 asset checksums and all portable gallery links passed. All earlier 281 assets remain byte-identical after figure renumbering. The tested environment has Python3.12.14 and original pins; no OOM kill occurred. See [POLLEN_VALIDATION.json](POLLEN_VALIDATION.json) for separate acceptance. Reports below describe their pinned earlier versions.
 

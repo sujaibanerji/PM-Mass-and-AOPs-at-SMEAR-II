@@ -1,0 +1,185 @@
+{
+  "status": "passed",
+  "version": "2026.10.19-r6",
+  "presentation_only": true,
+  "scientific_jobs_rerun": false,
+  "scientific_full_analysis_baseline_commit": "fd08ceca941a26e49c6599491babe70d1a3e934f",
+  "subscript_check": {
+    "paper_pages": 52,
+    "paper_tokens": 166,
+    "all_PDF_tokens": 553,
+    "unresolved_candidates": 0,
+    "gallery_subscripts": 126,
+    "main_and_SI_PDFs_unchanged": true,
+    "PDF_hashes": {
+      "main_manuscript.pdf": "34a103758756cb14fb5afb6ff2c6a420018bf9d708fc7dd421ddd75fa1859197",
+      "supplementary_information.pdf": "cfa8bc82def7acde9d4124cfefdbab4063f0c8205ba5c791c80b05f61d6ae1c0"
+    },
+    "documentation_correction": "AE33₆₆₀ and MAAP₆₃₇ wavelength indices; literal input column names preserved"
+  },
+  "current_size_figure": {
+    "status": "passed",
+    "manuscript_figure": 7,
+    "dimensions": [
+      2711,
+      3150
+    ],
+    "pixel_identical_to_main_manuscript": true,
+    "byte_identical_to_main_manuscript": false,
+    "geometry_arrays_styles_axes_ticks_unchanged": true,
+    "category_counts": {
+      "background": 1454,
+      "plant_only": 71,
+      "dust_only": 19,
+      "plant_and_dust": 5
+    },
+    "manuscript_sha256": "f93bb9d32b270378d870b0e95e5645894170e8ecf87d38f17417cc662f92674e",
+    "rendered_sha256": "a32860627dd78c257c921fe94f72485dc48c4e89b88445a058f7e0a4a7829ebc",
+    "formatter_uses_original_manuscript_round_half_up": true,
+    "new_labels": [
+      "0",
+      "$1\\times10^{3}$",
+      "$2\\times10^{3}$",
+      "$3\\times10^{3}$"
+    ],
+    "full_scientific_calculation_rerun": false
+  },
+  "figures": 131,
+  "image_assets": 282,
+  "unchanged_image_assets": 269,
+  "gallery_changed_members": [
+    "figures/archive_0ff38bca8541/superPM10.pdf",
+    "figures/archive_0ff38bca8541/superPM10.png",
+    "figures/archive_87e47254ed07/PM1-10.pdf",
+    "figures/archive_87e47254ed07/PM1-10.png",
+    "figures/archive_9a0993e7af7e/FOUR_CATEGORY_DISTRIBUTIONS.pdf",
+    "figures/archive_9a0993e7af7e/FOUR_CATEGORY_DISTRIBUTIONS.png",
+    "figures/archive_c716d286e5a3/PM10.pdf",
+    "figures/archive_c716d286e5a3/PM10.png",
+    "figures/archive_c8b91b6d34bf/PM1.pdf",
+    "figures/archive_c8b91b6d34bf/PM1.png",
+    "figures/archive_eac5ace40a7c/all_collections.pdf",
+    "figures/archive_eac5ace40a7c/all_collections.png",
+    "figures/main_7/figure_7.png",
+    "index.html",
+    "manifest.json",
+    "provenance/1_run_manifest.json"
+  ],
+  "analysis_changed_existing_members": [
+    "analysis/python/main_manuscript/figure_7.png",
+    "analysis/python/main_manuscript/run_manifest.json"
+  ],
+  "all_numerical_CSVs_and_production_logs_byte_identical": true,
+  "shipped_code_changed_members": [
+    "python_codes/figure_renderer.py",
+    "README.md",
+    "release.json",
+    "python_codes/number_format_snapshot.py",
+    "python_codes/tick_format.py",
+    "python_codes/style_size_distributions.py"
+  ],
+  "original_requirements_bytes_unchanged": true,
+  "historical_scope_reference_corrected": "Current projected-area comparison is Figure 7.",
+  "historical_curve_figures_restyled": 6,
+  "historical_series_checked": 144,
+  "source_table_bytes_unchanged": true,
+  "data_archive_unchanged": true,
+  "additional_figures_archive_unchanged": false,
+  "all_style_source_inputs_included": true,
+  "historical_logarithm_base_not_reinterpreted": true,
+  "unredrawn_supplied_raster_figures": [
+    "archive_ccb7f1102286",
+    "archive_3774b883e8fc",
+    "archive_e59253c1fe2a",
+    "archive_51229fe0ee5d",
+    "archive_6a66b19438b4",
+    "archive_ba5a019c6745",
+    "archive_153b98d04609"
+  ],
+  "unredrawn_reason": "Exact generator and plotted numerical tables unavailable; project and linked-source searches did not recover them; author does not remember their location.",
+  "all_number_area_volume_styles_complete": false,
+  "archive_dependencies": {
+    "codes": {
+      "filename": "codes.zip",
+      "bytes": 2311717,
+      "sha256": "ece1e31e61aa60a12c2802df7e421e471fd314eb20616d06ccb4f7714697795c",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-size-format/codes.zip"
+    },
+    "data": {
+      "filename": "data.zip",
+      "bytes": 374791899,
+      "sha256": "7eb650fb02b403430cf8f55f234311112573f56b781386f96890ffe2cd555826",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-pollen/data.zip"
+    },
+    "additional_figures": {
+      "filename": "additional_figures.zip",
+      "bytes": 40841226,
+      "sha256": "e77b2a4eb25514d4f7c3c9c3c3d46c9ef0e31001dbaf0a556fad5ed79f96e9fb",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-size-format/additional_figures.zip"
+    }
+  },
+  "scientific_tests": {
+    "run": 54,
+    "passed": 54
+  },
+  "launcher_tests": {
+    "run": 37,
+    "passed": 37,
+    "environment": "Python 3.12.14 matching Binder environment"
+  },
+  "saved_runtime_acceptance": {
+    "figure_count": 131,
+    "asset_count": 282,
+    "result_zip_bytes": 49233655,
+    "status": "passed",
+    "current_manuscript_size_figure_pixel_identical": true,
+    "numerical_full_jobs_rerun": false,
+    "additional_figure_count": 113,
+    "checked_additional_files": 268
+  },
+  "historical_PDF_visual_QA": [
+    {
+      "id": "archive_0ff38bca8541",
+      "pages": 1,
+      "text_outside_page": [],
+      "pdf": "figures/archive_0ff38bca8541/superPM10.pdf"
+    },
+    {
+      "id": "archive_87e47254ed07",
+      "pages": 1,
+      "text_outside_page": [],
+      "pdf": "figures/archive_87e47254ed07/PM1-10.pdf"
+    },
+    {
+      "id": "archive_9a0993e7af7e",
+      "pages": 1,
+      "text_outside_page": [],
+      "pdf": "figures/archive_9a0993e7af7e/FOUR_CATEGORY_DISTRIBUTIONS.pdf"
+    },
+    {
+      "id": "archive_c716d286e5a3",
+      "pages": 1,
+      "text_outside_page": [],
+      "pdf": "figures/archive_c716d286e5a3/PM10.pdf"
+    },
+    {
+      "id": "archive_c8b91b6d34bf",
+      "pages": 1,
+      "text_outside_page": [],
+      "pdf": "figures/archive_c8b91b6d34bf/PM1.pdf"
+    },
+    {
+      "id": "archive_eac5ace40a7c",
+      "pages": 1,
+      "text_outside_page": [],
+      "pdf": "figures/archive_eac5ace40a7c/all_collections.pdf"
+    }
+  ],
+  "shipped_scientific_python_files": 43,
+  "local_final_asset_checks": "passed; archive CRC, configured identities, all image changes, original flowchart and numerical CSV/log bytes checked",
+  "presentation_provenance_matches_final_codes_archive": true,
+  "browser_verified": true,
+  "browser_images_loaded": 2,
+  "browser_superscript_css": "super",
+  "independent_review": "Accepted final source and archives: all 144 series, 45 original CSV/log files, 282 asset hashes, companion formats and final code provenance verified. Seven raster-only exceptions remain explicit."
+}

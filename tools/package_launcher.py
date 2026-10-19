@@ -8,10 +8,10 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 FILES = (
     '.gitattributes', '.gitignore', '.binder/environment.yml', '.binder/requirements.txt', '.binder/ui-requirements.txt', '.binder/postBuild',
-    'README.md', 'VALIDATION.md', 'ONLINE_VALIDATION.json', 'FULL_ANALYSIS_VALIDATION.json', 'ONE_CLICK_VALIDATION.json', 'SCOPE_VALIDATION.json', 'POLLEN_VALIDATION.json', 'SUBSCRIPT_VALIDATION.json', 'SUPERSCRIPT_VALIDATION.json',
+    'README.md', 'VALIDATION.md', 'ONLINE_VALIDATION.json', 'FULL_ANALYSIS_VALIDATION.json', 'ONE_CLICK_VALIDATION.json', 'SCOPE_VALIDATION.json', 'POLLEN_VALIDATION.json', 'SUBSCRIPT_VALIDATION.json', 'SUPERSCRIPT_VALIDATION.json', 'PRESENTATION_VALIDATION.json',
     'binder_release.json', 'figure_inventory.json', 'figure_exclusions.csv',
     'release_io.py', 'prepare_release.py', 'production_entry.py', 'reviewer.py', 'Start_here.ipynb', 'one_click.py', 'One_click.ipynb',
-    'audit/README.md', 'audit/scope_revision.json', 'audit/renderer_artwork.diff', 'audit/selection_decisions.json', 'audit/pdf_pages.json',
+    'audit/README.md', 'audit/scope_revision.json', 'audit/renderer_artwork.diff', 'audit/size_tick_format.diff', 'audit/size_style_revision.json', 'audit/selection_decisions.json', 'audit/pdf_pages.json',
     'tools/audit_figures.py', 'tools/package_figures.py', 'tools/package_launcher.py', 'tools/validate_linux.py',
     'tests/test_figure_audit.py', 'tests/test_figure_bundle.py', 'tests/test_production_entry.py',
     'tests/test_release_io.py', 'tests/test_reviewer.py', 'tests/test_one_click.py',

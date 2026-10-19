@@ -1,0 +1,201 @@
+{
+  "figures": [
+    {
+      "before": {
+        "id": "archive_87e47254ed07",
+        "canonical_source": "project:size_distribution_category_curves_20261012/runs/run_20261012_194932_107724/figures/PM1-10.png",
+        "sha256": "ee97cf79df2bee300e2eeb148368ff8d1a03f36910a652cab9df69d0f2600694",
+        "formats": [
+          {
+            "source": "project:size_distribution_category_curves_20261012/runs/run_20261012_194932_107724/figures/PM1-10.pdf",
+            "sha256": "2394dd8d70f838c19a166a5d0b4b3f54a50b5b27da26d07c9a7dc6b25df83bb7"
+          }
+        ]
+      },
+      "after": {
+        "id": "archive_87e47254ed07",
+        "canonical_source": "project:manuscript_style_revision_20261019/figures/archive_87e47254ed07/PM1-10.png",
+        "sha256": "90dfd234e9da6a259fd1ab5e3437372d1e4ec86d89ebfd565d7741f3a6c81694",
+        "formats": [
+          {
+            "source": "project:manuscript_style_revision_20261019/figures/archive_87e47254ed07/PM1-10.pdf",
+            "sha256": "e5cada2922009f0078f9e0c5f4fbaef604055e93f13fab43df1437ff64f474ee"
+          }
+        ]
+      },
+      "counts": {
+        "background": 1405,
+        "plant_only": 70,
+        "dust_only": 19,
+        "plant_and_dust": 5
+      },
+      "saved_series_match": true
+    },
+    {
+      "before": {
+        "id": "archive_c8b91b6d34bf",
+        "canonical_source": "project:size_distribution_category_curves_20261012/runs/run_20261012_194932_107724/figures/PM1.png",
+        "sha256": "11bfc220b4f9d96efa66eb46ff6a36b0b87626d4c4b56415279800f6efaf725a",
+        "formats": [
+          {
+            "source": "project:size_distribution_category_curves_20261012/runs/run_20261012_194932_107724/figures/PM1.pdf",
+            "sha256": "28a34823f0abe31990d682f65792acd6ff09c917e2b38be21a3935016032f0cd"
+          }
+        ]
+      },
+      "after": {
+        "id": "archive_c8b91b6d34bf",
+        "canonical_source": "project:manuscript_style_revision_20261019/figures/archive_c8b91b6d34bf/PM1.png",
+        "sha256": "8ee5470bbda490b084fd2a4fe43bc325258b620d201c44560448a903d5ee19e8",
+        "formats": [
+          {
+            "source": "project:manuscript_style_revision_20261019/figures/archive_c8b91b6d34bf/PM1.pdf",
+            "sha256": "a5732a38b88611ff752ca2776fd0c17666adec15683845121ccdd27271014adc"
+          }
+        ]
+      },
+      "counts": {
+        "background": 1437,
+        "plant_only": 70,
+        "dust_only": 19,
+        "plant_and_dust": 5
+      },
+      "saved_series_match": true
+    },
+    {
+      "before": {
+        "id": "archive_c716d286e5a3",
+        "canonical_source": "project:size_distribution_category_curves_20261012/runs/run_20261012_194932_107724/figures/PM10.png",
+        "sha256": "308836e48b34b3346c901e330c7ce18b842f35f8a5874c6c71d45956944c3045",
+        "formats": [
+          {
+            "source": "project:size_distribution_category_curves_20261012/runs/run_20261012_194932_107724/figures/PM10.pdf",
+            "sha256": "ada62a67a8506d18cf3f9c42ac1a4beeac88dc9aaa3c8332fef01a403f5ed579"
+          }
+        ]
+      },
+      "after": {
+        "id": "archive_c716d286e5a3",
+        "canonical_source": "project:manuscript_style_revision_20261019/figures/archive_c716d286e5a3/PM10.png",
+        "sha256": "ff28de94118818b0ed2f09d36c003d5e16d4174b69fd18f4f5f5572cf6f2d01d",
+        "formats": [
+          {
+            "source": "project:manuscript_style_revision_20261019/figures/archive_c716d286e5a3/PM10.pdf",
+            "sha256": "8f7e3a0a619b3d1048d8a5531e2d6c34b2ee3e5d96a4a67aec757623a47f870a"
+          }
+        ]
+      },
+      "counts": {
+        "background": 1429,
+        "plant_only": 70,
+        "dust_only": 19,
+        "plant_and_dust": 5
+      },
+      "saved_series_match": true
+    },
+    {
+      "before": {
+        "id": "archive_eac5ace40a7c",
+        "canonical_source": "project:size_distribution_category_curves_20261012/runs/run_20261012_194932_107724/figures/all_collections.png",
+        "sha256": "4600d5f8ed88774ad2f86839abb5e7b259f246cda5ae57fc5c039169d801f9cd",
+        "formats": [
+          {
+            "source": "project:size_distribution_category_curves_20261012/runs/run_20261012_194932_107724/figures/all_collections.pdf",
+            "sha256": "597aabb6b5ae8e3dd7381aba3c51ff9983ff79b1994549cf32a459b19ba57272"
+          }
+        ]
+      },
+      "after": {
+        "id": "archive_eac5ace40a7c",
+        "canonical_source": "project:manuscript_style_revision_20261019/figures/archive_eac5ace40a7c/all_collections.png",
+        "sha256": "60312c3e2f6dc1f77c44f9d22bff17ce6a96a8d01cd20a76f508467273179c76",
+        "formats": [
+          {
+            "source": "project:manuscript_style_revision_20261019/figures/archive_eac5ace40a7c/all_collections.pdf",
+            "sha256": "13f45beefc26c181bd6690f10c96165731d739cd05bbac1f9b5f63762ca38f09"
+          }
+        ]
+      },
+      "counts": {
+        "background": 1437,
+        "plant_only": 71,
+        "dust_only": 19,
+        "plant_and_dust": 5
+      },
+      "saved_series_match": true
+    },
+    {
+      "before": {
+        "id": "archive_0ff38bca8541",
+        "canonical_source": "project:size_distribution_category_curves_20261012/runs/run_20261012_194932_107724/figures/superPM10.png",
+        "sha256": "0e66f0f045721f694e5aaf6008b4631e102b536bc833172011a36ef8e444862e",
+        "formats": [
+          {
+            "source": "project:size_distribution_category_curves_20261012/runs/run_20261012_194932_107724/figures/superPM10.pdf",
+            "sha256": "5ed6f4fc79f99c11132dbe35030f7f4e05143a5fe0d0b0f55d0393e556b75b88"
+          }
+        ]
+      },
+      "after": {
+        "id": "archive_0ff38bca8541",
+        "canonical_source": "project:manuscript_style_revision_20261019/figures/archive_0ff38bca8541/superPM10.png",
+        "sha256": "f50a644ce8790ca5890fd71d1f0d1b8d2f692ad0e6c247328737f54fe9c81ab2",
+        "formats": [
+          {
+            "source": "project:manuscript_style_revision_20261019/figures/archive_0ff38bca8541/superPM10.pdf",
+            "sha256": "579f5e4d88095b7b310f6cc7433912f29f5a2f8e25857d19ab1d1c846abb057b"
+          }
+        ]
+      },
+      "counts": {
+        "background": 1371,
+        "plant_only": 71,
+        "dust_only": 19,
+        "plant_and_dust": 5
+      },
+      "saved_series_match": true
+    },
+    {
+      "before": {
+        "id": "archive_9a0993e7af7e",
+        "canonical_source": "project:size_distribution_filter_categories_20261013/runs/run_20261013_103453_993793/FOUR_CATEGORY_DISTRIBUTIONS.png",
+        "sha256": "fb1345c16e3e62ca0fd56247e3affd77cf7c46bab4e035b31381d613ce5b9632",
+        "formats": [
+          {
+            "source": "project:size_distribution_filter_categories_20261013/runs/run_20261013_103453_993793/FOUR_CATEGORY_DISTRIBUTIONS.pdf",
+            "sha256": "2b5a4a328bb89ff8563995af6aa06086743cc00007b848a2c9b7203eab6abd4c"
+          }
+        ]
+      },
+      "after": {
+        "id": "archive_9a0993e7af7e",
+        "canonical_source": "project:manuscript_style_revision_20261019/figures/archive_9a0993e7af7e/FOUR_CATEGORY_DISTRIBUTIONS.png",
+        "sha256": "1e587b72d3db3b51cc7f14144d90232fdc931129be2deb7e1abed07633209091",
+        "formats": [
+          {
+            "source": "project:manuscript_style_revision_20261019/figures/archive_9a0993e7af7e/FOUR_CATEGORY_DISTRIBUTIONS.pdf",
+            "sha256": "5afe79347bcaef4fceefcd9606bff6e2849a865d94b7bddda34b5ddb45f7110d"
+          }
+        ]
+      },
+      "counts": {
+        "background": 1454,
+        "plant_only": 71,
+        "dust_only": 19,
+        "plant_and_dust": 5
+      },
+      "saved_series_match": true
+    }
+  ],
+  "unredrawn": [
+    "archive_ccb7f1102286",
+    "archive_3774b883e8fc",
+    "archive_e59253c1fe2a",
+    "archive_51229fe0ee5d",
+    "archive_6a66b19438b4",
+    "archive_ba5a019c6745",
+    "archive_153b98d04609"
+  ],
+  "reason": "Exact generator and plotted numerical tables unavailable; project and linked-source searches did not recover them; author does not remember their location.",
+  "original_saved_tables": "18e356cf12bbd15244362ba93de86a26d7d50b44b4d579d5c8bccf7e9bd7c8b8"
+}

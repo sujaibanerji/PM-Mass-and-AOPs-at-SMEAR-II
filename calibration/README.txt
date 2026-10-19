@@ -1,6 +1,6 @@
 FIGURE S9 REPLICATION — Banerji et al. (2025)
 
-The published relation is AE33_660 = 2.33 * MAAP_637 + 0.16, R² = 0.96.
+The published relation is AE33₆₆₀ = 2.33 * MAAP₆₃₇ + 0.16, R² = 0.96.
 OLS with a freely fitted intercept on 37,020 paired hourly medians gives:
 slope 2.3315177741608997; intercept +0.1604597140968682 Mm⁻¹;
 R² 0.9597021427180543. Independent NumPy least squares agrees.
