@@ -1,23 +1,23 @@
 {
-  "release_id": "hyytiala-20261015-binder-20261018",
+  "release_id": "binder-20261019-no-backscatter",
   "archives": {
     "codes": {
       "filename": "codes.zip",
-      "bytes": 1758048,
-      "sha256": "da54154e80123d73818f8421a5fe3055effa154839648e0740eb0b59e61ee83b",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/reviewer-20261015-binder-20261018/codes.zip"
+      "bytes": 2303874,
+      "sha256": "6e76f237634165f9a331260523482957bac3f6838ac929ff1e8c4bd360fc0447",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-no-backscatter/codes.zip"
     },
     "data": {
       "filename": "data.zip",
-      "bytes": 373657528,
-      "sha256": "c86ec82967021950bbd4b59c8ee3dbf133af6d89170a040a6957e731687d99b3",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/reviewer-20261015-binder-20261018/data.zip"
+      "bytes": 374534368,
+      "sha256": "eb3fa491aff7cdcdd5fb4c59568c24f47f26c452796ec8b210bad6d74c1eeffa",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-no-backscatter/data.zip"
     },
     "additional_figures": {
       "filename": "additional_figures.zip",
-      "bytes": 66991173,
-      "sha256": "66b437b3740fa724de6155a133fa766cd0296934cbdcc1047f61f60314174ef9",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/reviewer-20261015-binder-20261018/additional_figures.zip"
+      "bytes": 39053830,
+      "sha256": "c2ab4189b28cba1b5a889c9715ecdf6249234ddb7776e7812c7a0c7972224d14",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-no-backscatter/additional_figures.zip"
     }
   }
 }

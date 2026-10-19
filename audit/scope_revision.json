@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-19",
+  "approved_scope": "Remove complete mixed plots containing backscattering as well as dedicated plots",
+  "removed_figures": {
+    "archive_fd18ffef8ea7": {
+      "title": "interval before after",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_c1c7cbff0296": {
+      "title": "monthly components",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": [
+        "PM$_1$ | Backscattering",
+        "PM$_1$ | Backscattering fraction",
+        "PM$_{1\\!\\! -\\!\\! 10}$ | Backscattering",
+        "PM$_{1\\!\\! -\\!\\! 10}$ | Backscattering fraction",
+        "PM$_{10}$ | Backscattering"
+      ]
+    },
+    "archive_9557489d08c2": {
+      "title": "hourly b 0 to 1 detail",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_ff5dcfa07cfd": {
+      "title": "hourly optics 450nm full range",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_330c7520b538": {
+      "title": "hourly optics 550nm full range",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_38d058639070": {
+      "title": "hourly optics 700nm full range",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_c37982a28e3d": {
+      "title": "monthly 450nm medians only",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_27bf5d649b53": {
+      "title": "monthly 550nm medians only",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_3a0f20ad8f8f": {
+      "title": "monthly 700nm medians only",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_bdb267be8d1d": {
+      "title": "monthly b 0 to 1 detail",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_354f3937ff3d": {
+      "title": "All channels: msc700, sae, bsae",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_0bd1465a5ae1": {
+      "title": "Scattering: sca450, sca700, bsca450",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_161cc0435a06": {
+      "title": "Scattering: bsca700, bf450, bf700",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_826a67a9e6d0": {
+      "title": "Scattering: sae, bsae",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_c503e5960846": {
+      "title": "Scattering: sca550, bsca550, bf550",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_41a51b74fbfa": {
+      "title": "All backscatter fraction wavelengths, including 550 nm. Monthly medians are visual summaries, not inferential replicates. Hourly PM1–10 backscatter fraction is the ratio of paired coefficient differences, retaining only positive scattering and backscattering between zero and scattering. Markers denote 2018-01-01 and 2018-04-25; they do not establish causation.",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_1426c6cb5cc8": {
+      "title": "All backscattering wavelengths, including 550 nm. Monthly medians are visual summaries, not inferential replicates. PM1–10 is computed on paired finite hours before aggregation; negative differences are retained. Markers denote 2018-01-01 and 2018-04-25; they do not establish causation.",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_4389b3e44e8f": {
+      "title": "Paired-hour support in both fractions, aggregated within month",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_4d80db7b0819": {
+      "title": "Paired-hour support in both fractions, aggregated within month",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_38480e906052": {
+      "title": "All channels: sca450, sca700, bsca450",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_f339b9300741": {
+      "title": "All channels: bsca700, abs370, abs470",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_d404ee755878": {
+      "title": "All channels: abs550, abs700, bf450",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_c3571a1a4637": {
+      "title": "All channels: bf700, ssa450, ssa550",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_b0b68be7aa60": {
+      "title": "primary iqr changes",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": [
+        "$\\mathrm{PM}_{1}$: Backscattering",
+        "$\\mathrm{PM}_{1–10}$: Backscattering",
+        "$\\mathrm{PM}_{10}$: Backscattering",
+        "$\\mathrm{PM}_{1}$: Backscattering fraction",
+        "$\\mathrm{PM}_{1–10}$: Backscattering fraction"
+      ]
+    },
+    "archive_bf9ba3737b5f": {
+      "title": "yearly iqr",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": [
+        "$\\mathrm{PM}_{1}$: Backscattering",
+        "$\\mathrm{PM}_{1–10}$: Backscattering",
+        "$\\mathrm{PM}_{10}$: Backscattering",
+        "$\\mathrm{PM}_{1}$: Backscattering fraction",
+        "$\\mathrm{PM}_{1–10}$: Backscattering fraction"
+      ]
+    },
+    "archive_51099c2cbe5f": {
+      "title": "yearly tailwidth",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": [
+        "$\\mathrm{PM}_{1}$: Backscattering",
+        "$\\mathrm{PM}_{1–10}$: Backscattering",
+        "$\\mathrm{PM}_{10}$: Backscattering",
+        "$\\mathrm{PM}_{1}$: Backscattering fraction",
+        "$\\mathrm{PM}_{1–10}$: Backscattering fraction"
+      ]
+    },
+    "archive_94398e7a2eb3": {
+      "title": "02 zero and optics matched intervals",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_82513adfada7": {
+      "title": "weather and b 450nm",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_48466622ab93": {
+      "title": "weather and b 550nm",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_07e0bede29a4": {
+      "title": "weather and b 700nm",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_8060776b2de9": {
+      "title": "collection interval time series 550nm",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_395f35ca6bf8": {
+      "title": "historical primary backscatter optics 550",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_7b83d25af334": {
+      "title": "historical raw month adjustment bf ssa mass",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_f674e2ec21b5": {
+      "title": "historical primary backscatter three wavelengths",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_41d180417d3c": {
+      "title": "historical primary backscatter fraction three wavelengths",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_61277d70004f": {
+      "title": "averaging comparison",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_a454b9cd1493": {
+      "title": "pollen time windows",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": [
+        "Backscattering fraction",
+        "Backscattering fraction",
+        "Backscattering fraction"
+      ]
+    },
+    "archive_bd074a2ac74e": {
+      "title": "common interval optics",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": [
+        "Backscattering 550 nm (Mm⁻¹)",
+        "Backscattering 550 nm (Mm⁻¹)",
+        "Backscattering 550 nm (Mm⁻¹)",
+        "Backscattering fraction at 550 nm",
+        "Backscattering fraction at 550 nm"
+      ]
+    },
+    "archive_2b7c9d74adf8": {
+      "title": "season thinning figure 1",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_cf9a115eb0d7": {
+      "title": "season thinning figure 2",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_7da419dfc0d7": {
+      "title": "season thinning figure 3",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_57199492df8b": {
+      "title": "setup comparison side by side",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": [
+        "Measures scattering and backscattering",
+        "This comparison does not establish the cause or direction of a change in backscattering fraction."
+      ]
+    },
+    "archive_3887bd0d2f54": {
+      "title": "distribution optics strict825 bf550 month",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_7f01785d97b2": {
+      "title": "distribution optics strict825 bf550 raw",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_ed349f21c543": {
+      "title": "distribution optics strict825 bf550 year month",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_dfa9f1fe3c61": {
+      "title": "distribution optics strict825 bsca550 month",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_7dd123b5ce4b": {
+      "title": "distribution optics strict825 bsca550 raw",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_0133d7651d21": {
+      "title": "distribution optics strict825 bsca550 year month",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_6201f5f2b84c": {
+      "title": "timeline optics strict825 bf550 raw",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_b139c3c09156": {
+      "title": "timeline optics strict825 bsca550 raw",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_bab18e412c2d": {
+      "title": "seasonal bf550",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_78cfa3f4ec9e": {
+      "title": "seasonal bsca550",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_d27ee5e18d37": {
+      "title": "backscatter time backscattering fraction full range",
+      "evidence": "Backscattering labels in title or companion SVG",
+      "matched_labels": []
+    },
+    "archive_9e13f3fc67c7": {
+      "title": "backscatter time figure 1",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_20a63be1c761": {
+      "title": "backscatter time figure 2",
+      "evidence": "Reviewed plotted backscattering labels/panels",
+      "matched_labels": []
+    },
+    "archive_0d920c6b84a4": {
+      "title": "low signal fraction iqr",
+      "evidence": "Visually reviewed figure: backscattering coefficient, fraction, baseline or ratio-uncertainty panels"
+    },
+    "archive_90762f1e1061": {
+      "title": "01 threshold sensitivity",
+      "evidence": "Visually reviewed figure: backscattering coefficient, fraction, baseline or ratio-uncertainty panels"
+    },
+    "archive_f7cbf0b65f1c": {
+      "title": "02 ambient offset screen",
+      "evidence": "Visually reviewed figure: backscattering coefficient, fraction, baseline or ratio-uncertainty panels"
+    },
+    "archive_ff29a6dd9c17": {
+      "title": "04 coarse amplification scenario",
+      "evidence": "Visually reviewed figure: backscattering coefficient, fraction, baseline or ratio-uncertainty panels"
+    },
+    "archive_ae4918114582": {
+      "title": "01 zero baselines all wavelengths",
+      "evidence": "Visually reviewed figure: backscattering coefficient, fraction, baseline or ratio-uncertainty panels"
+    },
+    "archive_251576b00a06": {
+      "title": "All channels: abs880, abs950, abs450",
+      "evidence": "Independent PDF/PNG review found Backscatter fraction, 450 nm panels hidden by the inventory title"
+    },
+    "archive_94edf176a87c": {
+      "title": "All channels: ssa700, msc450, msc550",
+      "evidence": "Independent raster review found Backscattering Angstrom exponent panels hidden by the inventory title"
+    }
+  },
+  "figures_removed": 62,
+  "assets_removed": 115,
+  "figures_retained": 130,
+  "assets_retained": 281,
+  "retained_historical_images_byte_unchanged": 113,
+  "code_audit": {
+    "backscattering_specific_source_files": [],
+    "note": "Original registered scientific code already omitted backscattering; no such routines were present to delete. Generic retained analysis is unchanged."
+  },
+  "code_changes": {
+    "assets/artwork_blank.png": "Removed obsolete alternate flowchart source/artwork",
+    "assets/figure_1.tex": "Removed obsolete alternate flowchart source/artwork",
+    "python_codes/figure_renderer.py": {
+      "before_sha256": "9dcf084e625c039ac7fa855655548d73f9d7524c6f0593d8b2ca69cc4256f203",
+      "after_sha256": "3cc11cb8e348566b746ff36b482c220fe2e8d7c23ba2dff512bd099356a1fea8"
+    },
+    "python_codes/tests/test_figures.py": {
+      "before_sha256": "621db43c2e069da3829ab43be8c9a881420c41cfdfd36caba8e10b2fc0d51e18",
+      "after_sha256": "2ad4834f090bb319c135a4b846e8c63f95b0d8048b5f14accefef1f188b4d56c"
+    },
+    "assets/manuscript_flowchart.png": "Added exact manuscript artwork",
+    "python_codes/tests/test_manuscript_flowchart.py": "Added artwork regressions"
+  },
+  "numerical_data_changes": [],
+  "manuscript_reference": {
+    "filename": "manuscripts_significant_figures_20261019.zip",
+    "sha256": "0206ba5e02d6bee7ba0d009c477108266b0ed3d84735da441ec88cf047381ea4",
+    "member": "figures/main/figure_1.png",
+    "image_sha256": "758441e4dcbd98788cf03024e3acd2c4f3bf0ec1c131d9238936aeed4b900c8e",
+    "width": 5811,
+    "height": 4250
+  },
+  "archives": {
+    "codes": {
+      "filename": "codes.zip",
+      "bytes": 2303874,
+      "sha256": "6e76f237634165f9a331260523482957bac3f6838ac929ff1e8c4bd360fc0447",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-no-backscatter/codes.zip"
+    },
+    "data": {
+      "filename": "data.zip",
+      "bytes": 374534368,
+      "sha256": "eb3fa491aff7cdcdd5fb4c59568c24f47f26c452796ec8b210bad6d74c1eeffa",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-no-backscatter/data.zip"
+    },
+    "additional_figures": {
+      "filename": "additional_figures.zip",
+      "bytes": 39053830,
+      "sha256": "c2ab4189b28cba1b5a889c9715ecdf6249234ddb7776e7812c7a0c7972224d14",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-no-backscatter/additional_figures.zip"
+    }
+  }
+}

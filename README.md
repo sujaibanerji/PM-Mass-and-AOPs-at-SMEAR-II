@@ -1,30 +1,26 @@
-# Hyytiälä reviewer figures for Binder
+# Hyytiälä manuscript analysis and figures
 
-This launcher presents **192 distinct scientific figures**: seven current main-manuscript figures, ten current supporting figures and 175 archived historical figures. The packaged supplementary information has no embedded figures. Available companion formats bring the complete download to 396 image assets.
+This Python code accompanies the manuscript and its supplementary information. The current gallery contains **130 distinct scientific figures and 281 image assets**: seven main-manuscript figures, ten current supporting figures and 113 archived historical figures.
 
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://bids.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/54af7d028cc7699b192b2362fd58629ddfae408c?urlpath=voila/render/One_click.ipynb)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/binder-20261019-no-backscatter?urlpath=voila/render/One_click.ipynb)
 
-**[Open Binder and run the full analysis with one button](https://bids.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/54af7d028cc7699b192b2362fd58629ddfae408c?urlpath=voila/render/One_click.ipynb)**. Once the page opens, click **Run full analysis**. Progress, the complete gallery and downloads appear on that page. No notebook editing or individual-cell execution is needed. The calculation uses the original production settings; each run preserves earlier outputs.
+**[Open Binder](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/binder-20261019-no-backscatter?urlpath=voila/render/One_click.ipynb)**, then click **Run full analysis**. Progress, the gallery and downloads appear on the same page. Reviewers do not need an account or notebook editing.
 
-The full Python production calculation passed on actual MyBinder on 19 October 2026 in **9.5 minutes**: all five jobs, the numerical reference checks, 192 distinct figures and 396 assets passed. The session had one CPU and a 2 GiB memory limit; peak container memory was 1.63 GiB, with no memory-limit events. All 396 assets matched the prior validated production outputs byte for byte. See [FULL_ANALYSIS_VALIDATION.json](FULL_ANALYSIS_VALIDATION.json).
+Estimated calculation time is **10–30 minutes**, depending on the Binder server, with about five minutes for initial startup. Calculation runs on Binder's servers; internet speed mainly affects page loading and downloads. These are estimates, not guarantees. Download results before leaving because Binder storage is temporary.
 
-For code inspection or the quick saved-input workflow, [open the original notebook](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/560c4e3264d217ca106818318ec03b6aecb0224e?urlpath=lab/tree/Start_here.ipynb). The standard `mybinder.org` browser route returned 403 during the 18 October test; the direct GESIS provider above worked.
+## Current version
 
-Open `Start_here.ipynb` and run the normal cells to render the current 17 figures, browse the entire gallery and download individual images or the complete ZIP. The normal path uses processed observations and saved derived tables. Saved uncertainty estimates are labelled `saved_reference`; Figure 1 is fixed artwork. Historical figures retain their original cohorts, processing and geometry conventions and remain labelled `archived_image`.
+`binder-20261019-no-backscatter` implements the author's 19 October 2026 scope revision. It removes **62 historical figures and 115 assets**, including mixed plots containing backscattering coefficients, backscattering fractions, related uncertainty/baseline diagnostics and their companion formats. Mass-only comparisons with historical selection rules are retained because they do not plot those quantities.
 
-Reviewers do not need a Binder account. Binder sessions have temporary storage, so download results before leaving. See the official [Binder usage guidelines](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html).
+Figure 1 is the **exact 5811 × 4250 PNG** from `manuscripts_significant_figures_20261019.zip`, member `figures/main/figure_1.png`. Its SHA-256 is `758441e4dcbd98788cf03024e3acd2c4f3bf0ec1c131d9238936aeed4b900c8e`. It is copied without redraw or resampling, including in full analysis exports. The same image is supplied in the code and data archives. Pollen corroboration checks remain active.
 
-## Current delivery status
+The original registered scientific code already omitted backscattering-specific routines. The revised code archive keeps the numerical calculations and removes obsolete alternate flowchart artwork/source. Numerical observations and numerical reference tables are unchanged; the data archive changes only Figure 1 and its checksum record. All 113 retained historical images and companion formats preserve their original bytes.
 
-**Binder version `binder-20261019-oneclick`**, tested on **19 October 2026**, opens a ready-to-use **Run full analysis** button. The page explains the manuscript/SI connection, estimated runtime and temporary storage. The calculation runs on Binder's servers; internet speed mainly affects loading and downloads.
+Current verification is recorded in [NO_BACKSCATTER_VALIDATION.json](NO_BACKSCATTER_VALIDATION.json). The detailed removal list, source hashes and code audit are in [audit/scope_revision.json](audit/scope_revision.json); the fixed-artwork code change is in [audit/renderer_artwork.diff](audit/renderer_artwork.diff). Earlier 192-figure tests remain historical evidence in [ONE_CLICK_VALIDATION.json](ONE_CLICK_VALIDATION.json) and [FULL_ANALYSIS_VALIDATION.json](FULL_ANALYSIS_VALIDATION.json). See [VALIDATION.md](VALIDATION.md).
 
-The actual browser button completed all five production jobs in **23.2 minutes**, including all numerical reference checks at the original 5,000/2,000-draw settings. All 192 figures and 396 assets matched the prior completed production run. Both result ZIPs downloaded successfully through authenticated HTTP; the downloaded gallery also displayed correctly in a local browser view. All **35 focused tests** passed. See [ONE_CLICK_VALIDATION.json](ONE_CLICK_VALIDATION.json), [FULL_ANALYSIS_VALIDATION.json](FULL_ANALYSIS_VALIDATION.json) and [VALIDATION.md](VALIDATION.md).
+## Local use
 
-The full-test image build/startup took 4.9 minutes. These are observed timings, not guarantees. The launch links pin `54af7d028cc7699b192b2362fd58629ddfae408c`, which updates only the introductory runtime guidance from full-analysis-tested `c42423a658cca095790bf07b6ac73571bbb17410`. The button and calculation logic are identical, and the revised opening page was separately checked in the browser. The `binder-20261019-oneclick` tag identifies this version.
-
-## Local preparation
-
-Keep the original `codes.zip` and `data.zip`, plus the additive `additional_figures.zip`, in a separate archive directory. Extract the launcher ZIP once. From that launcher directory, use an isolated Python 3.12.14 environment with Jupyter installed, then install the exact scientific dependencies:
+Extract this launcher's ZIP once and keep the three matching archives in a separate directory. Use an isolated Python 3.12.14 environment with Jupyter installed:
 
 ```bash
 python -m pip install -r .binder/requirements.txt -r .binder/ui-requirements.txt
@@ -33,43 +29,31 @@ python prepare_release.py --destination runtime \
   --codes-zip ../archives/codes.zip \
   --data-zip ../archives/data.zip \
   --figures-zip ../archives/additional_figures.zip
-jupyter lab Start_here.ipynb
+voila One_click.ipynb
 ```
 
-For the one-button page locally, run `voila One_click.ipynb` from this launcher directory. Use the same interpreter/kernel for installation and notebook execution. Jupyter is supplied by repo2docker online; the scientific requirements file preserves the original release's 16 exact pins. Archive byte sizes and SHA-256 hashes are checked before extraction. Preparation also runs the original 341-file data check and validates every additional asset. Matching verified releases can be reused; unrelated or changed destinations are refused. Use a fresh destination if a prepared release has changed.
+Use a fresh runtime directory when upgrading from a previous archive identity. Existing unrelated or modified prepared releases are refused. All archive sizes/hashes, the original 341-file data check and every additional asset are verified before use.
 
-## Optional production calculation
+For code inspection or quick rendering from saved inputs, run `jupyter lab Start_here.ipynb`. The advanced notebook leaves `RUN_FULL_ANALYSIS = False` until deliberately enabled. The one-button page runs the full workflow after its button click, using `--language python --all-methods --size-bootstrap --native-size-bootstrap`, with the original 5,000 bootstrap and 2,000 year-block draws and all numerical reference checks. Each run creates a fresh output directory.
 
-Online execution covers the Python workflow.
+## Scientific scope
 
-The one-button page runs this workflow after its deliberate button click. In the advanced `Start_here.ipynb` notebook, the final cell has `RUN_FULL_ANALYSIS = False`. Run All leaves it disabled. To deliberately calculate the current production analyses, change that value to `True` and run the cell. This invokes the unchanged release launcher with `--language python --all-methods --size-bootstrap --native-size-bootstrap`, retaining defaults of 5,000 bootstrap draws and 2,000 year-block draws, plus the numerical reference checks. Each run uses a fresh analysis directory and retains progress, original logs and scope manifests. An additive compatibility wrapper preserves a symlinked Linux virtual environment for child jobs; it changes no scientific source or archive.
+The current pipeline recalculates the registered Python analyses from supplied processed observations. Raw instrument corrections and original category attribution remain upstream. Figure 1 is fixed artwork; 16 current figures are recomputed. The 113 historical figures retain their original methods and cohorts and are labelled `archived_image`; their original pipelines are not rerun by this launcher. The gallery and ZIP preserve these distinctions. The current release's SI renderer has no separate embedded figures; additional scientific images are included through the gallery inventory.
 
-The current 17 figures are regenerated from supplied processed inputs. Raw instrument corrections and original category attribution remain upstream. Historical figures are included as archived images; this current pipeline does not recreate their original historical analyses. The gallery and ZIP preserve these distinctions.
-
-MyBinder guarantees at least 1 GB RAM and allows at most 2 GB, and intensive sessions are subject to an approximately one CPU-hour limit. The completed online test is recorded above; future session capacity and timing can vary. Use a local environment if the optional long calculation exceeds available session resources. See [official resource limits](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html#resources-available).
-
-## Figure provenance and overlap decisions
-
-`figure_inventory.json` lists every retained figure, source placements, captions, byte identities, original scope and regeneration status. `figure_exclusions.csv` links excluded scientific versions to retained counterparts. `audit/selection_decisions.json` accounts for all 6,210 source candidates. See [the audit record](audit/README.md).
-
-The audit preserves distinct wavelengths, populations, adjustments and diagnostic questions. Current figures replace overlapping earlier versions; historical results with different content remain. Companion PDF/SVG files come from the same source run and plot stem. The additional bundle preserves original image bytes and records related source-code identities where available; these references are not claims of validated historical regeneration.
+Python 3.12.14 and the original 16 scientific dependency pins are preserved. Voilà 0.5.13 and ipywidgets 8.1.9 provide the one-button page. See the official [Binder usage/resource guidelines](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html).
 
 ## Archive identities
 
 | Archive | Bytes | SHA-256 |
 |---|---:|---|
-| codes.zip | 1,758,048 | `da54154e80123d73818f8421a5fe3055effa154839648e0740eb0b59e61ee83b` |
-| data.zip | 373,657,528 | `c86ec82967021950bbd4b59c8ee3dbf133af6d89170a040a6957e731687d99b3` |
-| additional_figures.zip | 66,991,173 | `66b437b3740fa724de6155a133fa766cd0296934cbdcc1047f61f60314174ef9` |
+| codes.zip | 2,303,874 | `6e76f237634165f9a331260523482957bac3f6838ac929ff1e8c4bd360fc0447` |
+| data.zip | 374,534,368 | `eb3fa491aff7cdcdd5fb4c59568c24f47f26c452796ec8b210bad6d74c1eeffa` |
+| additional_figures.zip | 39,053,830 | `c2ab4189b28cba1b5a889c9715ecdf6249234ddb7776e7812c7a0c7972224d14` |
 
-The two original ZIPs are unchanged. The additive bundle contains 175 canonical archived images plus 204 companion PDF/SVG exports. Launcher artifact checksums are delivered separately in `SHA256SUMS.txt`.
+These revised archives use release [`binder-20261019-no-backscatter`](https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/tag/binder-20261019-no-backscatter). Earlier releases remain versioned records. No DOI is assigned by this GitHub release. Launcher checksums are delivered separately in `SHA256SUMS.txt`.
 
-## Publication handoff
+## Source audit
 
-Public repository: [sujaibanerji/hyytiala-binder-reviewer](https://github.com/sujaibanerji/hyytiala-binder-reviewer). The three matching archives use release `reviewer-20261015-binder-20261018`. The author approved public publication on 18 October 2026. No DOI is assigned by this GitHub release.
+[figure_inventory.json](figure_inventory.json) lists retained figures, captions, placements and identities. [figure_exclusions.csv](figure_exclusions.csv) records overlap decisions and explicit scope exclusions. [audit/selection_decisions.json](audit/selection_decisions.json) retains the source-level audit. The earlier 6,210-source scan is supplemented by the newly supplied flowchart; excluded backscattering content has no active gallery asset or code registration. See [audit/README.md](audit/README.md).
 
-The published repository starts from the reviewed, allowlisted launcher snapshot; local development history is excluded. The release preserves the three exact archive identities above. Online acceptance checked downloaded archive hashes, an actual MyBinder build and the complete 192-figure normal notebook. The launch links above pin the tested immutable commit; subsequent documentation updates do not change that tested environment.
-
-When committing an extracted launcher snapshot, preserve the executable Git mode for `.binder/postBuild` (`git update-index --chmod=+x .binder/postBuild` after adding it).
-
-For environment configuration, see the official [repo2docker research configuration](https://repo2docker.readthedocs.io/en/latest/configuration/research/).
+When committing a launcher snapshot, preserve the executable Git mode of `.binder/postBuild`. The public repository excludes local development history and machine paths.

@@ -10,6 +10,25 @@ except ImportError:
 
 
 class FigureAuditTests(unittest.TestCase):
+    def test_author_excluded_scientific_figure_needs_no_retained_replacement(self):
+        rows = [dict(source_id='retained', relative='mass.png', sha256='a'),
+                dict(source_id='excluded', relative='coefficient.png', sha256='b')]
+        decisions = {
+            'retained': dict(decision='keep', id='mass', title='Mass', group='mass'),
+            'excluded': dict(decision='out_of_scope', canonical_ids=[],
+                             evidence='Author explicitly removed this measurement from delivery')}
+        try:
+            result = resolve_inventory(rows, decisions)
+        except ValueError as error:
+            self.fail(f'Explicit scope exclusion should resolve without a replacement: {error}')
+        self.assertEqual([f['id'] for f in result['figures']], ['mass'])
+        self.assertEqual(result['decisions'][1]['canonical_ids'], [])
+
+    def test_scope_exclusion_requires_documented_evidence(self):
+        row = dict(source_id='a', relative='a.png', sha256='a')
+        with self.assertRaises(ValueError):
+            resolve_inventory([row], {'a': dict(decision='out_of_scope', canonical_ids=[])})
+
     def test_reviewed_inventory_preserves_changed_mass_selection_cohorts(self):
         inventory = json.loads((Path(__file__).resolve().parents[1] / 'figure_inventory.json').read_text(encoding='utf-8'))
         selected = [f for f in inventory['figures'] if f['canonical_source'].endswith(

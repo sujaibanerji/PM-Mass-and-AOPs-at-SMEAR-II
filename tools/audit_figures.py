@@ -55,7 +55,7 @@ def resolve_inventory(candidates: list[dict], decisions: dict) -> dict:
             figures.append(figure)
             record["canonical_ids"] = [figure["id"]]
         elif disposition not in {"duplicate", "format_variant", "presentation_variant",
-                                 "superseded", "composite_covered", "non_scientific_artifact"}:
+                                 "superseded", "composite_covered", "non_scientific_artifact", "out_of_scope"}:
             raise ValueError(f"Unresolved decision: {row['source_id']}")
         elif not choice.get("evidence"):
             raise ValueError(f"Missing exclusion evidence: {row['source_id']}")
@@ -65,7 +65,7 @@ def resolve_inventory(candidates: list[dict], decisions: dict) -> dict:
         raise ValueError("Repeated canonical figure IDs")
     for record in records:
         ids = record.get("canonical_ids", [])
-        if record["decision"] != "non_scientific_artifact" and not ids:
+        if record["decision"] not in {"non_scientific_artifact", "out_of_scope"} and not ids:
             raise ValueError("Scientific exclusion lacks its canonical replacement")
         if any(i not in by_id for i in ids):
             raise ValueError("Exclusion names an absent canonical figure")

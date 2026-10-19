@@ -351,38 +351,44 @@
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 1,
-    "canonical_ids": [
-      "archive_395f35ca6bf8"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_all_channels_550.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_395f35ca6bf8"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 2,
-    "canonical_ids": [
-      "archive_38480e906052"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_all_channels_02.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_38480e906052"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 3,
-    "canonical_ids": [
-      "archive_f339b9300741"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_all_channels_03.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_f339b9300741"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
@@ -399,62 +405,72 @@
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 5,
-    "canonical_ids": [
-      "archive_251576b00a06"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_all_channels_05.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_251576b00a06"
+    ],
+    "delivery_scope": "Author excluded backscattering content"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 6,
-    "canonical_ids": [
-      "archive_d404ee755878"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_all_channels_06.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_d404ee755878"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 7,
-    "canonical_ids": [
-      "archive_c3571a1a4637"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_all_channels_07.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_c3571a1a4637"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 8,
-    "canonical_ids": [
-      "archive_94edf176a87c"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_all_channels_08.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_94edf176a87c"
+    ],
+    "delivery_scope": "Author excluded backscattering content"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 9,
-    "canonical_ids": [
-      "archive_354f3937ff3d"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_all_channels_09.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_354f3937ff3d"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
@@ -519,38 +535,44 @@
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 15,
-    "canonical_ids": [
-      "archive_c503e5960846"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_scattering_550.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_c503e5960846"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 16,
-    "canonical_ids": [
-      "archive_0bd1465a5ae1"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_scattering_02.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_0bd1465a5ae1"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 17,
-    "canonical_ids": [
-      "archive_161cc0435a06"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_scattering_03.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_161cc0435a06"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
@@ -567,14 +589,16 @@
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 19,
-    "canonical_ids": [
-      "archive_826a67a9e6d0"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/categories_scattering_05.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_826a67a9e6d0"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
@@ -724,26 +748,30 @@
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 32,
-    "canonical_ids": [
-      "archive_1426c6cb5cc8"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/hourly_monthly_bsca.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_1426c6cb5cc8"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 33,
-    "canonical_ids": [
-      "archive_4d80db7b0819"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/paired_scatter_bsca.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_4d80db7b0819"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
@@ -772,62 +800,72 @@
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 36,
-    "canonical_ids": [
-      "archive_41a51b74fbfa"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/hourly_monthly_bf.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_41a51b74fbfa"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/FIGURES.pdf",
     "page": 37,
-    "canonical_ids": [
-      "archive_4389b3e44e8f"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:collection_clock_revision_20261012/runs/20261012_071819_603071_UTC/results/figures/paired_scatter_bf.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_4389b3e44e8f"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 1,
-    "canonical_ids": [
-      "archive_395f35ca6bf8"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_all_channels_550.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_395f35ca6bf8"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 2,
-    "canonical_ids": [
-      "archive_38480e906052"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_all_channels_02.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_38480e906052"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 3,
-    "canonical_ids": [
-      "archive_f339b9300741"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_all_channels_03.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_f339b9300741"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
@@ -844,62 +882,72 @@
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 5,
-    "canonical_ids": [
-      "archive_251576b00a06"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_all_channels_05.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_251576b00a06"
+    ],
+    "delivery_scope": "Author excluded backscattering content"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 6,
-    "canonical_ids": [
-      "archive_d404ee755878"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_all_channels_06.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_d404ee755878"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 7,
-    "canonical_ids": [
-      "archive_c3571a1a4637"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_all_channels_07.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_c3571a1a4637"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 8,
-    "canonical_ids": [
-      "archive_94edf176a87c"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_all_channels_08.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_94edf176a87c"
+    ],
+    "delivery_scope": "Author excluded backscattering content"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 9,
-    "canonical_ids": [
-      "archive_354f3937ff3d"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_all_channels_09.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_354f3937ff3d"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
@@ -964,38 +1012,44 @@
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 15,
-    "canonical_ids": [
-      "archive_c503e5960846"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_scattering_550.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_c503e5960846"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 16,
-    "canonical_ids": [
-      "archive_0bd1465a5ae1"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_scattering_02.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_0bd1465a5ae1"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 17,
-    "canonical_ids": [
-      "archive_161cc0435a06"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_scattering_03.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_161cc0435a06"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
@@ -1012,14 +1066,16 @@
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 19,
-    "canonical_ids": [
-      "archive_826a67a9e6d0"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/categories_scattering_05.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_826a67a9e6d0"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
@@ -1169,26 +1225,30 @@
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 32,
-    "canonical_ids": [
-      "archive_1426c6cb5cc8"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/hourly_monthly_bsca.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_1426c6cb5cc8"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 33,
-    "canonical_ids": [
-      "archive_4d80db7b0819"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/paired_scatter_bsca.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_4d80db7b0819"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
@@ -1217,26 +1277,30 @@
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 36,
-    "canonical_ids": [
-      "archive_41a51b74fbfa"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/hourly_monthly_bf.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_41a51b74fbfa"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/FIGURES.pdf",
     "page": 37,
-    "canonical_ids": [
-      "archive_4389b3e44e8f"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:integrated_optics_20261009/runs/20261009_032134_799128_UTC/results/figures/paired_scatter_bf.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_4389b3e44e8f"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:manuscript_revision_20261006/seasonal_results/run_20261006_070556_048734/ALL_SEASONAL_FIGURES.pdf",
@@ -1289,26 +1353,30 @@
   {
     "source_id": "project:manuscript_revision_20261006/seasonal_results/run_20261006_070556_048734/ALL_SEASONAL_FIGURES.pdf",
     "page": 5,
-    "canonical_ids": [
-      "archive_78cfa3f4ec9e"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:manuscript_revision_20261006/seasonal_results/run_20261006_070556_048734/seasonal_bsca550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_78cfa3f4ec9e"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:manuscript_revision_20261006/seasonal_results/run_20261006_070556_048734/ALL_SEASONAL_FIGURES.pdf",
     "page": 6,
-    "canonical_ids": [
-      "archive_bab18e412c2d"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:manuscript_revision_20261006/seasonal_results/run_20261006_070556_048734/seasonal_bf550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_bab18e412c2d"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:manuscript_revision_20261006/seasonal_results/run_20261006_070556_048734/ALL_SEASONAL_FIGURES.pdf",
@@ -1373,26 +1441,30 @@
   {
     "source_id": "project:manuscript_revision_20261006/seasonal_results/run_20261006_071607_553274/ALL_SEASONAL_FIGURES.pdf",
     "page": 5,
-    "canonical_ids": [
-      "archive_78cfa3f4ec9e"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:manuscript_revision_20261006/seasonal_results/run_20261006_071607_553274/seasonal_bsca550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_78cfa3f4ec9e"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:manuscript_revision_20261006/seasonal_results/run_20261006_071607_553274/ALL_SEASONAL_FIGURES.pdf",
     "page": 6,
-    "canonical_ids": [
-      "archive_bab18e412c2d"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:manuscript_revision_20261006/seasonal_results/run_20261006_071607_553274/seasonal_bf550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_bab18e412c2d"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:manuscript_revision_20261006/seasonal_results/run_20261006_071607_553274/ALL_SEASONAL_FIGURES.pdf",
@@ -1457,26 +1529,30 @@
   {
     "source_id": "project:manuscript_revision_20261006/seasonal_results/run_20261006_072544_123328/ALL_SEASONAL_FIGURES.pdf",
     "page": 5,
-    "canonical_ids": [
-      "archive_78cfa3f4ec9e"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:manuscript_revision_20261006/seasonal_results/run_20261006_072544_123328/seasonal_bsca550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_78cfa3f4ec9e"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:manuscript_revision_20261006/seasonal_results/run_20261006_072544_123328/ALL_SEASONAL_FIGURES.pdf",
     "page": 6,
-    "canonical_ids": [
-      "archive_bab18e412c2d"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:manuscript_revision_20261006/seasonal_results/run_20261006_072544_123328/seasonal_bf550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_bab18e412c2d"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:manuscript_revision_20261006/seasonal_results/run_20261006_072544_123328/ALL_SEASONAL_FIGURES.pdf",
@@ -1613,50 +1689,58 @@
   {
     "source_id": "project:navy_revision_20261006/results/run_20261006_154456_118995/ALL_FIGURES.pdf",
     "page": 11,
-    "canonical_ids": [
-      "archive_7dd123b5ce4b"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:navy_revision_20261006/results/run_20261006_154456_118995/pdf/distribution_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7dd123b5ce4b"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:navy_revision_20261006/results/run_20261006_154456_118995/ALL_FIGURES.pdf",
     "page": 12,
-    "canonical_ids": [
-      "archive_b139c3c09156"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:navy_revision_20261006/results/run_20261006_154456_118995/pdf/timeline_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_b139c3c09156"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:navy_revision_20261006/results/run_20261006_154456_118995/ALL_FIGURES.pdf",
     "page": 13,
-    "canonical_ids": [
-      "archive_7f01785d97b2"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:navy_revision_20261006/results/run_20261006_154456_118995/pdf/distribution_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7f01785d97b2"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:navy_revision_20261006/results/run_20261006_154456_118995/ALL_FIGURES.pdf",
     "page": 14,
-    "canonical_ids": [
-      "archive_6201f5f2b84c"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:navy_revision_20261006/results/run_20261006_154456_118995/pdf/timeline_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_6201f5f2b84c"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:navy_revision_20261006/results/run_20261006_154456_118995/ALL_FIGURES.pdf",
@@ -1877,50 +1961,58 @@
   {
     "source_id": "project:navy_revision_20261006/results/run_20261006_154456_118995/ALL_FIGURES.pdf",
     "page": 33,
-    "canonical_ids": [
-      "archive_dfa9f1fe3c61"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:navy_revision_20261006/results/run_20261006_154456_118995/pdf/distribution_optics_strict825_bsca550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_dfa9f1fe3c61"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:navy_revision_20261006/results/run_20261006_154456_118995/ALL_FIGURES.pdf",
     "page": 34,
-    "canonical_ids": [
-      "archive_0133d7651d21"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:navy_revision_20261006/results/run_20261006_154456_118995/pdf/distribution_optics_strict825_bsca550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_0133d7651d21"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:navy_revision_20261006/results/run_20261006_154456_118995/ALL_FIGURES.pdf",
     "page": 35,
-    "canonical_ids": [
-      "archive_3887bd0d2f54"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:navy_revision_20261006/results/run_20261006_154456_118995/pdf/distribution_optics_strict825_bf550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_3887bd0d2f54"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:navy_revision_20261006/results/run_20261006_154456_118995/ALL_FIGURES.pdf",
     "page": 36,
-    "canonical_ids": [
-      "archive_ed349f21c543"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:navy_revision_20261006/results/run_20261006_154456_118995/pdf/distribution_optics_strict825_bf550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_ed349f21c543"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:navy_revision_20261006/results/run_20261006_154456_118995/ALL_FIGURES.pdf",
@@ -2129,26 +2221,30 @@
   {
     "source_id": "project:navy_revision_20261006/seasonal_results/run_20261006_154506_599062/ALL_SEASONAL_FIGURES.pdf",
     "page": 5,
-    "canonical_ids": [
-      "archive_78cfa3f4ec9e"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:navy_revision_20261006/seasonal_results/run_20261006_154506_599062/seasonal_bsca550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_78cfa3f4ec9e"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:navy_revision_20261006/seasonal_results/run_20261006_154506_599062/ALL_SEASONAL_FIGURES.pdf",
     "page": 6,
-    "canonical_ids": [
-      "archive_bab18e412c2d"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:navy_revision_20261006/seasonal_results/run_20261006_154506_599062/seasonal_bf550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_bab18e412c2d"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:navy_revision_20261006/seasonal_results/run_20261006_154506_599062/ALL_SEASONAL_FIGURES.pdf",
@@ -2285,50 +2381,58 @@
   {
     "source_id": "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/ALL_FIGURES.pdf",
     "page": 11,
-    "canonical_ids": [
-      "archive_7dd123b5ce4b"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/pdf/distribution_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7dd123b5ce4b"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/ALL_FIGURES.pdf",
     "page": 12,
-    "canonical_ids": [
-      "archive_b139c3c09156"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/pdf/timeline_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_b139c3c09156"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/ALL_FIGURES.pdf",
     "page": 13,
-    "canonical_ids": [
-      "archive_7f01785d97b2"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/pdf/distribution_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7f01785d97b2"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/ALL_FIGURES.pdf",
     "page": 14,
-    "canonical_ids": [
-      "archive_6201f5f2b84c"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/pdf/timeline_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_6201f5f2b84c"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/ALL_FIGURES.pdf",
@@ -2549,50 +2653,58 @@
   {
     "source_id": "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/ALL_FIGURES.pdf",
     "page": 33,
-    "canonical_ids": [
-      "archive_dfa9f1fe3c61"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/pdf/distribution_optics_strict825_bsca550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_dfa9f1fe3c61"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/ALL_FIGURES.pdf",
     "page": 34,
-    "canonical_ids": [
-      "archive_0133d7651d21"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/pdf/distribution_optics_strict825_bsca550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_0133d7651d21"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/ALL_FIGURES.pdf",
     "page": 35,
-    "canonical_ids": [
-      "archive_3887bd0d2f54"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/pdf/distribution_optics_strict825_bf550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_3887bd0d2f54"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/ALL_FIGURES.pdf",
     "page": 36,
-    "canonical_ids": [
-      "archive_ed349f21c543"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/pdf/distribution_optics_strict825_bf550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_ed349f21c543"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:pastel_navy_revision_20261006/results/run_20261006_204020_481460/ALL_FIGURES.pdf",
@@ -2801,26 +2913,30 @@
   {
     "source_id": "project:pastel_navy_revision_20261006/seasonal_results/run_20261006_204020_955695/ALL_SEASONAL_FIGURES.pdf",
     "page": 5,
-    "canonical_ids": [
-      "archive_78cfa3f4ec9e"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:pastel_navy_revision_20261006/seasonal_results/run_20261006_204020_955695/seasonal_bsca550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_78cfa3f4ec9e"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:pastel_navy_revision_20261006/seasonal_results/run_20261006_204020_955695/ALL_SEASONAL_FIGURES.pdf",
     "page": 6,
-    "canonical_ids": [
-      "archive_bab18e412c2d"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:pastel_navy_revision_20261006/seasonal_results/run_20261006_204020_955695/seasonal_bf550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_bab18e412c2d"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:pastel_navy_revision_20261006/seasonal_results/run_20261006_204020_955695/ALL_SEASONAL_FIGURES.pdf",
@@ -2957,50 +3073,58 @@
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080225_218738/ALL_FIGURES.pdf",
     "page": 11,
-    "canonical_ids": [
-      "archive_7dd123b5ce4b"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080225_218738/pdf/distribution_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7dd123b5ce4b"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080225_218738/ALL_FIGURES.pdf",
     "page": 12,
-    "canonical_ids": [
-      "archive_b139c3c09156"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080225_218738/pdf/timeline_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_b139c3c09156"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080225_218738/ALL_FIGURES.pdf",
     "page": 13,
-    "canonical_ids": [
-      "archive_7f01785d97b2"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080225_218738/pdf/distribution_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7f01785d97b2"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080225_218738/ALL_FIGURES.pdf",
     "page": 14,
-    "canonical_ids": [
-      "archive_6201f5f2b84c"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080225_218738/pdf/timeline_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_6201f5f2b84c"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080225_218738/ALL_FIGURES.pdf",
@@ -3221,50 +3345,58 @@
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080225_218738/ALL_FIGURES.pdf",
     "page": 33,
-    "canonical_ids": [
-      "archive_dfa9f1fe3c61"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080225_218738/pdf/distribution_optics_strict825_bsca550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_dfa9f1fe3c61"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080225_218738/ALL_FIGURES.pdf",
     "page": 34,
-    "canonical_ids": [
-      "archive_0133d7651d21"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080225_218738/pdf/distribution_optics_strict825_bsca550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_0133d7651d21"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080225_218738/ALL_FIGURES.pdf",
     "page": 35,
-    "canonical_ids": [
-      "archive_3887bd0d2f54"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080225_218738/pdf/distribution_optics_strict825_bf550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_3887bd0d2f54"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080225_218738/ALL_FIGURES.pdf",
     "page": 36,
-    "canonical_ids": [
-      "archive_ed349f21c543"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080225_218738/pdf/distribution_optics_strict825_bf550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_ed349f21c543"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080225_218738/ALL_FIGURES.pdf",
@@ -3545,50 +3677,58 @@
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080743_188848/ALL_FIGURES.pdf",
     "page": 11,
-    "canonical_ids": [
-      "archive_7dd123b5ce4b"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080743_188848/pdf/distribution_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7dd123b5ce4b"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080743_188848/ALL_FIGURES.pdf",
     "page": 12,
-    "canonical_ids": [
-      "archive_b139c3c09156"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080743_188848/pdf/timeline_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_b139c3c09156"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080743_188848/ALL_FIGURES.pdf",
     "page": 13,
-    "canonical_ids": [
-      "archive_7f01785d97b2"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080743_188848/pdf/distribution_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7f01785d97b2"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080743_188848/ALL_FIGURES.pdf",
     "page": 14,
-    "canonical_ids": [
-      "archive_6201f5f2b84c"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080743_188848/pdf/timeline_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_6201f5f2b84c"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080743_188848/ALL_FIGURES.pdf",
@@ -3809,50 +3949,58 @@
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080743_188848/ALL_FIGURES.pdf",
     "page": 33,
-    "canonical_ids": [
-      "archive_dfa9f1fe3c61"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080743_188848/pdf/distribution_optics_strict825_bsca550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_dfa9f1fe3c61"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080743_188848/ALL_FIGURES.pdf",
     "page": 34,
-    "canonical_ids": [
-      "archive_0133d7651d21"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080743_188848/pdf/distribution_optics_strict825_bsca550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_0133d7651d21"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080743_188848/ALL_FIGURES.pdf",
     "page": 35,
-    "canonical_ids": [
-      "archive_3887bd0d2f54"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080743_188848/pdf/distribution_optics_strict825_bf550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_3887bd0d2f54"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080743_188848/ALL_FIGURES.pdf",
     "page": 36,
-    "canonical_ids": [
-      "archive_ed349f21c543"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_080743_188848/pdf/distribution_optics_strict825_bf550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_ed349f21c543"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_080743_188848/ALL_FIGURES.pdf",
@@ -4133,50 +4281,58 @@
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_081332_824442/ALL_FIGURES.pdf",
     "page": 11,
-    "canonical_ids": [
-      "archive_7dd123b5ce4b"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_081332_824442/pdf/distribution_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7dd123b5ce4b"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_081332_824442/ALL_FIGURES.pdf",
     "page": 12,
-    "canonical_ids": [
-      "archive_b139c3c09156"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_081332_824442/pdf/timeline_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_b139c3c09156"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_081332_824442/ALL_FIGURES.pdf",
     "page": 13,
-    "canonical_ids": [
-      "archive_7f01785d97b2"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_081332_824442/pdf/distribution_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7f01785d97b2"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_081332_824442/ALL_FIGURES.pdf",
     "page": 14,
-    "canonical_ids": [
-      "archive_6201f5f2b84c"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_081332_824442/pdf/timeline_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_6201f5f2b84c"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_081332_824442/ALL_FIGURES.pdf",
@@ -4397,50 +4553,58 @@
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_081332_824442/ALL_FIGURES.pdf",
     "page": 33,
-    "canonical_ids": [
-      "archive_dfa9f1fe3c61"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_081332_824442/pdf/distribution_optics_strict825_bsca550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_dfa9f1fe3c61"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_081332_824442/ALL_FIGURES.pdf",
     "page": 34,
-    "canonical_ids": [
-      "archive_0133d7651d21"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_081332_824442/pdf/distribution_optics_strict825_bsca550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_0133d7651d21"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_081332_824442/ALL_FIGURES.pdf",
     "page": 35,
-    "canonical_ids": [
-      "archive_3887bd0d2f54"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_081332_824442/pdf/distribution_optics_strict825_bf550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_3887bd0d2f54"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_081332_824442/ALL_FIGURES.pdf",
     "page": 36,
-    "canonical_ids": [
-      "archive_ed349f21c543"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_cornflower_20261006/results/run_20261006_081332_824442/pdf/distribution_optics_strict825_bf550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_ed349f21c543"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_cornflower_20261006/results/run_20261006_081332_824442/ALL_FIGURES.pdf",
@@ -4721,50 +4885,58 @@
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_063025_787962/ALL_FIGURES.pdf",
     "page": 11,
-    "canonical_ids": [
-      "archive_7dd123b5ce4b"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_063025_787962/pdf/distribution_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7dd123b5ce4b"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_063025_787962/ALL_FIGURES.pdf",
     "page": 12,
-    "canonical_ids": [
-      "archive_b139c3c09156"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_063025_787962/pdf/timeline_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_b139c3c09156"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_063025_787962/ALL_FIGURES.pdf",
     "page": 13,
-    "canonical_ids": [
-      "archive_7f01785d97b2"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_063025_787962/pdf/distribution_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7f01785d97b2"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_063025_787962/ALL_FIGURES.pdf",
     "page": 14,
-    "canonical_ids": [
-      "archive_6201f5f2b84c"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_063025_787962/pdf/timeline_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_6201f5f2b84c"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_063025_787962/ALL_FIGURES.pdf",
@@ -4985,50 +5157,58 @@
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_063025_787962/ALL_FIGURES.pdf",
     "page": 33,
-    "canonical_ids": [
-      "archive_dfa9f1fe3c61"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_063025_787962/pdf/distribution_optics_strict825_bsca550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_dfa9f1fe3c61"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_063025_787962/ALL_FIGURES.pdf",
     "page": 34,
-    "canonical_ids": [
-      "archive_0133d7651d21"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_063025_787962/pdf/distribution_optics_strict825_bsca550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_0133d7651d21"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_063025_787962/ALL_FIGURES.pdf",
     "page": 35,
-    "canonical_ids": [
-      "archive_3887bd0d2f54"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_063025_787962/pdf/distribution_optics_strict825_bf550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_3887bd0d2f54"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_063025_787962/ALL_FIGURES.pdf",
     "page": 36,
-    "canonical_ids": [
-      "archive_ed349f21c543"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_063025_787962/pdf/distribution_optics_strict825_bf550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_ed349f21c543"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_063025_787962/ALL_FIGURES.pdf",
@@ -5309,50 +5489,58 @@
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_064820_237530/ALL_FIGURES.pdf",
     "page": 11,
-    "canonical_ids": [
-      "archive_7dd123b5ce4b"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_064820_237530/pdf/distribution_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7dd123b5ce4b"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_064820_237530/ALL_FIGURES.pdf",
     "page": 12,
-    "canonical_ids": [
-      "archive_b139c3c09156"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_064820_237530/pdf/timeline_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_b139c3c09156"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_064820_237530/ALL_FIGURES.pdf",
     "page": 13,
-    "canonical_ids": [
-      "archive_7f01785d97b2"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_064820_237530/pdf/distribution_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7f01785d97b2"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_064820_237530/ALL_FIGURES.pdf",
     "page": 14,
-    "canonical_ids": [
-      "archive_6201f5f2b84c"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_064820_237530/pdf/timeline_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_6201f5f2b84c"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_064820_237530/ALL_FIGURES.pdf",
@@ -5573,50 +5761,58 @@
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_064820_237530/ALL_FIGURES.pdf",
     "page": 33,
-    "canonical_ids": [
-      "archive_dfa9f1fe3c61"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_064820_237530/pdf/distribution_optics_strict825_bsca550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_dfa9f1fe3c61"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_064820_237530/ALL_FIGURES.pdf",
     "page": 34,
-    "canonical_ids": [
-      "archive_0133d7651d21"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_064820_237530/pdf/distribution_optics_strict825_bsca550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_0133d7651d21"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_064820_237530/ALL_FIGURES.pdf",
     "page": 35,
-    "canonical_ids": [
-      "archive_3887bd0d2f54"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_064820_237530/pdf/distribution_optics_strict825_bf550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_3887bd0d2f54"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_064820_237530/ALL_FIGURES.pdf",
     "page": 36,
-    "canonical_ids": [
-      "archive_ed349f21c543"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:publication_figures_20261006/results/run_20261006_064820_237530/pdf/distribution_optics_strict825_bf550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_ed349f21c543"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:publication_figures_20261006/results/run_20261006_064820_237530/ALL_FIGURES.pdf",
@@ -5825,26 +6021,30 @@
   {
     "source_id": "project:seasonal_cornflower_20261006/seasonal_results/run_20261006_080228_163412/ALL_SEASONAL_FIGURES.pdf",
     "page": 5,
-    "canonical_ids": [
-      "archive_78cfa3f4ec9e"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:seasonal_cornflower_20261006/seasonal_results/run_20261006_080228_163412/seasonal_bsca550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_78cfa3f4ec9e"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:seasonal_cornflower_20261006/seasonal_results/run_20261006_080228_163412/ALL_SEASONAL_FIGURES.pdf",
     "page": 6,
-    "canonical_ids": [
-      "archive_bab18e412c2d"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:seasonal_cornflower_20261006/seasonal_results/run_20261006_080228_163412/seasonal_bf550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_bab18e412c2d"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:seasonal_cornflower_20261006/seasonal_results/run_20261006_080228_163412/ALL_SEASONAL_FIGURES.pdf",
@@ -5909,26 +6109,30 @@
   {
     "source_id": "project:seasonal_cornflower_20261006/seasonal_results/run_20261006_081335_830983/ALL_SEASONAL_FIGURES.pdf",
     "page": 5,
-    "canonical_ids": [
-      "archive_78cfa3f4ec9e"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:seasonal_cornflower_20261006/seasonal_results/run_20261006_081335_830983/seasonal_bsca550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_78cfa3f4ec9e"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:seasonal_cornflower_20261006/seasonal_results/run_20261006_081335_830983/ALL_SEASONAL_FIGURES.pdf",
     "page": 6,
-    "canonical_ids": [
-      "archive_bab18e412c2d"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:seasonal_cornflower_20261006/seasonal_results/run_20261006_081335_830983/seasonal_bf550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_bab18e412c2d"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:seasonal_cornflower_20261006/seasonal_results/run_20261006_081335_830983/ALL_SEASONAL_FIGURES.pdf",
@@ -6125,50 +6329,58 @@
   {
     "source_id": "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/ALL_FIGURES.pdf",
     "page": 11,
-    "canonical_ids": [
-      "archive_7dd123b5ce4b"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/pdf/distribution_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7dd123b5ce4b"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/ALL_FIGURES.pdf",
     "page": 12,
-    "canonical_ids": [
-      "archive_b139c3c09156"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/pdf/timeline_optics_strict825_bsca550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_b139c3c09156"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/ALL_FIGURES.pdf",
     "page": 13,
-    "canonical_ids": [
-      "archive_7f01785d97b2"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/pdf/distribution_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_7f01785d97b2"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/ALL_FIGURES.pdf",
     "page": 14,
-    "canonical_ids": [
-      "archive_6201f5f2b84c"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/pdf/timeline_optics_strict825_bf550_raw.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_6201f5f2b84c"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/ALL_FIGURES.pdf",
@@ -6389,50 +6601,58 @@
   {
     "source_id": "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/ALL_FIGURES.pdf",
     "page": 33,
-    "canonical_ids": [
-      "archive_dfa9f1fe3c61"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/pdf/distribution_optics_strict825_bsca550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_dfa9f1fe3c61"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/ALL_FIGURES.pdf",
     "page": 34,
-    "canonical_ids": [
-      "archive_0133d7651d21"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/pdf/distribution_optics_strict825_bsca550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_0133d7651d21"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/ALL_FIGURES.pdf",
     "page": 35,
-    "canonical_ids": [
-      "archive_3887bd0d2f54"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/pdf/distribution_optics_strict825_bf550_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_3887bd0d2f54"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/ALL_FIGURES.pdf",
     "page": 36,
-    "canonical_ids": [
-      "archive_ed349f21c543"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/pdf/distribution_optics_strict825_bf550_year_month.pdf"
     ],
     "evidence": "exact_vector_stream",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_ed349f21c543"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:sky_blue_navy_revision_20261006/results/run_20261006_201728_299974/ALL_FIGURES.pdf",
@@ -6641,26 +6861,30 @@
   {
     "source_id": "project:sky_blue_navy_revision_20261006/seasonal_results/run_20261006_201805_601478/ALL_SEASONAL_FIGURES.pdf",
     "page": 5,
-    "canonical_ids": [
-      "archive_78cfa3f4ec9e"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:sky_blue_navy_revision_20261006/seasonal_results/run_20261006_201805_601478/seasonal_bsca550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_78cfa3f4ec9e"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:sky_blue_navy_revision_20261006/seasonal_results/run_20261006_201805_601478/ALL_SEASONAL_FIGURES.pdf",
     "page": 6,
-    "canonical_ids": [
-      "archive_bab18e412c2d"
-    ],
+    "canonical_ids": [],
     "export_sources": [
       "project:sky_blue_navy_revision_20261006/seasonal_results/run_20261006_201805_601478/seasonal_bf550.pdf"
     ],
     "evidence": "exact_text_and_page_geometry_same_run",
-    "geometry_tolerance_points": 0.0001
+    "geometry_tolerance_points": 0.0001,
+    "excluded_figure_ids": [
+      "archive_bab18e412c2d"
+    ],
+    "delivery_scope": "Author excluded backscattering content; retained IDs cover other content only"
   },
   {
     "source_id": "project:sky_blue_navy_revision_20261006/seasonal_results/run_20261006_201805_601478/ALL_SEASONAL_FIGURES.pdf",
