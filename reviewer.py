@@ -19,6 +19,18 @@ HERE = Path(__file__).resolve().parent
 ZIP_DOWNLOAD_LINK = '<a href="../all_figures.zip" download>Download complete figure set</a> · '
 
 
+def scientific_html(value):
+    """Escape gallery prose and typeset scientific indices in its visible text."""
+    text = html.escape(str(value), quote=True)
+    text = re.sub(r'(?<![A-Za-z0-9_])((?:super-?)?PM)(1(?:[-–]10)?|10)(?![A-Za-z0-9_])',
+                  lambda m: m[1] + '<sub>' + m[2] + '</sub>', text, flags=re.I)
+    text = re.sub(r'(?<![A-Za-z0-9_])(abs|sca|ssa|msc|mac)(\d{3})(?![A-Za-z0-9_])',
+                  lambda m: m[1] + '<sub>' + m[2] + '</sub>', text, flags=re.I)
+    text = re.sub(r'(?<![A-Za-z0-9_])(N[_ ]Ait|S[_ ]acc|V[_ ]acc|V[_ ]coarse|R[_ ]V)(?![A-Za-z0-9_])',
+                  lambda m: m[0][0] + '<sub>' + m[0][2:] + '</sub>', text)
+    return text
+
+
 def notebook_gallery(gallery: Path, base_url: str) -> str:
     """Display static gallery markup in the notebook origin; load images as files.
 
@@ -218,9 +230,9 @@ def build_gallery(manifest: dict, output: Path) -> Path:
             else:
                 entry.setdefault('formats', []).append(dict(asset=relative, sha256=asset['sha256']))
         public['figures'].append(entry)
-        cards.append(f'<article data-group="{esc(f["group"])}"><h2>{esc(f["title"])}</h2>'
+        cards.append(f'<article data-group="{esc(f["group"])}"><h2>{scientific_html(f["title"])}</h2>'
             f'<p>{esc(f["group"])} · {esc(f["id"])} · <strong>{esc(f["estimate_origin"].replace("_", " "))}</strong></p>'
-            f'<p>{esc(f["scope"])}</p><a href="{esc(entry["asset"])}">'
+            f'<p>{scientific_html(f["scope"])}</p><a href="{esc(entry["asset"])}">'
             f'<img loading="lazy" src="{esc(entry["asset"])}" alt="{esc(f["title"])}"></a>'
             f'<p>Download: {" · ".join(links)}</p><details><summary>Source and scope</summary>'
             f'<pre>{esc(json.dumps(entry, indent=2, ensure_ascii=False))}</pre></details></article>')

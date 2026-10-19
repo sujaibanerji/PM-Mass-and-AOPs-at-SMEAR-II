@@ -33,13 +33,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 10105,
-      "sha256": "d590eafa71065492b23f45054f2c28b4749b7fe292370b2c0dad7ef429d98fdf"
+      "bytes": 10685,
+      "sha256": "9b0caae92a418122a92b59153f20cfba2a57d8464004454ecabc76725b7d7713"
     },
     {
       "path": "VALIDATION.md",
-      "bytes": 19992,
-      "sha256": "d06d785b8ee4229fef0b21986d1e465bf708c9f97f3e65c169f795ffa3e35a4d"
+      "bytes": 20191,
+      "sha256": "18c3bfbe5289775859e87715633eac47af9418cd81549aff163f9a30985546a1"
     },
     {
       "path": "ONLINE_VALIDATION.json",
@@ -65,6 +65,11 @@
       "path": "POLLEN_VALIDATION.json",
       "bytes": 6319,
       "sha256": "f4337c86147747c7e6eb7221fda67495b00aa3a0c68766023ec21c6c9da7c4fb"
+    },
+    {
+      "path": "SUBSCRIPT_VALIDATION.json",
+      "bytes": 886,
+      "sha256": "12239b917bcefbee5ec237e6d40a0533b2f02c3cb5f76ffa0ac87fe6463e52a2"
     },
     {
       "path": "binder_release.json",
@@ -98,8 +103,8 @@
     },
     {
       "path": "reviewer.py",
-      "bytes": 14666,
-      "sha256": "fb4cbc720a068b8016ee59f99af55f1b78bde65c965ada48fbbb706a091ba28c"
+      "bytes": 15379,
+      "sha256": "51f61fc2d7184b8210a7fba5bdf9f8c69d04e29ccd0bd1364ed0ab9af54af58e"
     },
     {
       "path": "Start_here.ipynb",
@@ -153,8 +158,8 @@
     },
     {
       "path": "tools/package_launcher.py",
-      "bytes": 3517,
-      "sha256": "b0275f42239555f800831b0854c68a615dfc7e72d3b29c06d628f373ccb6c892"
+      "bytes": 3546,
+      "sha256": "4be084f2a459f090464be42c4cd289d8ced474b334ae2d0c2c0ece50868e2505"
     },
     {
       "path": "tools/validate_linux.py",
