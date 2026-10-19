@@ -1,10 +1,318 @@
 {
-  "status": "pending_online_test",
-  "version": "binder-20261019-no-backscatter-r1",
+  "status": "passed",
+  "date": "2026-10-19",
+  "tested_commit": "8036ed928ea5de4056f3d4d8ca771c57ffb5bfc5",
+  "browser_button_clicked": true,
+  "production_directories": 1,
+  "one_click_run": {
+    "status": "completed",
+    "started_utc": "2026-10-19T03:21:51.618075+00:00",
+    "finished_utc": "2026-10-19T03:31:47.392547+00:00",
+    "seconds": 595.7744493409991,
+    "figures": 130
+  },
   "figures": 130,
   "assets": 281,
+  "estimate_origins": {
+    "fixed_artwork": 1,
+    "recomputed_production": 16,
+    "archived_image": 113
+  },
+  "all_other_assets_identical_to_completed_online_test": true,
+  "exact_manuscript_flowchart": true,
+  "jobs": {
+    "release": "20261015",
+    "language": "python",
+    "jobs": [
+      {
+        "name": "python_supporting_MM",
+        "command": [
+          "/srv/conda/envs/notebook/bin/python",
+          "/home/jovyan/runtime/codes/python_codes/supporting_figures_main_manuscript.py",
+          "--data-dir",
+          "/home/jovyan/runtime/data",
+          "--output-dir",
+          "/home/jovyan/outputs/production_20261019T032151618075Z/analysis/python/supporting_main_manuscript",
+          "--draws",
+          "5000",
+          "--year-draws",
+          "2000",
+          "--all-methods"
+        ],
+        "working_directory": "/home/jovyan/runtime/codes",
+        "exit_code": 0,
+        "log": "python_supporting_MM.log",
+        "status": "completed",
+        "seconds": 357.1467486061156
+      },
+      {
+        "name": "python_supporting_SI",
+        "command": [
+          "/srv/conda/envs/notebook/bin/python",
+          "/home/jovyan/runtime/codes/python_codes/supporting_figures_supplementary_information.py",
+          "--data-dir",
+          "/home/jovyan/runtime/data",
+          "--output-dir",
+          "/home/jovyan/outputs/production_20261019T032151618075Z/analysis/python/supporting_supplementary_information",
+          "--draws",
+          "5000",
+          "--size-bootstrap",
+          "--native-size-bootstrap"
+        ],
+        "working_directory": "/home/jovyan/runtime/codes",
+        "exit_code": 0,
+        "log": "python_supporting_SI.log",
+        "status": "completed",
+        "seconds": 212.19382272288203
+      },
+      {
+        "name": "python_MM",
+        "command": [
+          "/srv/conda/envs/notebook/bin/python",
+          "/home/jovyan/runtime/codes/python_codes/main_manuscript.py",
+          "--data-dir",
+          "/home/jovyan/runtime/data",
+          "--output-dir",
+          "/home/jovyan/outputs/production_20261019T032151618075Z/analysis/python/main_manuscript",
+          "--statistics-dir",
+          "/home/jovyan/outputs/production_20261019T032151618075Z/analysis/python/supporting_main_manuscript",
+          "--scalar-dir",
+          "/home/jovyan/outputs/production_20261019T032151618075Z/analysis/python/supporting_supplementary_information"
+        ],
+        "working_directory": "/home/jovyan/runtime/codes",
+        "exit_code": 0,
+        "log": "python_MM.log",
+        "status": "completed",
+        "seconds": 5.824529580771923
+      },
+      {
+        "name": "python_SI",
+        "command": [
+          "/srv/conda/envs/notebook/bin/python",
+          "/home/jovyan/runtime/codes/python_codes/supplementary_information.py",
+          "--data-dir",
+          "/home/jovyan/runtime/data",
+          "--output-dir",
+          "/home/jovyan/outputs/production_20261019T032151618075Z/analysis/python/supplementary_information"
+        ],
+        "working_directory": "/home/jovyan/runtime/codes",
+        "exit_code": 0,
+        "log": "python_SI.log",
+        "status": "completed",
+        "seconds": 0.7807460241019726
+      },
+      {
+        "name": "python_reference_check",
+        "command": [
+          "/srv/conda/envs/notebook/bin/python",
+          "/home/jovyan/runtime/codes/verify_results.py",
+          "--data-dir",
+          "/home/jovyan/runtime/data",
+          "--mm-results",
+          "/home/jovyan/outputs/production_20261019T032151618075Z/analysis/python/supporting_main_manuscript",
+          "--si-results",
+          "/home/jovyan/outputs/production_20261019T032151618075Z/analysis/python/supporting_supplementary_information",
+          "--output",
+          "/home/jovyan/outputs/production_20261019T032151618075Z/analysis/python_reference_check.json",
+          "--all-methods",
+          "--legacy",
+          "--size-bootstrap",
+          "--native-size-bootstrap"
+        ],
+        "working_directory": "/home/jovyan/runtime/codes",
+        "exit_code": 0,
+        "log": "python_reference_check.log",
+        "status": "completed",
+        "seconds": 2.6678112484514713
+      }
+    ],
+    "parameters": {
+      "draws": 5000,
+      "year_draws": 2000,
+      "all_methods": true,
+      "size_bootstrap": true,
+      "native_size_bootstrap": true
+    },
+    "production_settings": true,
+    "resolved_executables": {
+      "python": "/srv/conda/envs/notebook/bin/python"
+    },
+    "data_manifest_sha256": "27bfae830d4ae43ab5a680ba8b8ca38e40c2da8081f5ded28ff68b895f0172e9",
+    "code_sha256": {
+      "assets/fonts/lmroman12-regular.otf": "e6be218ae83e61aa8a29990d3cdc401c678c1962188cb9a4a8b6359e4f5e5870",
+      "assets/manuscript_flowchart.png": "758441e4dcbd98788cf03024e3acd2c4f3bf0ec1c131d9238936aeed4b900c8e",
+      "julia_codes/NativeBootstrap.jl": "079667583c25ff2c31f7bb7eb86bb6843ae94c4178f10fc6229db983e27b8ffa",
+      "julia_codes/NativeExtraOptics.jl": "1f0a2ae62d8490f15296879c1e6cfce6845e0dc82728503f78b8eb4ef9d7b5da",
+      "julia_codes/NativeLegacyOptics.jl": "c2c93c82c09303e2c8bea5e9990a8a265556b85e67d26f3905a65b9d44c8475b",
+      "julia_codes/NativePollen.jl": "7187f6d3eee002e9487ef7360847de5a868f69b351dce1adbb94e0e917759ee0",
+      "julia_codes/NativeSI.jl": "842a8e2fc47b3d5ecb3d5a107c31993e6283849f794d4f344bb299e1a81542de",
+      "julia_codes/NativeScalarControls.jl": "e3b76d0b7d5f3ea8502a62aa18cccf9ea23deb7fc58cbfddee037b63b4edf234",
+      "julia_codes/NativeSizeSensitivity.jl": "a177919e5d56568fff1527b562607bbba04115056c537e09ee1007bd6a38fcf0",
+      "julia_codes/NativeSpectra.jl": "0de000c0b1fcae57e3d5050c83e0f5816bbdf5084cc193085196c74a7900fe5d",
+      "julia_codes/PackageCLI.jl": "7535a015ab8da110288c09d704e2eef7e8bdfa5121c68348846af7f228b63879",
+      "julia_codes/PackageCore.jl": "c7b0d24f1e6e4d0f6b8c1863387d988a1f9a83f105b1515d99c0aa22d71c9b93",
+      "julia_codes/Project.toml": "00ba46790cd61ff40cee625b53f431917eac927ffe60aa53ebcc88e78cbee743",
+      "julia_codes/main_manuscript.jl": "2598edf12c9014cb14c7f1be1ca916181c96f8e5b6e928341028ddcd6ad653e2",
+      "julia_codes/supplementary_information.jl": "f611ad373c151eaec8129504c1d6c782793aef443cc22a7e2a7d87b88a896a3d",
+      "julia_codes/supporting_figures_main_manuscript.jl": "601d81a28a890638492e9d27f4e349ad638c79235a0100e5ee7bc941cccc9edd",
+      "julia_codes/supporting_figures_supplementary_information.jl": "a49fb664936e18119d059d2b20dc25f5be19f09933c3da239b5cf69437014343",
+      "package_checks.py": "2719deef35f6c1ebbecfe9dd324735d7698f64f792b2efbb6595d12d2f319f5f",
+      "python_codes/export_scalar_inputs.py": "905a3cc74df1328dd80bc4a497c534d2e924f38400f19fd2012ee2dcb648797b",
+      "python_codes/export_seasonal_weights.py": "f88721a407d94c9f1e80be0a2441f02c7b3bb98ca305967a6a2da76e151768d4",
+      "python_codes/export_shared_draws.py": "07dcf4d30bdf1d9cbcf039105a999622ec3f60f273003fe76277a8856c83419f",
+      "python_codes/figure_renderer.py": "3cc11cb8e348566b746ff36b482c220fe2e8d7c23ba2dff512bd099356a1fea8",
+      "python_codes/legacy_core.py": "880736c2a6aa072e26cbd76c13ff80c068c37c9e095fae8852db25b66f25d1fb",
+      "python_codes/legacy_random_draws.py": "edb903022ee8f90abf0fc036f260d09dbc090d7f311d60c8d0381ddf2f86caea",
+      "python_codes/main_manuscript.py": "3706534eca64366fe5e8ee521a737662e1d8fb2cedac9e87114e226d3cbf052a",
+      "python_codes/optics_random_draws.py": "742b91e9c8501d5be453a042822942b7f126967a517cb50942f5d7d9158b6ab0",
+      "python_codes/plot_helpers.py": "a699b60322a8ede2b146030b340eb71f1a210d24d617aa7fca2fea161bcb62b5",
+      "python_codes/pollen_corroboration.py": "5465b13f87a49026b1ec85f44907398f0d19c515d99cd7ea42959e388f4d31bb",
+      "python_codes/requirements.txt": "ee67cb652472243060a06bc3b9561c9ad42fb1a1f12f77a262ffc4d17e73c062",
+      "python_codes/seasonal_core.py": "90dcd5b29d2d2e65786f9904c21031c3d490ed7baa82c7212b08ceca017c04b9",
+      "python_codes/size_core.py": "84b29901c517157aaf6aa8da6b42a240828ba3ac01777901ee89bc5450ade6d7",
+      "python_codes/size_random_draws.py": "9dd31710c9c809ac564c0ebd097ec3c11ea5f00c16a32f5fc72b937c3bf9738c",
+      "python_codes/statistics_core.py": "bab8e661425ffb75b05f3bd9f37e0d28cbddf47244cba93a4d5d68d6962e0cfa",
+      "python_codes/supplementary_information.py": "c7651db0e2574d676198e868fdcd3d5d823c006471da7f26a3113e524fbda4e9",
+      "python_codes/supporting_diagnostics.py": "ca55060ed31a37e2fc8c9e19671289905e0bc6ae2d780f1ad883b049fcbd18b3",
+      "python_codes/supporting_figures_main_manuscript.py": "5df6f0629f6d5d4e2b570f53d0216f1dd424624639c79e91e21b288ac8f1ac49",
+      "python_codes/supporting_figures_supplementary_information.py": "49184635487b01b3c17447bb664d613f59699b224545af9931d2296fb48a4136",
+      "python_codes/supporting_plots.py": "8984f20b595553a2b1fe2e21dc04bfa383ea879b0755a1f5d1c61683eb785b8b",
+      "python_codes/supporting_spectra.py": "67e1c6e6756e453745560874b837ceb5ef8e0f64c0e13ae466a3d8fa6ff879d4",
+      "python_codes/year_core.py": "1dd86302f38b46cb2b9b1ac149c8b765a2861a9eda8eb5cc6fdd9b62f2779bd1",
+      "reference_checks.py": "36d8358244c60d4a1c27e30d9671de5a96e8c905e1329ad37c214c9e84d67209",
+      "release.json": "e96d3561e350f0aaa869992c9f19b7b797fd1d04ed385048f59e85b7c8f5fc18",
+      "run_all.py": "5535defd304b783956eea3074fd8259a608516ad3552ef0d01498f3ec4192755",
+      "verify_results.py": "54485e815da907df1f2044b3823e03a1c0ab34e40afb9b77a0e96100e15ad812"
+    },
+    "python_version": "3.12.14",
+    "status": "completed_requested_jobs_with_scope_limits",
+    "python_reference_verification": "complete registered inventories compared",
+    "scope_note": "Read each language run manifest. Shared rendering is not independent uncertainty verification."
+  },
+  "source_manifest_files": 39,
+  "downloads": {
+    "all_figures.zip": {
+      "bytes": 47381287,
+      "sha256": "5e9ac4e919c1d7c997ffbbd1e88f90702736b96783a1191468249815bf90fdca",
+      "http_status": 200
+    },
+    "analysis_tables_and_logs.zip": {
+      "bytes": 33730126,
+      "sha256": "935b81c5fc5b43d032b563fb192ea1079b71666048b99755c6e0ba83d3e36e9d",
+      "http_status": 200
+    }
+  },
+  "reference_rows": {
+    "optical_mass_point_statistics": 175,
+    "whole_year": 150,
+    "duration_and_month_adjusted": 2000,
+    "seasonal": 180,
+    "scalar_collection_values": 23535,
+    "size_point_effects": 105,
+    "size_collection_intervals": 630,
+    "size_native_hour_intervals": 105,
+    "legacy_canonical": 350,
+    "legacy_all_family": 686
+  },
+  "version": "binder-20261019-no-backscatter-r1",
+  "launch_url": "https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/8036ed928ea5de4056f3d4d8ca771c57ffb5bfc5?urlpath=voila/render/One_click.ipynb",
   "removed_figures": 62,
   "removed_assets": 115,
-  "flowchart_sha256": "758441e4dcbd98788cf03024e3acd2c4f3bf0ec1c131d9238936aeed4b900c8e",
-  "archive_preparation": "first explicit Run full analysis click"
+  "environment": {
+    "status": "passed",
+    "python": "3.12.14",
+    "pins": {
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "et_xmlfile": "2.0.0",
+      "fonttools": "4.67.0",
+      "kiwisolver": "1.5.1",
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.4",
+      "openpyxl": "3.1.5",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "pillow": "12.3.0",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "2.9.0.post0",
+      "scipy": "1.18.1",
+      "six": "1.17.0",
+      "tzdata": "2026.5",
+      "voila": "0.5.13",
+      "ipywidgets": "8.1.9"
+    },
+    "resources": {
+      "memory.events": "low 0\nhigh 0\nmax 346\noom 0\noom_kill 0\noom_group_kill 0",
+      "memory.current": "1761095680",
+      "memory.peak": "2147487744",
+      "cpu.max": "100000 100000",
+      "memory.max": "2147483648"
+    },
+    "source_manifest_files": 39
+  },
+  "browser": {
+    "status": "passed",
+    "date": "2026-10-19",
+    "one_button_clicked": true,
+    "opening_did_not_start_analysis": true,
+    "completion_message": "Complete: 130 figures ready. Calculation and packaging took 9.9 minutes.",
+    "gallery_figures": 130,
+    "flowchart_dimensions": [
+      5811,
+      4250
+    ],
+    "both_download_links_visible": true,
+    "screenshot": "MyBinder_completed_20261019.jpg",
+    "figure_zip_downloaded_via_browser": true,
+    "tables_zip_downloaded_via_browser": true,
+    "both_browser_downloads_match_authenticated_verified_archives": true,
+    "portable_figure_download": {
+      "status": "passed",
+      "figures": 130,
+      "assets": 281,
+      "portable_links_checked": 412,
+      "external_archive_links": 0,
+      "bytes": 47381287,
+      "sha256": "5e9ac4e919c1d7c997ffbbd1e88f90702736b96783a1191468249815bf90fdca"
+    }
+  },
+  "local_saved_render": {
+    "status": "passed",
+    "figures": 130,
+    "assets": 281,
+    "flowchart_exact": true,
+    "prepared_code_and_data_reused": true,
+    "reviewed_additional_bundle_verified": true
+  },
+  "launcher_tests_passed": 37,
+  "renderer_tests_passed": 21,
+  "independent_review": "passed after both hidden mixed figures and earlier-flowchart evidence were corrected",
+  "build": {
+    "commit": "8036ed928ea5de4056f3d4d8ca771c57ffb5bfc5",
+    "build_url": "https://gesis.mybinder.org/build/gh/sujaibanerji/hyytiala-binder-reviewer/8036ed928ea5de4056f3d4d8ca771c57ffb5bfc5",
+    "status": "ready",
+    "resolved_url": "https://gesis.mybinder.org/build/gh/sujaibanerji/hyytiala-binder-reviewer/8036ed928ea5de4056f3d4d8ca771c57ffb5bfc5",
+    "seconds": 206.8763695000016
+  },
+  "python_reference_cleanup": {
+    "status": "passed",
+    "scientific_python_files": 39,
+    "launcher_python_files": 15,
+    "notebook_code_cells_checked": true,
+    "references_found": 0,
+    "manifest_files": 39
+  },
+  "before_click": {
+    "production_directories": 0,
+    "prepared_runtime_present": false,
+    "status": "passed"
+  },
+  "archive_preparation": "first deliberate button click downloads and verifies the three release archives",
+  "startup_diagnosis": {
+    "hypothesis": "Embedding prepared data created a 618MB image layer whose provider transfer was truncated; use the already-supported first-click preparation path.",
+    "initial_commit": "808bb1e5d242f56ecfa4f37a275f61687427993e",
+    "provider": "gesis.mybinder.org",
+    "error": "ImagePullBackOff: expected 618009130 bytes but got 201195520; unexpected EOF",
+    "fix": "Keep pinned software in the image; existing Dashboard.calculate prepares and verifies archives after the deliberate click. Scientific archives unchanged."
+  }
 }

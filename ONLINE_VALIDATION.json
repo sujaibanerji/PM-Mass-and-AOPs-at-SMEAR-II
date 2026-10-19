@@ -125,5 +125,12 @@
     "launch_commit": "54af7d028cc7699b192b2362fd58629ddfae408c",
     "launch_url": "https://bids.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/54af7d028cc7699b192b2362fd58629ddfae408c?urlpath=voila/render/One_click.ipynb",
     "evidence": "ONE_CLICK_VALIDATION.json"
+  },
+  "no_backscattering_revision": {
+    "status": "passed",
+    "version": "binder-20261019-no-backscatter-r1",
+    "tested_commit": "8036ed928ea5de4056f3d4d8ca771c57ffb5bfc5",
+    "launch_url": "https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/8036ed928ea5de4056f3d4d8ca771c57ffb5bfc5?urlpath=voila/render/One_click.ipynb",
+    "evidence": "SCOPE_VALIDATION.json"
   }
 }
