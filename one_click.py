@@ -1,134 +1,113 @@
-"""A single deliberate button for the existing full Python production workflow."""
-from contextlib import redirect_stdout, redirect_stderr
-from contextvars import copy_context
-from datetime import datetime, timezone
+"""Automatic default once per kernel; explicit retry and optional later reruns."""
 import html
-import io
-import json
 import os
-from pathlib import Path
-import threading
-import time
+from contextvars import copy_context
+from threading import Lock,Thread
+import traceback
 from urllib.parse import quote
-import zipfile
-
 import ipywidgets as widgets
+from IPython.display import display,HTML
+from launcher import HERE,run
+from release_io import configuration
 
-from release_io import prepare_release
-from reviewer import run_full, notebook_gallery
+INSTRUCTIONS=('Click the Binder link once, then wait. Everything will start automatically. '
+              'Keep the tab open; do not click Run, change settings, or refresh the page. '
+              'The figures and download links will appear when processing finishes.')
 
-
-INTRO = '''<h1>Run the manuscript analysis</h1>
-<p>This Python code accompanies the manuscript and its supplementary information.
-Click <strong>Run full analysis</strong> below to recalculate the current analyses
-and open the complete figure gallery. Historical figures retain their original methods and cohorts.</p>
-<p><strong>Estimated calculation time: 10–30 minutes, depending on the Binder server.</strong>
-Initial startup may take a few minutes. The first run downloads and verifies the supplied archives before calculation.
-The calculation runs on Binder’s servers;
-your internet speed mainly affects page loading and downloads.</p>
-<p>The complete gallery contains 131 distinct figures and 282 image assets.
-Download your results before leaving: Binder sessions are temporary.</p>'''
+# Re-execution/re-rendering reuses this module. Preserve the controller even
+# across explicit module reloads in the same kernel; a new kernel is a new run.
+if '_SESSION' not in globals():
+    _SESSION=None
+    _SESSION_LOCK=Lock()
 
 
-def file_url(path):
-    prefix = os.environ.get('JUPYTERHUB_SERVICE_PREFIX', '/').rstrip('/')
-    return prefix + '/files/' + quote(Path(path).as_posix())
+class Session:
+    def __init__(self):
+        self.lock=Lock(); self.state='idle'; self.last_historical=False
+        self.status=widgets.HTML(value='<p>Starting automatically. Keep this tab open.</p>')
+        self.output=widgets.Output()
+        self.links=widgets.HTML(value='')
+        self.option=widgets.Checkbox(value=False,disabled=True,
+            description='Also recompute historical r6 processed-input analysis (slower)',
+            indent=False,layout=widgets.Layout(width='95%'))
+        self.button=widgets.Button(description='Optional: run again with selected option',
+            disabled=True,layout=widgets.Layout(width='340px'))
+        self.advanced=widgets.VBox([self.option,self.button],layout=widgets.Layout(display='none'))
+        self.retry=widgets.Button(description='Retry failed run',button_style='warning',
+                                  disabled=True,layout=widgets.Layout(display='none'))
+        self.button.on_click(lambda _:self.start(self.option.value,'manual'))
+        self.retry.on_click(lambda _:self.start(self.last_historical,'retry'))
+        self.panel=widgets.VBox([self.status,self.output,self.links,self.retry,self.advanced])
 
-
-class Progress(io.TextIOBase):
-    def __init__(self, dashboard):
-        self.dashboard = dashboard
-
-    def write(self, text):
-        if text:
-            self.dashboard.logs.append_stdout(text)
-            stages = {
-                'python_supporting_MM': 'Calculating main-manuscript supporting analyses…',
-                'python_supporting_SI': 'Calculating supplementary and size analyses…',
-                'python_MM': 'Rendering main-manuscript figures…',
-                'python_SI': 'Writing supplementary results…',
-                'python_reference_check': 'Checking numerical results against the references…',
-            }
-            for name, label in stages.items():
-                if 'START: ' + name in text:
-                    self.dashboard.status.value = '<p><strong>' + label + '</strong></p>'
-        return len(text)
-
-
-class Dashboard:
-    def __init__(self, *, config=Path('binder_release.json'), runtime=Path('runtime'),
-                 outputs=Path('outputs'), runner=run_full):
-        self.config, self.runtime, self.outputs = Path(config), Path(runtime), Path(outputs)
-        self.runner = runner
-        self.running = False
-        self.lock = threading.Lock()
-        self.button = widgets.Button(description='Run full analysis', button_style='primary',
-                                     icon='play', layout=widgets.Layout(width='220px', height='42px'))
-        self.status = widgets.HTML('<p>Ready. Click the button to begin.</p>')
-        self.logs = widgets.Output(layout=widgets.Layout(max_height='280px', overflow='auto'))
-        self.downloads = widgets.HTML('')
-        self.gallery = widgets.HTML('', layout=widgets.Layout(width='100%'))
-        progress = widgets.Accordion(children=[self.logs], selected_index=None)
-        progress.set_title(0, 'Calculation log')
-        self.view = widgets.VBox([widgets.HTML(INTRO), self.button, self.status, progress,
-                                  self.downloads, self.gallery], layout=widgets.Layout(width='100%'))
-        self.button.on_click(self.start)
-
-    def start(self, _button):
+    def start(self,historical=False,source='automatic'):
         with self.lock:
-            if self.running:
-                return
-            self.running = True
-            self.button.disabled = True
-        self.downloads.value = ''
-        self.gallery.value = ''
-        self.logs.clear_output()
-        self.status.value = '<p><strong>Verifying the supplied archives…</strong></p>'
-        context = copy_context()
-        threading.Thread(target=context.run, args=(self.calculate,), daemon=True).start()
-
-    def calculate(self):
-        started = datetime.now(timezone.utc)
-        clock = time.monotonic()
-        output = self.outputs / ('production_' + started.strftime('%Y%m%dT%H%M%S%fZ'))
+            required={'automatic':'idle','manual':'succeeded','retry':'failed'}[source]
+            if self.state!=required:
+                return  # Includes already-queued double clicks and re-renders.
+            self.state='running'; self.last_historical=bool(historical)
+            self.button.disabled=True; self.option.disabled=True; self.retry.disabled=True
+            self.advanced.layout.display='none'; self.retry.layout.display='none'
+            self.links.value=''
+            mode='historical + current' if historical else 'current figures + dust audit'
+            self.status.value=f'<p><b>Processing {mode}.</b> Keep the tab open; no action is needed.</p>'
+            self.output.append_stdout('Starting '+mode+'; first build/downloads can take several minutes.\n')
         try:
-            stream = Progress(self)
-            with redirect_stdout(stream), redirect_stderr(stream):
-                prepared = prepare_release(self.config, self.runtime)
-                result = self.runner(prepared, output, confirmed=True)
-            self.status.value = '<p><strong>Preparing the gallery and downloads…</strong></p>'
-            archive = output / 'analysis_tables_and_logs.zip'
-            with zipfile.ZipFile(archive, 'x', compression=zipfile.ZIP_DEFLATED) as z:
-                for path in sorted((output / 'analysis').rglob('*')):
-                    if path.is_file():
-                        z.write(path, path.relative_to(output).as_posix())
-                for name in ('production.log', 'binder_production_wrapper.json'):
-                    path = output / name
-                    if path.is_file():
-                        z.write(path, name)
-            elapsed = time.monotonic() - clock
-            record = dict(status='completed', started_utc=started.isoformat(),
-                          finished_utc=datetime.now(timezone.utc).isoformat(), seconds=elapsed,
-                          figures=len(result['figures']))
-            (output / 'one_click_run.json').write_text(json.dumps(record, indent=2), encoding='utf-8')
-            self.gallery.value = notebook_gallery(output / 'gallery/index.html',
-                                                 file_url(output / 'gallery') + '/')
-            links = [(output/'all_figures.zip', 'Download all figures (ZIP)'),
-                     (archive, 'Download analysis tables and logs (ZIP)')]
-            self.downloads.value = '<p>' + ' · '.join(
-                '<a download href="' + html.escape(file_url(path), quote=True) + '">' + label + '</a>'
-                for path, label in links) + '</p>'
-            self.status.value = (f'<p><strong>Complete: {len(result["figures"])} figures ready.</strong> '
-                                 f'Calculation and packaging took {elapsed/60:.1f} minutes.</p>')
-            self.button.description = 'Run full analysis again'
-        except Exception as exc:
-            self.status.value = ('<p><strong>Analysis failed.</strong> ' + html.escape(str(exc)) +
-                                 ' Open the calculation log for details. Existing outputs have been preserved.</p>')
-        finally:
+            context=copy_context()
+            Thread(target=lambda:context.run(self.execute),daemon=True).start()
+        except Exception:
+            self.failed()
+
+    def failed(self):
+        self.output.append_stderr(traceback.format_exc())
+        with self.lock:
+            self.status.value=('<p><b>Processing failed.</b> Details are above. No old release or saved-output '
+                               'fallback was substituted. After resolving the problem, use Retry failed run. '
+                               'There is no automatic retry; do not refresh.</p>')
+            self.retry.layout.display=''; self.retry.disabled=False
+            self.state='failed'
+
+    def execute(self):
+        try:
+            folder=run(historical=self.last_historical,
+                       progress=lambda line:self.output.append_stdout(str(line)+'\n'))
+            rel=folder.relative_to(HERE).as_posix()
+            prefix=os.environ.get('JUPYTERHUB_SERVICE_PREFIX','/').rstrip('/')
+            url=html.escape(prefix+'/files/'+quote(rel)+'/',quote=True)
+            gallery=(f'<p><a href="{url}results.zip" download>Download all results (ZIP)</a> · '
+                     f'<a href="{url}results/index.html" target="_blank">Open gallery separately</a></p>')
+            gallery+=''.join(f'<h3>Figure {n}</h3><img style="max-width:100%" '
+                f'src="{url}results/python/main_manuscript/figure_{n}.png" alt="Figure {n}">'
+                for n in range(1,9))
             with self.lock:
-                self.button.disabled = False
-                self.running = False
+                self.links.value=gallery
+                self.status.value='<p><b>Processing finished.</b> Figures and downloads are below. No further action is required.</p>'
+                self.advanced.layout.display=''; self.button.disabled=False; self.option.disabled=False
+                self.state='succeeded'
+        except Exception:
+            self.failed()
 
 
-def create_dashboard():
-    return Dashboard()
+def show():
+    global _SESSION
+    config=configuration()
+    display(HTML('<h1>Hyytiälä: current figures and dust-evidence diagnostic</h1>'
+      '<p><b>'+INSTRUCTIONS+'</b></p>'
+      '<p>The initial Binder build and archive downloads can take several minutes. '
+      'Progress appears here once this page has loaded.</p>'
+      '<p><b>Version: '+html.escape(config['release_id'])+'</b>. Archives are size- and SHA-256-pinned; '
+      'unavailable new archives cause an error, never an old-release fallback.</p>'
+      '<p><b>Automatic default:</b> redraw current Figures 2–8 from frozen saved/processed inputs; '
+      'copy exact workflow Figure 1; recompute overlap, counts, medians and Cliff effects from the '
+      'immutable dust snapshot. Saved uncertainty intervals are not recalculated. No original-instrument-data reconstruction.</p>'
+      '<p>After success, optional manual controls can rerun the historical r6 processed-input analysis '
+      '(5,000/2,000 draws), followed by the same current saved-input figures. Historical outputs are separate; '
+      'changed settings do not flow into the frozen snapshots. No extra action is needed for the default results.</p>'
+      '<p>Python performs the rendering and dust replay. Julia wrappers are shared-Python dispatch, not independent '
+      'new uncertainty/dust validation. Download results before leaving: Binder storage is temporary.</p>'))
+    with _SESSION_LOCK:
+        if _SESSION is None:
+            _SESSION=Session()
+        session=_SESSION
+    display(session.panel)
+    session.start(False,'automatic')
+    return session

@@ -1,23 +1,22 @@
 {
-  "release_id": "binder-20261019-size-format",
+  "release_id": "binder-20261019-dust-evidence",
+  "repository": "sujaibanerji/hyytiala-binder-reviewer",
+  "proposed_branch": "release/dust-evidence-20261019",
+  "release_tag": "binder-20261019-dust-evidence",
+  "actual_commit_sha": null,
+  "publication_state": "prepared_not_published_by_packager",
   "archives": {
-    "codes": {
-      "filename": "codes.zip",
-      "bytes": 2311717,
-      "sha256": "ece1e31e61aa60a12c2802df7e421e471fd314eb20616d06ccb4f7714697795c",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-size-format/codes.zip"
-    },
     "data": {
       "filename": "data.zip",
-      "bytes": 374791899,
-      "sha256": "7eb650fb02b403430cf8f55f234311112573f56b781386f96890ffe2cd555826",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-pollen/data.zip"
+      "bytes": 424088387,
+      "sha256": "fbcea2262e8ad179798ad7cd462031345790649b89dd0e5c7a4d75bb549dc393",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-dust-evidence/data.zip"
     },
-    "additional_figures": {
-      "filename": "additional_figures.zip",
-      "bytes": 40841226,
-      "sha256": "e77b2a4eb25514d4f7c3c9c3c3d46c9ef0e31001dbaf0a556fad5ed79f96e9fb",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-size-format/additional_figures.zip"
+    "codes": {
+      "filename": "codes.zip",
+      "bytes": 2436436,
+      "sha256": "efe43ec20b7e94a86c0bedfe9f9db5c6dd50115ca000d176e37e1bb94310959b",
+      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-dust-evidence/codes.zip"
     }
   }
 }

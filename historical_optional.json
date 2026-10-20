@@ -1,0 +1,9 @@
+{
+  "role": "Optional historical r6 additional figures only; never used automatically.",
+  "additional_figures": {
+    "filename": "additional_figures.zip",
+    "bytes": 40841226,
+    "sha256": "e77b2a4eb25514d4f7c3c9c3c3d46c9ef0e31001dbaf0a556fad5ed79f96e9fb",
+    "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-size-format/additional_figures.zip"
+  }
+}
