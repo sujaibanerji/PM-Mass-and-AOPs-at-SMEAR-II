@@ -1,5 +1,15 @@
 # Do the PM mass and aerosol optical properties differ between plant-material-labelled and dust-event-associated filters at Hyytiälä?
 
+## PNG portability repair (20 October 2026)
+
+The first cloud run stopped at a PNG file-byte assertion. Reproduction under
+Linux showed identical decoded Figure 2 pixels and metadata but different
+lossless compression bytes. The repaired code checks every decoded pixel,
+dimensions, mode, format and all metadata, including DPI, against authenticated
+references. Changed pixels remain fatal; no tolerance or saved-image fallback
+was added. Actual PNG file hashes and byte equality are reported separately.
+Code/data archive hash checks remain strict. The original data ZIP is unchanged.
+
 Binder release: `binder-20261019-dust-evidence`.
 
 This folder is the **Git repository root** to commit for the new launcher. It

@@ -1,10 +1,10 @@
 {
   "release_id": "binder-20261019-dust-evidence",
   "repository": "sujaibanerji/hyytiala-pm-mass-and-optical-properties",
-  "proposed_branch": "release/dust-evidence-20261019",
-  "release_tag": "binder-20261019-dust-evidence",
+  "proposed_branch": "release/png-portability-20261020",
+  "release_tag": "binder-20261020-png-portability",
   "actual_commit_sha": null,
-  "publication_state": "prepared_not_published_by_packager",
+  "publication_state": "repair_prepared_pending_cloud_verification",
   "archives": {
     "data": {
       "filename": "data.zip",
@@ -14,9 +14,9 @@
     },
     "codes": {
       "filename": "codes.zip",
-      "bytes": 2436436,
-      "sha256": "efe43ec20b7e94a86c0bedfe9f9db5c6dd50115ca000d176e37e1bb94310959b",
-      "url": "https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/releases/download/binder-20261019-dust-evidence/codes.zip"
+      "bytes": 2439125,
+      "sha256": "d2d55993a940ef23f1a98a8e3b539ef24995ad4f5579cc1a7edb4465cdc689a0",
+      "url": "https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/releases/download/binder-20261020-png-portability/codes.zip"
     }
   }
 }
