@@ -1,4 +1,4 @@
-# Do the PM mass and aerosol optical properties differ between plant-material-labelled and dust-event-associated impactor filters at Hyytiälä?
+# Do the PM mass and aerosol optical properties differ between pollen-labeled and dust-event-associated impactor filters at Hyytiälä?
 
 ## Revised size-distribution methods
 
