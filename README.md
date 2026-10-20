@@ -1,4 +1,6 @@
-# Hyytiälä manuscript analysis and figures
+# Do the PM mass and aerosol optical properties differ between plant-material-labelled and dust-event-associated filters at Hyytiälä?
+
+The revised automatic-start launcher is on [the release branch](https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/tree/release/dust-evidence-20261019). Its matching release is still a draft pending final upload and cloud verification. The instructions below document the preceding button-driven release; they are retained until the replacement is accepted.
 
 This Python code accompanies the manuscript and its supplementary information. The current gallery contains **131 distinct scientific figures and 282 image assets**: eight main-manuscript figures, ten current supporting figures and 113 archived historical figures.
 
