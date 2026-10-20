@@ -1,26 +1,57 @@
 # Do the PM mass and aerosol optical properties differ between plant-material-labelled and dust-event-associated filters at Hyytiälä?
 
-The revised automatic-start launcher is on [the release branch](https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/tree/release/dust-evidence-20261019). Its matching release is still a draft pending final upload and cloud verification. The instructions below document the preceding button-driven release; they are retained until the replacement is accepted.
+## Published archives and current status — 20 October 2026
+
+The processed data and Python-only analysis code are now publicly available on Zenodo, both as version 1.00:
+
+| Resource | DOI | Archive size |
+|---|---|---:|
+| Processed data | [10.5281/zenodo.23383412](https://doi.org/10.5281/zenodo.23383412) | 424,088,387 bytes |
+| Python-only analysis code | [10.5281/zenodo.23401520](https://doi.org/10.5281/zenodo.23401520) | 1,632,906 bytes |
+
+**Version compatibility matters.** The published Zenodo code is the earlier seven-main-figure Python-only distribution. The data record contains the later eight-figure/dust-evidence package. These are not the same code/data pair used for the completed Python-only production check, and the Zenodo pair must not be described as fully validated together. The later data manifest changes three reference figures, omits two old manuscript source files, and adds a reference figure relative to that validated data archive. Do not bypass checks or substitute these archives into another version's launcher.
+
+The downloaded Zenodo code has SHA-256 `a8337df6d4770ec0edef7c8f7b051d24d7859f268b8cd451a70d64df35f85551`; its filenames and uncompressed file contents contain no Julia remnants. This exact code archive was subsequently checked locally with its matching earlier data archive: the recorded run passed 30 package tests and 43 scientific tests with no skips, and completed the full 5,000/2,000-draw processed-input workflow including optional sensitivities. The matching data archive for that run has SHA-256 `c86ec82967021950bbd4b59c8ee3dbf133af6d89170a040a6957e731687d99b3` (373,657,528 bytes), **not** the archive currently published under the data DOI. The Zenodo code description still contains the earlier, pre-production-check wording.
+
+## Latest published automatic-start Binder revision
+
+The [PNG portability repair release](https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/releases/tag/binder-20261020-png-portability) is public. Its pinned source is [`23c8c27cb1959fc8a13052f9362096a934914bb1`](https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/tree/23c8c27cb1959fc8a13052f9362096a934914bb1).
+
+[![Launch automatic-start Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sujaibanerji/hyytiala-pm-mass-and-optical-properties/23c8c27cb1959fc8a13052f9362096a934914bb1?urlpath=voila/render/One_click.ipynb)
+
+**Click once, then wait. Keep the tab open; do not click Run, change settings, or refresh the page.** The page starts the default workflow automatically and displays progress and downloads. Initial environment preparation and archive downloads can take several minutes. Download results before leaving because Binder storage is temporary.
+
+This revision redraws eight current manuscript figures from frozen inputs (preserving Figure 1 artwork) and recalculates dust-event overlap, counts, medians, and Cliff effects. It does not recalculate the frozen uncertainty intervals or reconstruct original instrument-level observations in its default run. Optional historical recomputation is separate.
+
+The launcher continues to use the exact archive URLs, sizes, and SHA-256 checks in its [pinned manifest](https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/blob/23c8c27cb1959fc8a13052f9362096a934914bb1/binder_release.json). Its data archive is identical to the published Zenodo data file; its code archive is **different from** the Zenodo Python-only code. No launcher pins, scientific calculations, release assets, or historical tags were changed by this documentation update.
+
+**Verification boundary:** publication and archive identities are confirmed; a successful end-to-end cloud run of the PNG portability repair is not yet confirmed. Earlier completed Binder runs below are historical evidence, not acceptance of this revision.
+
+---
+
+## Historical button-driven baseline
+
+Everything below describes the preceding default-branch implementation and its historical validation. Its figure counts, archive hashes, button instructions, and local commands must not be applied to the automatic-start revision above.
 
 This Python code accompanies the manuscript and its supplementary information. The current gallery contains **131 distinct scientific figures and 282 image assets**: eight main-manuscript figures, ten current supporting figures and 113 archived historical figures.
 
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/60f8a9ca4098ed75ef430f78a328300b8f386183?urlpath=voila/render/One_click.ipynb)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-pm-mass-and-optical-properties/60f8a9ca4098ed75ef430f78a328300b8f386183?urlpath=voila/render/One_click.ipynb)
 
-**[Open Binder](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/60f8a9ca4098ed75ef430f78a328300b8f386183?urlpath=voila/render/One_click.ipynb)**, then click **Run full analysis**. Progress, the gallery and downloads appear on the same page. Reviewers do not need an account or notebook editing.
+**[Open Binder](https://gesis.mybinder.org/v2/gh/sujaibanerji/hyytiala-pm-mass-and-optical-properties/60f8a9ca4098ed75ef430f78a328300b8f386183?urlpath=voila/render/One_click.ipynb)**, then click **Run full analysis**. Progress, the gallery and downloads appear on the same page. Reviewers do not need an account or notebook editing.
 
 Estimated calculation time is **10–30 minutes**, depending on the Binder server, with about five minutes for initial startup. Calculation runs on Binder's servers; internet speed mainly affects page loading and downloads. These are estimates, not guarantees. Download results before leaving because Binder storage is temporary.
 
-## Calibration verification and Zenodo identifiers
+## Historical calibration verification
 
-The author supplied separate archival identifiers: [data, 10.5281/zenodo.23383412](https://doi.org/10.5281/zenodo.23383412) and [code, 10.5281/zenodo.23401520](https://doi.org/10.5281/zenodo.23401520). They did not yet resolve publicly during the 19 October 2026 check and may be reserved draft identifiers.
+The current public Zenodo identifiers and archive-version distinctions are listed above. The calibration evidence below belongs to this historical baseline.
 
 An independent check reproduces Figure S9 of [Banerji et al. (2025)](https://acp.copernicus.org/articles/25/16895/2025/acp-25-16895-2025-supplement.pdf) by OLS with an intercept on **37,020 paired hourly medians**: **AE33₆₆₀ = 2.33 × MAAP₆₃₇ + 0.16; R² = 0.96**. The original authored recipe uses equal-value runs of at least 10 records and strict two-sided ratios below 10. The historical mean-named plotting block reused the median inputs.
 
 The current inverse **(AE33 − 0.16) / 2.33** is already correct. An arithmetic audit of **204,908 inlet-hours**, all seven absorption channels in both inlets, STP scaling, hourly quality screening and the portable input passed. The existing calibrated optical values remain unchanged; the current presentation revision adds the pollen ratio calculation. This reproduction checks the historical 660–637 nm fit; it does not independently calibrate every wavelength.
 
-The clean reproducer, fit, source hashes and audit are in [calibration/README.txt](https://github.com/sujaibanerji/hyytiala-binder-reviewer/blob/main/calibration/README.txt). The additional S9 plot is separate from the 131-figure production gallery. Current manuscript/SI reading copies are supplied in the author's `manuscripts.zip`; reference manuscript copies inside `data.zip` remain the frozen inputs for the earlier renderer checks. The final local Zenodo preparation uses separate code/data records and includes this verification supplement.
+The clean reproducer, fit, source hashes and audit are in [calibration/README.txt](https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/blob/main/calibration/README.txt). The additional S9 plot is separate from the 131-figure production gallery. Current manuscript/SI reading copies are supplied in the author's `manuscripts.zip`; reference manuscript copies inside `data.zip` remain the frozen inputs for the earlier renderer checks. The final local Zenodo preparation uses separate code/data records and includes this verification supplement.
 
-## Current version
+## Historical version 2026.10.19-r6
 
 Version **2026.10.19-r6** matches the current number, area and volume distribution figure to manuscript Figure 7 exactly at the pixel level. Six historical curve figures and their PDF companions use the manuscript's fonts, colours, axes and curve styling. All 144 historical panel/category series match the saved numerical tables. Their original cohorts, area definitions and unspecified logarithm base are preserved. The optional `python_codes/style_size_distributions.py` reproduces these six figures from the two saved CSVs in `additional_figures/style_inputs`; it does not rerun their original classification pipelines.
 
@@ -78,7 +109,7 @@ Python 3.12.14 and the original 16 scientific dependency pins are preserved. Voi
 | data.zip | 374,791,899 | `7eb650fb02b403430cf8f55f234311112573f56b781386f96890ffe2cd555826` |
 | additional_figures.zip | 40,841,226 | `e77b2a4eb25514d4f7c3c9c3c3d46c9ef0e31001dbaf0a556fad5ed79f96e9fb` |
 
-The code and additional-figure archives use release [`binder-20261019-size-format`](https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/tag/binder-20261019-size-format). The unchanged data archive remains at [`binder-20261019-pollen`](https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/tag/binder-20261019-pollen). Earlier releases remain versioned records. No DOI is assigned by this GitHub release. Launcher checksums are delivered separately in `SHA256SUMS.txt`.
+The code and additional-figure archives use release [`binder-20261019-size-format`](https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/releases/tag/binder-20261019-size-format). The unchanged data archive remains at [`binder-20261019-pollen`](https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/releases/tag/binder-20261019-pollen). Earlier releases remain versioned records. No DOI is assigned by this GitHub release. Launcher checksums are delivered separately in `SHA256SUMS.txt`.
 
 ## Source audit
 
