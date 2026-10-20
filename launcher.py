@@ -32,8 +32,9 @@ def run(output=None,archive_dir=None,allow_network=True,historical=False,progres
     if status:
         raise RuntimeError('Analysis failed; see launcher.log and job logs. No old-release fallback.')
     main=result/'python/main_manuscript'
-    gallery=['<!doctype html><meta charset="utf-8"><title>Hyytiälä current evidence-label figures</title>',
-             '<h1>Current evidence-label figures</h1><p>Figures 2–8 redrawn from frozen saved inputs; Figure 1 is the exact supplied current workflow asset. Dust replay is Python-only. No new bootstrap in default mode.</p>']
+    title='Do the PM mass and aerosol optical properties differ between plant-material-labelled and dust-event-associated filters at Hyytiälä?'
+    gallery=['<!doctype html><meta charset="utf-8"><title>'+html.escape(title)+'</title>',
+             '<h1>'+html.escape(title)+'</h1><p>Figures 2–8 redrawn from frozen saved inputs; Figure 1 is the exact supplied current workflow asset. Dust replay is Python-only. No new bootstrap in default mode.</p>']
     for n in range(1,9):
         gallery.append(f'<h2>Figure {n}</h2><img style="max-width:100%" src="python/main_manuscript/figure_{n}.png" alt="Figure {n}">')
     gallery.append('<p><a href="python/supporting_figures_supplementary_information/dust_audit/direct_P_minus_D.csv">Dust direct P−D effects CSV</a> · <a href="python/supporting_figures_supplementary_information/dust_audit/category_counts.csv">Dust counts CSV</a></p>')

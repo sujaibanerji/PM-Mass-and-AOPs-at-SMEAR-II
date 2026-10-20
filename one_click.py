@@ -90,7 +90,7 @@ class Session:
 def show():
     global _SESSION
     config=configuration()
-    display(HTML('<h1>Hyytiälä: current figures and dust-evidence diagnostic</h1>'
+    display(HTML('<h1>Do the PM mass and aerosol optical properties differ between plant-material-labelled and dust-event-associated filters at Hyytiälä?</h1>'
       '<p><b>'+INSTRUCTIONS+'</b></p>'
       '<p>The initial Binder build and archive downloads can take several minutes. '
       'Progress appears here once this page has loaded.</p>'

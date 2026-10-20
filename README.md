@@ -1,4 +1,6 @@
-# Hyytiälä one-click release: `binder-20261019-dust-evidence`
+# Do the PM mass and aerosol optical properties differ between plant-material-labelled and dust-event-associated filters at Hyytiälä?
+
+Binder release: `binder-20261019-dust-evidence`.
 
 This folder is the **Git repository root** to commit for the new launcher. It
 contains real Binder configuration, notebook and code, but no `.git`, scientific
@@ -55,14 +57,14 @@ the image build. `.binder/postBuild` installs exact scientific and UI pins.
 
 Prepared branch: `release/dust-evidence-20261019`.
 Prepared tag: `binder-20261019-dust-evidence`.
-Repository: `sujaibanerji/hyytiala-binder-reviewer`.
+Repository: `sujaibanerji/hyytiala-pm-mass-and-optical-properties`.
 Upload these exact assets to that tag's GitHub release:
 `data.zip`, `codes.zip`, `binder.zip`. Code/data expected sizes, SHA-256 and
 release-download URLs are in `binder_release.json`. No mutable `latest` URL.
 
 After the main agent publishes and verifies that tag, the planned launch URL is:
 
-`https://mybinder.org/v2/gh/sujaibanerji/hyytiala-binder-reviewer/binder-20261019-dust-evidence?urlpath=voila/render/One_click.ipynb`
+`https://mybinder.org/v2/gh/sujaibanerji/hyytiala-pm-mass-and-optical-properties/binder-20261019-dust-evidence?urlpath=voila/render/One_click.ipynb`
 
 Click the Binder link once, then wait. Everything will start automatically. Keep the tab open; do not click Run, change settings, or refresh the page. The figures and download links will appear when processing finishes.
 
@@ -70,8 +72,12 @@ The initial Binder build and archive downloads may take several minutes before
 the Voilà landing/progress UI becomes available. These instructions must also
 accompany the link outside the app; the app cannot show them before it loads.
 
-Local UI-contract tests: `python -B test_one_click.py` (mocked widgets/runner,
-no cloud claim). Existing six launcher tests remain unchanged.
+Local tests: `python -B -m unittest discover -p 'test_*.py'` (15 tests:
+eight mocked UI-contract tests, six archive tests, and one real-thread
+notebook-context regression). Browser testing must use Jupyter Server with
+the Voilà extension to match Binder: standalone Voilà uses different file
+routes and is not the supported deployment for the generated download links.
+Local tests do not establish a completed cloud run.
 
 For the strongest immutable launch identity, replace the tag in that URL with
 the **actual commit SHA returned by publication**, never an invented commit.
