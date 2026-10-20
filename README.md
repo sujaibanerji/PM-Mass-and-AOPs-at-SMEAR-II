@@ -1,5 +1,26 @@
 # Do the PM mass and aerosol optical properties differ between plant-material-labelled and dust-event-associated filters at Hyytiälä?
 
+## Revised size-distribution methods
+
+The revised methods subsection is available as a complete LaTeX source project:
+
+- [Copy-ready manuscript subsection](docs/methods/size-distribution/size_distribution.tex)
+- [Standalone compilation document](docs/methods/size-distribution/main.tex)
+- [The four cited bibliography entries](docs/methods/size-distribution/bibliography.bib)
+
+Download all three files into the same folder and compile `main.tex` with pdfLaTeX and BibTeX (or upload the folder to Overleaf with `main.tex` selected as the main document). A terminal build is:
+
+```sh
+pdflatex -halt-on-error main.tex
+bibtex main
+pdflatex -halt-on-error main.tex
+pdflatex -halt-on-error main.tex
+```
+
+For integration into the full manuscript, replace the existing size-distribution subsection with `size_distribution.tex`; do not introduce a second `sec:size` label. It uses `amsmath`, author-year `natbib` citations, and the four supplied bibliography keys. Keep the manuscript's existing preamble and bibliography style. The reference to SI Section S9 refers to the accompanying manuscript's SI, which is not reproduced in this methods-only project.
+
+The text explains the approximate APS diameter conversion and its density/shape assumptions, bin-centre selection, projected-area and volume weighting, collection averaging, and the distinction between size-regime scalar metrics and size-resolved curves. The exact project compiled successfully on 20 October 2026. This is a methods-documentation update: it does not change calculations, figure inputs, code/data archives, Binder pins, or their validation status.
+
 ## Published archives and current status — 20 October 2026
 
 The processed data and Python-only analysis code are now publicly available on Zenodo, both as version 1.00:

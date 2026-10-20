@@ -1,0 +1,113 @@
+\subsection{Size-distribution treatment}
+\label{sec:size}
+
+Aerosol particle size distributions (APSDs) provide size-resolved
+context for the PM mass and aerosol optical properties associated
+with each collection category. We use number, projected-area, and
+volume distributions to distinguish the contribution of smaller
+particles to number concentration from the greater weighting of
+larger particles in area and volume. These distributions describe
+the aerosol particles sampled during the collection periods;
+they do not identify individual particles as plant-material or dust.
+
+Combining the two instruments requires an explicit relationship
+between their diameter scales. The differential mobility particle
+sizer (DMPS) reports electrical mobility diameter, which is retained
+without conversion \citep{wiedensohler2012}. The aerodynamic particle
+sizer (APS) reports aerodynamic diameter, \(D_a\). Following the
+approach used at Hyyti\"al\"a by \citet{ylivinkka2025}, we convert
+\(D_a\) to an approximate mobility-equivalent diameter, \(D_m\), using
+\begin{equation}
+D_m \approx D_a\sqrt{\frac{\rho_0}{\rho_p}},
+\qquad
+\rho_0 = 1~\mathrm{g\,cm^{-3}},
+\qquad
+\rho_p = 1.5~\mathrm{g\,cm^{-3}},
+\end{equation}
+where \(\rho_0\) is the reference density and \(\rho_p\) is the assumed
+particle density. This spherical-particle approximation neglects
+the diameter dependence of the Cunningham slip correction in the
+conversion. Particle density and shape were not measured for each
+collection, so the converted diameters are model-dependent
+equivalent sizes rather than independently measured geometric
+diameters.
+
+The merged distributions use DMPS bins below
+\(0.6~\mu\mathrm{m}\) and converted APS bins at and above
+\(0.6~\mu\mathrm{m}\), avoiding duplicate use of the overlapping
+instrument ranges. The upper selection criterion is applied to
+the original APS aerodynamic bin centres, retaining only centres
+at or below \(15~\mu\mathrm{m}\). The largest retained APS bin
+centre is therefore \(14.9~\mu\mathrm{m}\) in aerodynamic diameter,
+corresponding to approximately \(12.2~\mu\mathrm{m}\) after the
+conversion above. This value locates that bin on the converted
+diameter axis; it is not a sharp upper limit on the diameters of
+all particles represented by the bin. Although the plotted axis
+extends to \(15~\mu\mathrm{m}\), no values are extrapolated beyond
+the retained bin centres. SI Section S9 gives the native
+instrument grids.
+
+The upper-bin selection limits the plotted range but does not
+demonstrate complete particle detection within it.
+\citet{vasilatou2023} documented size-dependent counting
+efficiencies and differences among four APS instruments in
+laboratory tests extending beyond \(10~\mu\mathrm{m}\).
+Their findings motivate caution when interpreting the large-particle
+end of APS distributions; they do not independently validate the
+counting efficiency of our instrument or establish
+\(15~\mu\mathrm{m}\) as a universal performance threshold.
+This plotting criterion does not alter the independently
+measured super-PM$_{10}$ mass.
+
+Number, projected-area, and volume distributions are calculated
+on the same retained diameter grid. We define
+\begin{equation}
+n(D) = \frac{\mathrm{d}N}{\mathrm{d}\log_{10}D},
+\end{equation}
+where \(N\) is particle number concentration and \(D\) denotes
+mobility diameter for DMPS bins or the approximate
+mobility-equivalent diameter for converted APS bins. Assuming
+spherical particles, the corresponding distributions of projected
+area, \(A_{\mathrm{proj}}\), and volume, \(V\), are
+\begin{align}
+\frac{\mathrm{d}A_{\mathrm{proj}}}{\mathrm{d}\log_{10}D}
+&= \frac{\pi D^2}{4}\,n(D),\\
+\frac{\mathrm{d}V}{\mathrm{d}\log_{10}D}
+&= \frac{\pi D^3}{6}\,n(D).
+\end{align}
+The geometric factors are evaluated at the retained bin centres.
+Projected area is the circular cross-sectional area of a sphere,
+not its total surface area, which is four times larger
+\citep{seinfeld2016}; neither quantity is an optical scattering
+cross-section. Multiplying all APS diameters by the same constant
+preserves logarithmic bin widths and hence the number-distribution
+ordinates, while changing the diameter-dependent area and volume
+weights.
+
+Collection averaging preserves the sampling interval as the unit
+of comparison. Hourly spectra are required to contain finite
+values in all supplied size bins and are averaged over each
+recorded filter interval using the duration of their overlap
+with that interval as weights. A collection is retained when
+complete spectra cover at least \(75\,\%\) of its duration;
+this selection is independent of PM mass validity. The retained
+collection-mean spectra then receive equal weight in each
+category mean. Consequently, longer collections do not
+automatically receive greater weight in the category curves.
+
+The five supplied scalar metrics describe broader particle-size
+regimes rather than individual bins in the plotted distributions.
+They comprise Aitken-regime number concentration,
+\(N_{\mathrm{Ait}}\), accumulation-regime area,
+\(S_{\mathrm{acc}}\), accumulation-regime volume,
+\(V_{\mathrm{acc}}\), coarse-regime volume,
+\(V_{\mathrm{coarse}}\), and the coarse-to-accumulation volume
+ratio, \(R_V\). These quantities are analysed as supplied
+regime-level descriptors, separately from the newly constructed
+size-resolved curves; they are not obtained by integrating the
+category-mean curves. The two analyses therefore answer
+complementary questions: the scalars compare specified regimes,
+whereas the curves show where differences occur across particle
+size. Neither the descriptive mean curves nor their geometric
+weightings establish whole-curve statistical significance or
+plant-material-specific and dust-specific contributions to PM mass.
