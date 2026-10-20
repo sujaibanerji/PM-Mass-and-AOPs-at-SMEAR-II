@@ -1,23 +1,22 @@
 {
-  "release_id": "binder-20261019-size-format",
+  "release_id": "binder-20261019-dust-evidence",
+  "repository": "sujaibanerji/hyytiala-pm-mass-and-optical-properties",
+  "proposed_branch": "release/python-only-eight-figures-20261020",
+  "release_tag": "binder-20261020-python-only-eight-figures",
+  "actual_commit_sha": null,
+  "publication_state": "locally_verified_cloud_acceptance_pending",
   "archives": {
-    "codes": {
-      "filename": "codes.zip",
-      "bytes": 2311717,
-      "sha256": "ece1e31e61aa60a12c2802df7e421e471fd314eb20616d06ccb4f7714697795c",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-size-format/codes.zip"
-    },
     "data": {
       "filename": "data.zip",
-      "bytes": 374791899,
-      "sha256": "7eb650fb02b403430cf8f55f234311112573f56b781386f96890ffe2cd555826",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-pollen/data.zip"
+      "bytes": 424088387,
+      "sha256": "fbcea2262e8ad179798ad7cd462031345790649b89dd0e5c7a4d75bb549dc393",
+      "url": "https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/releases/download/binder-20261019-dust-evidence/data.zip"
     },
-    "additional_figures": {
-      "filename": "additional_figures.zip",
-      "bytes": 40841226,
-      "sha256": "e77b2a4eb25514d4f7c3c9c3c3d46c9ef0e31001dbaf0a556fad5ed79f96e9fb",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-size-format/additional_figures.zip"
+    "codes": {
+      "filename": "codes.zip",
+      "bytes": 2322881,
+      "sha256": "8e40c9f354bd96f53dea2f9a95cbc6a3e2bd25248ca4351101fb061232750720",
+      "url": "https://github.com/sujaibanerji/hyytiala-pm-mass-and-optical-properties/releases/download/binder-20261020-python-only-eight-figures/codes.zip"
     }
   }
 }

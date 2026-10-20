@@ -1,4 +1,4 @@
-name: hyytiala-reviewer
+name: hyytiala-reviewer-dust-evidence
 channels:
   - conda-forge
 dependencies:

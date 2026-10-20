@@ -1,3 +1,3 @@
-# Interface only; the original scientific requirements remain unchanged.
+# Interface only. Scientific dependency pins are separate.
 voila==0.5.13
 ipywidgets==8.1.9
