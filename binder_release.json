@@ -1,23 +1,23 @@
 {
-  "release_id": "binder-20261019-size-format",
+  "release_id": "binder-20261025-consistent-counts",
+  "repository": "sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II",
+  "proposed_branch": "release/consistent-counts-20261025",
+  "release_tag": "binder-20261025-consistent-counts",
+  "actual_commit_sha": null,
+  "publication_state": "release_prepared_for_hosted_verification",
   "archives": {
-    "codes": {
-      "filename": "codes.zip",
-      "bytes": 2311717,
-      "sha256": "ece1e31e61aa60a12c2802df7e421e471fd314eb20616d06ccb4f7714697795c",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-size-format/codes.zip"
-    },
     "data": {
       "filename": "data.zip",
-      "bytes": 374791899,
-      "sha256": "7eb650fb02b403430cf8f55f234311112573f56b781386f96890ffe2cd555826",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-pollen/data.zip"
+      "bytes": 451789522,
+      "sha256": "4c3eeb8b9763144fc86da62f0f10fabf33a1069ad9f8196a573372778f38efdd",
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261025-consistent-counts/data.zip"
     },
-    "additional_figures": {
-      "filename": "additional_figures.zip",
-      "bytes": 40841226,
-      "sha256": "e77b2a4eb25514d4f7c3c9c3c3d46c9ef0e31001dbaf0a556fad5ed79f96e9fb",
-      "url": "https://github.com/sujaibanerji/hyytiala-binder-reviewer/releases/download/binder-20261019-size-format/additional_figures.zip"
+    "codes": {
+      "filename": "codes.zip",
+      "bytes": 2867029,
+      "sha256": "1722f94a7bf02ff5a585c4d5f2ae530b483bd2f0fa9170fa20093ed04ef777a1",
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261025-consistent-counts/codes.zip"
     }
-  }
+  },
+  "cloud_execution_verified": false
 }
