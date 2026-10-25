@@ -3,8 +3,8 @@
   "repository": "sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II",
   "proposed_branch": "release/count-explanations-20261025",
   "release_tag": "binder-20261025-count-explanations",
-  "actual_commit_sha": null,
-  "publication_state": "prepared_for_hosted_verification",
+  "actual_commit_sha": "cf3a9d0f0520458632f92009e94150bbbc0eb23b",
+  "publication_state": "published_and_hosted_verified",
   "archives": {
     "data": {
       "filename": "data.zip",
@@ -19,5 +19,7 @@
       "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261025-count-explanations/codes.zip"
     }
   },
-  "cloud_execution_verified": false
+  "cloud_execution_verified": true,
+  "binder_url": "https://gesis.mybinder.org/v2/gh/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/cf3a9d0f0520458632f92009e94150bbbc0eb23b?urlpath=voila/render/One_click.ipynb",
+  "verification_report": "HOSTED_VERIFICATION.json"
 }
