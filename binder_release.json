@@ -1,22 +1,22 @@
 {
-  "release_id": "binder-20261025-consistent-counts",
+  "release_id": "binder-20261025-count-explanations",
   "repository": "sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II",
-  "proposed_branch": "release/consistent-counts-20261025",
-  "release_tag": "binder-20261025-consistent-counts",
+  "proposed_branch": "release/count-explanations-20261025",
+  "release_tag": "binder-20261025-count-explanations",
   "actual_commit_sha": null,
-  "publication_state": "release_prepared_for_hosted_verification",
+  "publication_state": "prepared_for_hosted_verification",
   "archives": {
     "data": {
       "filename": "data.zip",
-      "bytes": 451789522,
-      "sha256": "4c3eeb8b9763144fc86da62f0f10fabf33a1069ad9f8196a573372778f38efdd",
-      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261025-consistent-counts/data.zip"
+      "bytes": 451878223,
+      "sha256": "e456deb402afb381ee73f6455d1da79612467dfd79461f7ace6c3e48c902d870",
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261025-count-explanations/data.zip"
     },
     "codes": {
       "filename": "codes.zip",
-      "bytes": 2867029,
-      "sha256": "1722f94a7bf02ff5a585c4d5f2ae530b483bd2f0fa9170fa20093ed04ef777a1",
-      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261025-consistent-counts/codes.zip"
+      "bytes": 2867347,
+      "sha256": "fd77eed7edd4ac71b70f49b9752048391169110f6931aff832e60282e367300e",
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261025-count-explanations/codes.zip"
     }
   },
   "cloud_execution_verified": false

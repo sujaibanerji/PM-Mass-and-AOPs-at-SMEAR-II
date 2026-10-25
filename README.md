@@ -2,7 +2,7 @@
 
 This release uses the revised `data.zip` and `codes.zip` dated 25 October 2026.
 It reproduces eight main-manuscript and three supplementary figures, including
-the tighter boxplot axes, numeric collection counts and the Figure 2 explanation
+the tighter boxplot axes, numeric collection counts and the Figures 2-5 and S2-S3 explanation
 of n. Data observations and statistical definitions are unchanged.
 
 The default workflow redraws the figures from frozen processed inputs, preserves
@@ -23,3 +23,5 @@ the requirements in `.binder/`, and run:
 ```sh
 python binder/launcher.py --archive-dir . --offline --output-dir results/new_run
 ```
+
+All six figures with collection counts explain n. Figures S2-S3 use coloured markers without dark outlines.

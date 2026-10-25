@@ -73,7 +73,7 @@ def safe_extract(path,destination):
 
 def configuration():
     config=json.loads((HERE/'binder_release.json').read_text(encoding='utf-8'))
-    if config['release_id']!='binder-20261025-consistent-counts' or set(config['archives'])!={'codes','data'}:
+    if config['release_id']!='binder-20261025-count-explanations' or set(config['archives'])!={'codes','data'}:
         raise ValueError('Unexpected release configuration; no historical default is supported.')
     for kind,record in config['archives'].items():
         if record['filename']!=kind+'.zip' or not re.fullmatch('[0-9a-f]{64}',record['sha256']):
