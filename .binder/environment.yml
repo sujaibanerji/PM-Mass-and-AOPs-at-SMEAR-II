@@ -1,6 +1,0 @@
-name: hyytiala-current-figures
-channels:
-  - conda-forge
-dependencies:
-  - python=3.13.5
-  - pip
