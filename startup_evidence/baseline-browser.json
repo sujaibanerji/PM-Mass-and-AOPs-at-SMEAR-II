@@ -1,0 +1,82 @@
+{
+  "events": [
+    {
+      "type": "http",
+      "status": 403,
+      "url": "http://127.0.0.1:8866/voila/templates/lab/static/voila-style.js?v=f8119197a6dca99873188bf35156537a22bfe04c2731f2dff0eb39b234c84fa4f769d9b8cf450f08a0ac27487868c961055dc8149ea73442a204de904419ddb3"
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "type": "http",
+      "status": 403,
+      "url": "http://127.0.0.1:8866/voila/templates/lab/static/index.css?v=ee8de085778696b327a178e914641b4ff5d5936d39a3f685a2b8e96a30af90b5a36bd532c52c450c247a4135a5651fac2d12b82381800a9f1ce369cf7e116a4b"
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "type": "http",
+      "status": 403,
+      "url": "http://127.0.0.1:8866/voila/templates/lab/static/theme-light.css?v=567086df184b67ccfd5ef3e3744fcac5a9b5b662efb928b992481f937e7014f7ec2b8d232f92b742cf2eaafbef2aeeabe2fdc1f4d44d65dc857e09d6c6aee5b7"
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "type": "http",
+      "status": 403,
+      "url": "http://127.0.0.1:8866/voila/static/voila.js"
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    }
+  ],
+  "snapshots": [
+    {
+      "seconds": 6.01,
+      "text": "Executing 2 of 2"
+    },
+    {
+      "seconds": 11.091,
+      "text": "Executing 2 of 2"
+    },
+    {
+      "seconds": 16.105,
+      "text": "Executing 2 of 2"
+    },
+    {
+      "seconds": 21.124,
+      "text": "Executing 2 of 2"
+    },
+    {
+      "seconds": 26.138,
+      "text": "Executing 2 of 2"
+    },
+    {
+      "seconds": 31.151,
+      "text": "Executing 2 of 2"
+    },
+    {
+      "seconds": 36.162,
+      "text": "Executing 2 of 2"
+    },
+    {
+      "seconds": 41.174,
+      "text": "Executing 2 of 2"
+    },
+    {
+      "seconds": 46.185,
+      "text": "Executing 2 of 2"
+    },
+    {
+      "seconds": 51.196,
+      "text": "Executing 2 of 2"
+    }
+  ]
+}

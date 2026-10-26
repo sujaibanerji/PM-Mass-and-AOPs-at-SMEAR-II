@@ -97,7 +97,7 @@ def show():
       '<p><b>'+INSTRUCTIONS+'</b></p>'
       '<p>The initial Binder build and archive downloads can take several minutes. '
       'Progress appears here once this page has loaded.</p>'
-      '<p><b>Version: '+html.escape(config.get('release_tag',config['release_id']))+'</b>. Archives are size- and SHA-256-pinned; '
+      '<p><b>Version: '+html.escape(config.get('local_revision') or config.get('release_tag') or config['release_id'])+'</b>. Archives are size- and SHA-256-pinned; '
       'unavailable new archives cause an error, never an old-release fallback.</p>'
       '<p>&sigma;<sub>abs,520</sub> and MAC<sub>520</sub>. Scattering, MSC and SSA: 550 nm.</p>'
       '<p><b>Automatic default:</b> redraw current Figures 2–8 and S1–S3 from frozen saved/processed inputs; '

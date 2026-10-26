@@ -1,0 +1,27 @@
+test_good_flat_name (test_launcher.LauncherTests.test_good_flat_name) ... ok
+test_hash_or_size_mismatch (test_launcher.LauncherTests.test_hash_or_size_mismatch) ... ok
+test_reject_case_collision_before_extract (test_launcher.LauncherTests.test_reject_case_collision_before_extract) ... ok
+test_reject_dangerous_names (test_launcher.LauncherTests.test_reject_dangerous_names) ... ok
+test_reject_symlink (test_launcher.LauncherTests.test_reject_symlink) ... ok
+test_safe_extract_and_crc (test_launcher.LauncherTests.test_safe_extract_and_crc) ... ok
+test_hosted_release_tag_without_local_revision_still_works (test_local_revision.LocalRevisionTests.test_hosted_release_tag_without_local_revision_still_works) ... ok
+test_local_revision_with_null_release_tag_displays_and_starts (test_local_revision.LocalRevisionTests.test_local_revision_with_null_release_tag_displays_and_starts) ... ok
+test_explicit_module_reload_preserves_completed_session (test_one_click.AutoStartTests.test_explicit_module_reload_preserves_completed_session) ... ok
+test_failure_visible_no_rerender_retry_and_explicit_retry_only (test_one_click.AutoStartTests.test_failure_visible_no_rerender_retry_and_explicit_retry_only) ... ok
+test_historical_controls_hidden_disabled_until_success (test_one_click.AutoStartTests.test_historical_controls_hidden_disabled_until_success) ... ok
+test_historical_run_requires_explicit_click_after_success (test_one_click.AutoStartTests.test_historical_run_requires_explicit_click_after_success) ... ok
+test_instruction_is_visible_without_any_user_action (test_one_click.AutoStartTests.test_instruction_is_visible_without_any_user_action) ... ok
+test_rerender_during_and_after_success_never_schedules_duplicate (test_one_click.AutoStartTests.test_rerender_during_and_after_success_never_schedules_duplicate) ... ok
+test_show_automatically_runs_default_once_and_displays_progress_links (test_one_click.AutoStartTests.test_show_automatically_runs_default_once_and_displays_progress_links) ... ok
+test_success_does_not_allow_stale_retry_click (test_one_click.AutoStartTests.test_success_does_not_allow_stale_retry_click) ... ok
+test_javascript_in_second_configured_static_root_is_served (test_static_assets.StaticAssetsTests.test_javascript_in_second_configured_static_root_is_served) ... ok
+test_parent_traversal_remains_rejected (test_static_assets.StaticAssetsTests.test_parent_traversal_remains_rejected) ... 403 GET /voila/static/%2e%2e/private.txt (127.0.0.1): ..\private.txt is not in root static directory
+403 GET /voila/static/%2e%2e/private.txt (127.0.0.1) 1.43ms
+ok
+test_template_stylesheet_is_served_from_its_real_root (test_static_assets.StaticAssetsTests.test_template_stylesheet_is_served_from_its_real_root) ... ok
+test_real_worker_inherits_notebook_context (test_thread_context.WorkerContextTests.test_real_worker_inherits_notebook_context) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.115s
+
+OK

@@ -1,0 +1,255 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-10-26T23:27:52.105610+00:00",
+  "verification_date_local": "2026-10-27",
+  "time_zone": "Europe/Helsinki",
+  "package_revision": "20261027-self-contained",
+  "scope": "Actual local Chrome -> Voila in Jupyter Server -> automatic current 11-figure replay and dust audit -> browser ZIP download. Supplemental analyses and hosted execution are verified separately.",
+  "input_archive_pins_used": {
+    "codes": {
+      "filename": "codes.zip",
+      "bytes": 3251920,
+      "sha256": "aff537111c815dcbf3b6bdc678c97487674361a1d59cf05ad0592bed2ddf916d",
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261027-self-contained/codes.zip"
+    },
+    "data": {
+      "filename": "data.zip",
+      "bytes": 458123047,
+      "sha256": "c62f6cdb818eaa48d59940a30eb6d900da45f6967de9f72ab49e038f42f3648a",
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261027-self-contained/data.zip"
+    }
+  },
+  "archive_integrity": {
+    "release_id": "binder-20261025-count-explanations",
+    "archives": {
+      "codes": {
+        "filename": "codes.zip",
+        "bytes": 3251920,
+        "sha256": "aff537111c815dcbf3b6bdc678c97487674361a1d59cf05ad0592bed2ddf916d",
+        "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261027-self-contained/codes.zip"
+      },
+      "data": {
+        "filename": "data.zip",
+        "bytes": 458123047,
+        "sha256": "c62f6cdb818eaa48d59940a30eb6d900da45f6967de9f72ab49e038f42f3648a",
+        "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261027-self-contained/data.zip"
+      }
+    },
+    "size_sha256_CRC_paths_checked": true
+  },
+  "default_jobs": {
+    "release_id": "binder-20261025-count-explanations",
+    "status": "passed",
+    "jobs": [
+      {
+        "job": "python_main_manuscript",
+        "returncode": 0
+      },
+      {
+        "job": "python_supplementary_information",
+        "returncode": 0
+      },
+      {
+        "job": "python_supporting_figures_main_manuscript",
+        "returncode": 0
+      },
+      {
+        "job": "python_supporting_figures_supplementary_information",
+        "returncode": 0
+      }
+    ],
+    "mode": "saved_input_redraw_plus_python_dust_replay",
+    "historical_recomputed": false,
+    "full_raw_data_rerun": false,
+    "current_julia_entrypoints": "Shared Python renderer/replay dispatch; not independent Julia numerical validation.",
+    "cloud_execution_claim": false
+  },
+  "figures": {
+    "figure_1.png": {
+      "decoded_pixels_exact": true,
+      "bytes_exact": true
+    },
+    "figure_2.png": {
+      "decoded_pixels_exact": true,
+      "bytes_exact": true
+    },
+    "figure_3.png": {
+      "decoded_pixels_exact": true,
+      "bytes_exact": true
+    },
+    "figure_4.png": {
+      "decoded_pixels_exact": true,
+      "bytes_exact": true
+    },
+    "figure_5.png": {
+      "decoded_pixels_exact": true,
+      "bytes_exact": true
+    },
+    "figure_6.png": {
+      "decoded_pixels_exact": true,
+      "bytes_exact": true
+    },
+    "figure_7.png": {
+      "decoded_pixels_exact": true,
+      "bytes_exact": true
+    },
+    "figure_8.png": {
+      "decoded_pixels_exact": true,
+      "bytes_exact": true
+    },
+    "figure_S1": {
+      "decoded_pixels_exact": true,
+      "bytes_exact": true
+    },
+    "figure_S2": {
+      "decoded_pixels_exact": true,
+      "bytes_exact": true
+    },
+    "figure_S3": {
+      "decoded_pixels_exact": true,
+      "bytes_exact": true
+    }
+  },
+  "dust_replay": {
+    "status": "passed",
+    "mode": "portable_numerical_replay",
+    "python": "3.13.5",
+    "pandas": "3.0.3",
+    "snapshot_hashes_valid": true,
+    "baseline_labels_checked": 1569,
+    "maximum_overlap_hours_error": 1.7763568394002505e-15,
+    "synthetic_tests": 9,
+    "byte_identical_numerical_exports": {
+      "collection_overlaps.csv": true,
+      "collection_date_intersections.csv": true,
+      "selection_membership.csv": true,
+      "excluded_membership.csv": true,
+      "category_counts.csv": true,
+      "category_medians.csv": true,
+      "direct_P_minus_D.csv": true,
+      "fixed_measurements.csv": true,
+      "calendar_date_coverage.csv": true
+    },
+    "external_source_files_read": false,
+    "original_pdf_provenance_rechecked": false,
+    "native_julia_parity": false,
+    "new_bootstrap": false
+  },
+  "browser": {
+    "first_visible_running_seconds": 9.6,
+    "visible_success_seconds": 220.2,
+    "finished_seconds": 221.4,
+    "images_loaded": [
+      {
+        "alt": "Figure 1",
+        "width": 5811,
+        "height": 6690,
+        "path": "/files/outputs/20261026T232241189930Z/results/python/main_manuscript/figure_1.png"
+      },
+      {
+        "alt": "Figure 2",
+        "width": 2711,
+        "height": 2775,
+        "path": "/files/outputs/20261026T232241189930Z/results/python/main_manuscript/figure_2.png"
+      },
+      {
+        "alt": "Figure 3",
+        "width": 2711,
+        "height": 1865,
+        "path": "/files/outputs/20261026T232241189930Z/results/python/main_manuscript/figure_3.png"
+      },
+      {
+        "alt": "Figure 4",
+        "width": 2711,
+        "height": 2005,
+        "path": "/files/outputs/20261026T232241189930Z/results/python/main_manuscript/figure_4.png"
+      },
+      {
+        "alt": "Figure 5",
+        "width": 2711,
+        "height": 3090,
+        "path": "/files/outputs/20261026T232241189930Z/results/python/main_manuscript/figure_5.png"
+      },
+      {
+        "alt": "Figure 6",
+        "width": 2520,
+        "height": 1715,
+        "path": "/files/outputs/20261026T232241189930Z/results/python/main_manuscript/figure_6.png"
+      },
+      {
+        "alt": "Figure 7",
+        "width": 2711,
+        "height": 3343,
+        "path": "/files/outputs/20261026T232241189930Z/results/python/main_manuscript/figure_7.png"
+      },
+      {
+        "alt": "Figure 8",
+        "width": 2711,
+        "height": 2310,
+        "path": "/files/outputs/20261026T232241189930Z/results/python/main_manuscript/figure_8.png"
+      },
+      {
+        "alt": "Figure S1",
+        "width": 2160,
+        "height": 1350,
+        "path": "/files/outputs/20261026T232241189930Z/results/python/supplementary_information/figure_S1.png"
+      },
+      {
+        "alt": "Figure S2",
+        "width": 2160,
+        "height": 2160,
+        "path": "/files/outputs/20261026T232241189930Z/results/python/supplementary_information/figure_S2.png"
+      },
+      {
+        "alt": "Figure S3",
+        "width": 2160,
+        "height": 1560,
+        "path": "/files/outputs/20261026T232241189930Z/results/python/supplementary_information/figure_S3.png"
+      }
+    ],
+    "events": [
+      {
+        "type": "pageerror",
+        "message": "MathJax is not defined"
+      }
+    ]
+  },
+  "download": {
+    "bytes": 39646268,
+    "sha256": "b926ac97c3b3edfc8ec81eb74afedc7bbe91dab4e3360283553c0d8e8e0be64d",
+    "crc_passed": true,
+    "entries": 105,
+    "matches_server_zip": true
+  },
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.0",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "Pillow": "13.0.0",
+    "openpyxl": "3.1.5",
+    "voila": "0.5.13",
+    "ipywidgets": "8.1.9",
+    "ipykernel": "7.4.0",
+    "tornado": "6.5.10",
+    "jupyter_server": "2.21.0"
+  },
+  "hosted_execution_verified": false,
+  "final_archive_pin_verification": "FINAL-ARCHIVE-PIN-VERIFICATION.json",
+  "final_archive_pins": {
+    "codes": {
+      "filename": "codes.zip",
+      "bytes": 3288047,
+      "sha256": "f41e5e260e1063dcdf53b1a03dff0b5277aa651430b445a847decafe5cb0248e",
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261027-self-contained/codes.zip"
+    },
+    "data": {
+      "filename": "data.zip",
+      "bytes": 458123047,
+      "sha256": "c62f6cdb818eaa48d59940a30eb6d900da45f6967de9f72ab49e038f42f3648a",
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261027-self-contained/data.zip"
+    }
+  },
+  "final_codes_only_adds_23_receipts_existing_payload_unchanged": true
+}

@@ -47,7 +47,7 @@ def run(output=None,archive_dir=None,allow_network=True,historical=False,progres
         for p in sorted(result.rglob('*')):
             if p.is_file() and not {'saved_input_work','_render'}.intersection(p.parts) and p.name!='.run.lock':
                 z.write(p,p.relative_to(result).as_posix())
-    report=dict(release_id=configuration()['release_id'],status='passed',
+    report=dict(release_id=configuration()['release_id'],local_revision=configuration().get('local_revision'),status='passed',
                 current_figures='7 saved-input redraws plus exact current workflow asset',
                 dust='Python-only immutable-input numerical replay',historical_recomputed=historical,
                 full_raw_data_rerun=False,cloud_tested_by_preparer=False,

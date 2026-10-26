@@ -1,0 +1,180 @@
+{
+  "release_id": "binder-20261025-count-explanations",
+  "local_revision": "20261026-flag-555-lowercase",
+  "status": "PASS",
+  "current_figures": "7 saved-input redraws plus exact current workflow asset",
+  "dust": "Python-only immutable-input numerical replay",
+  "historical_recomputed": false,
+  "full_raw_data_rerun": false,
+  "cloud_tested_by_preparer": false,
+  "main_figures": 8,
+  "supplementary_figures": 3,
+  "results_zip": "results.zip",
+  "hosted_execution": false,
+  "figures": [
+    {
+      "figure": "figure_1",
+      "pixels_identical_to_current_documents": true,
+      "dimensions": [
+        5811,
+        6690
+      ]
+    },
+    {
+      "figure": "figure_2",
+      "pixels_identical_to_current_documents": true,
+      "dimensions": [
+        2711,
+        2775
+      ]
+    },
+    {
+      "figure": "figure_3",
+      "pixels_identical_to_current_documents": true,
+      "dimensions": [
+        2711,
+        1865
+      ]
+    },
+    {
+      "figure": "figure_4",
+      "pixels_identical_to_current_documents": true,
+      "dimensions": [
+        2711,
+        2005
+      ]
+    },
+    {
+      "figure": "figure_5",
+      "pixels_identical_to_current_documents": true,
+      "dimensions": [
+        2711,
+        3090
+      ]
+    },
+    {
+      "figure": "figure_6",
+      "pixels_identical_to_current_documents": true,
+      "dimensions": [
+        2520,
+        1715
+      ]
+    },
+    {
+      "figure": "figure_7",
+      "pixels_identical_to_current_documents": true,
+      "dimensions": [
+        2711,
+        3343
+      ]
+    },
+    {
+      "figure": "figure_8",
+      "pixels_identical_to_current_documents": true,
+      "dimensions": [
+        2711,
+        2310
+      ]
+    },
+    {
+      "figure": "figure_S1",
+      "pixels_identical_to_current_documents": true,
+      "dimensions": [
+        2160,
+        1350
+      ]
+    },
+    {
+      "figure": "figure_S2",
+      "pixels_identical_to_current_documents": true,
+      "dimensions": [
+        2160,
+        2160
+      ]
+    },
+    {
+      "figure": "figure_S3",
+      "pixels_identical_to_current_documents": true,
+      "dimensions": [
+        2160,
+        1560
+      ]
+    }
+  ],
+  "numeric_result_members_identical": [
+    "python/supporting_figures_main_manuscript/r6_saved/acf_block_choices.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/acf_diagnostics.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/block_membership.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/bootstrap_summary.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/category_contrasts.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/CATEGORY_CURVES.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/category_descriptives.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/cluster_influence.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/cluster_inventory.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/comparisons.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/legacy/adaptive_block_choices.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/legacy/all_family_comparisons.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/legacy/bootstrap_summary.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/legacy/diagnostic_ranking.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/legacy/fixed_monthly_support.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/legacy/ordinal_acf.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/monthly_baseline_support.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/monthly_typing_sensitivity_ranking.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/pollen_corroboration.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/pollen_grains_per_gram.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/spectrum_coverage.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/temporal_controls.csv",
+    "python/supporting_figures_main_manuscript/r6_saved/year_ci_comparison.csv",
+    "python/supporting_figures_supplementary_information/dust_audit/calendar_date_coverage.csv",
+    "python/supporting_figures_supplementary_information/dust_audit/category_counts.csv",
+    "python/supporting_figures_supplementary_information/dust_audit/category_medians.csv",
+    "python/supporting_figures_supplementary_information/dust_audit/collection_date_intersections.csv",
+    "python/supporting_figures_supplementary_information/dust_audit/collection_overlaps.csv",
+    "python/supporting_figures_supplementary_information/dust_audit/direct_P_minus_D.csv",
+    "python/supporting_figures_supplementary_information/dust_audit/excluded_membership.csv",
+    "python/supporting_figures_supplementary_information/dust_audit/fixed_measurements.csv",
+    "python/supporting_figures_supplementary_information/dust_audit/selection_membership.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/collection_scalars.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/native_background_baselines.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/seasonal_comparisons.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_bootstrap_draw_checks.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_bootstrap_intervals.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_bootstrap_observations.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_descriptives.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_effects.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_episode_median_leave_one_out.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_leave_one_episode_out.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_native_bootstrap_draw_checks.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_native_bootstrap_intervals.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_native_shared_draw_weights.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_shared_draw_weights.csv",
+    "python/supporting_figures_supplementary_information/r6_saved/size_unit_membership.csv"
+  ],
+  "archives": {
+    "codes": {
+      "filename": "codes.zip",
+      "bytes": 3115177,
+      "sha256": "d50df4c239d3ea74c4881ec62b3a271898acab9499476f97ae6155f419a9b91c",
+      "url": null
+    },
+    "data": {
+      "filename": "data.zip",
+      "bytes": 452781706,
+      "sha256": "fccd58f58b22ec7344fa2de63ceaff8e963bd778bddea04b81ac3bca5195183a",
+      "url": null
+    }
+  },
+  "package_revision": "20261026-reproduction-refresh",
+  "interface_checks": {
+    "tests_passed": 17,
+    "null_publication_tag_regression_reproduced_before_fix": true,
+    "version_display_prefers_local_revision": true,
+    "fallback_to_hosted_tag_and_schema_preserved": true
+  },
+  "binder_logic_sha256": {
+    "one_click.py": "872a898b4d83625e905b124a370da093da2b360634770429d986ebee809a2664",
+    "launcher.py": "6a2059da51a58a1353e763716d39834f5812648fd0685c6261d7dbef72c0b0c7",
+    "release_io.py": "9f2dbe798614da552c40d847c5cdb32917f072c1f7ab40e9810c90e1c265f6d1"
+  },
+  "verification_scope": "Four local jobs; ten saved-input figure redraws plus exact Figure 1 copy and dust diagnostic replay. UI tested with the current null-tag configuration. No new cloud execution or full raw-data/bootstrap recomputation."
+}

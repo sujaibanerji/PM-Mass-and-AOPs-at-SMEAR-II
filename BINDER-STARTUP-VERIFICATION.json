@@ -1,0 +1,106 @@
+{
+  "recorded_utc": "2026-10-26T23:18:15.920527+00:00",
+  "package_revision": "20261027-self-contained",
+  "status": "startup_fix_and_full_current_default_verified_locally; new_hosted_verification_pending",
+  "old_hosted_commit": "ff218d82cecbc95833df982759320d6c58453bb3",
+  "old_hosted_browser": {
+    "static_http_errors": [
+      {
+        "type": "http",
+        "status": 403,
+        "path": "/user/sujaibanerji-pm-ops-at-smear-ii-5zb13116/voila/templates/lab/static/voila-style.js"
+      },
+      {
+        "type": "http",
+        "status": 403,
+        "path": "/user/sujaibanerji-pm-ops-at-smear-ii-5zb13116/voila/templates/lab/static/index.css"
+      },
+      {
+        "type": "http",
+        "status": 403,
+        "path": "/user/sujaibanerji-pm-ops-at-smear-ii-5zb13116/voila/templates/lab/static/theme-light.css"
+      },
+      {
+        "type": "http",
+        "status": 403,
+        "path": "/user/sujaibanerji-pm-ops-at-smear-ii-5zb13116/voila/static/voila.js"
+      }
+    ],
+    "first_seconds": 1.703,
+    "last_seconds": 46.881,
+    "all_snapshots_spinner": true
+  },
+  "root_cause": "Tornado 6.5.9 StaticFileHandler freezes allowed_symlink_directory at initialization. Voila 0.5.13 template and multiple-static-root handlers subsequently validate a different legitimate root, causing 403 for required JS/CSS. The missing frontend leaves the loading overlay visible. This is independent of the background numerical worker.",
+  "repair": "Pin tornado==6.5.10; upstream resolves the default allowed directory against the validated root. No custom handler patch, security downgrade, calculation change or worker rewrite.",
+  "upstream": "https://www.tornadoweb.org/en/stable/releases/v6.5.10.html",
+  "http_regression": {
+    "before": {
+      "tornado": "6.5.9",
+      "failed": [
+        "javascript_in_second_configured_static_root_is_served",
+        "template_stylesheet_is_served_from_its_real_root"
+      ],
+      "passed": [
+        "parent_traversal_remains_rejected"
+      ]
+    },
+    "after": {
+      "tornado": "6.5.10",
+      "passed": 3,
+      "failed": 0
+    }
+  },
+  "full_unit_suite": {
+    "command": "python -m unittest discover -v",
+    "passed": 20,
+    "failed": 0
+  },
+  "fixed_local_browser": {
+    "kind": "Actual Chrome and Voila; controlled 30-second failing worker using the unchanged one_click.py",
+    "first_visible_progress_seconds": 11.432,
+    "first_visible_failure_seconds": 36.511,
+    "static_http_errors": [],
+    "console_warnings": [
+      {
+        "type": "console",
+        "message": "Error: The getter for the shared module is not a function. This may be caused by setting \"shared.import: false\" without the host providing the corresponding lib. #RUNTIME-012\nargs: {\"shareKey\":\"@jupyterlab/docregistry\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/runtime#runtime-012\n    at http://127.0.0.1:8867/voila/labextensions/@jupyter-notebook/lab-extension/static/remoteEntry.0e3a9446c28b8713.js:5:7220\n    at async Promise.all (index 7)\n    at async Promise.all (index 1)\n    at async http://127.0.0.1:8867/voila/labextensions/@jupyter-notebook/lab-extension/static/remoteEntry.0e3a9446c28b8713.js:3:18493\n    at async Promise.all (index 1)\n    at async Promise.all (index 1)\n    at async g (http://127.0.0.1:8867/voila/static/9212.voila.js:1:4497)\n    at async Promise.allSettled (index 1)\n    at async http://127.0.0.1:8867/voila/static/9212.voila.js:1:6146"
+      }
+    ],
+    "progress_and_retry_visible": true
+  },
+  "new_hosted_verified": false,
+  "scientific_inputs_or_arrays_changed": false,
+  "evidence_files": {
+    "baseline-browser.json": "8751e1094d59523c407bfac8c5e85cafa6b2d30bd64105730268e8aa2ec4b552",
+    "baseline-browser.png": "bbc7ab3577b4393c49a56a1285b24f2520493fb4fdbd705460dcbe5e20ba5619",
+    "current-full-browser.json": "e48e75760ab4983d1156851546c4ff95f85dc758da501cef5dc413add3100f9a",
+    "current-full-browser.png": "aa0e42d26dd2f4c2f2e65e14507c01a03b9fc350365be8716e478028d7eb7924",
+    "fixed-browser.json": "32ff70aed4b2a354df82e94cc1d30ef54156e4ef179d469354afbda08d1fb39a",
+    "fixed-browser.png": "e48c7b6975cf35b24aaee2fa60c3de050b25c57a3166a05ee5053d4909bdbc79",
+    "old-hosted-browser.json": "5e5cf521240c57cc976699b2555370c25fa220ab03a0f1e86ab91f7197c9621c",
+    "old-hosted-browser.png": "29e71d301b61383e7802ca8ac9354474d8790be3845278abdf72315f6cecb6c5",
+    "old-hosted-output-check.json": "21b6f0ad22f9ca59e018946b53e6128f4eec3a34a421f5441464209f1aa6649b",
+    "unit-tests.txt": "d125682e7a3116a41e5e46cf72c2b2b457b0787bf29d04261d5ef5dcc1691963"
+  },
+  "verification_date_local": "2026-10-27",
+  "time_zone": "Europe/Helsinki",
+  "old_hosted_output_check": {
+    "outputs_http_status": 200,
+    "output_run_count": 1,
+    "verification_http_status": 200,
+    "launcher": {
+      "release_id": "binder-20261025-count-explanations",
+      "status": "passed",
+      "current_figures": "7 saved-input redraws plus exact current workflow asset",
+      "dust": "Python-only immutable-input numerical replay",
+      "historical_recomputed": false,
+      "full_raw_data_rerun": false,
+      "cloud_tested_by_preparer": false,
+      "main_figures": 8,
+      "supplementary_figures": 3,
+      "results_zip": "results.zip"
+    }
+  },
+  "full_current_local_browser_report": "LOCAL-VERIFICATION.json",
+  "final_archive_pin_verification": "FINAL-ARCHIVE-PIN-VERIFICATION.json"
+}

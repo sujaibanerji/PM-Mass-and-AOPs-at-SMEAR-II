@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-10-26T23:39:53.603051+00:00",
+  "verification_date_local": "2026-10-27",
+  "time_zone": "Europe/Helsinki",
+  "local_browser_codes_sha256": "aff537111c815dcbf3b6bdc678c97487674361a1d59cf05ad0592bed2ddf916d",
+  "final_codes_sha256": "f41e5e260e1063dcdf53b1a03dff0b5277aa651430b445a847decafe5cb0248e",
+  "all_previously_tested_members_byte_identical": true,
+  "changed_members": [],
+  "removed_members": [],
+  "added_receipt_members": [
+    "local_verification/Existing-Test-Output.txt",
+    "local_verification/Existing-Test-Receipt.json",
+    "local_verification/Figure-Replay-Receipt.json",
+    "local_verification/Generated-Focal-Copies.json",
+    "local_verification/Isolation-Guard-Receipt.json",
+    "local_verification/README.txt",
+    "local_verification/Source-Preservation-Receipt.json",
+    "local_verification/Supplemental-Verification.json",
+    "local_verification/Tested-Payload-Manifest.json",
+    "local_verification/Unit-Test-Output.txt",
+    "local_verification/Unit-Test-Receipt.json",
+    "local_verification/supplemental_logs/absorption_520.log",
+    "local_verification/supplemental_logs/independent_verification.log",
+    "local_verification/supplemental_logs/matched_mass_optics.log",
+    "local_verification/supplemental_logs/measurement_analysis.log",
+    "local_verification/supplemental_logs/measurement_unit_tests.log",
+    "local_verification/supplemental_logs/measurement_verification.log",
+    "local_verification/supplemental_logs/pollen_arithmetic.log",
+    "local_verification/supplemental_logs/record_linkage.log",
+    "local_verification/supplemental_logs/record_verification.log",
+    "local_verification/supplemental_logs/sensitivity_analysis.log",
+    "local_verification/supplemental_logs/sensitivity_review_tables.log",
+    "local_verification/supplemental_logs/sensitivity_verification.log"
+  ],
+  "final_archive_pins": {
+    "codes": {
+      "filename": "codes.zip",
+      "bytes": 3288047,
+      "sha256": "f41e5e260e1063dcdf53b1a03dff0b5277aa651430b445a847decafe5cb0248e",
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261027-self-contained/codes.zip"
+    },
+    "data": {
+      "filename": "data.zip",
+      "bytes": 458123047,
+      "sha256": "c62f6cdb818eaa48d59940a30eb6d900da45f6967de9f72ab49e038f42f3648a",
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261027-self-contained/data.zip"
+    }
+  },
+  "final_codes_crc_safe_extraction": true,
+  "final_data_same_bytes_as_successful_local_browser_run": true,
+  "scope": "The final codes archive only adds non-executable verification receipts. Every member used by the successful local browser replay is byte-identical. The new hosted run independently exercises the final archive bytes."
+}

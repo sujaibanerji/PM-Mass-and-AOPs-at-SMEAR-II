@@ -1,7 +1,5 @@
-Published and hosted-verified on 26 October 2026.
-https://gesis.mybinder.org/v2/gh/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/ff218d82cecbc95833df982759320d6c58453bb3?urlpath=voila/render/One_click.ipynb
+20261027-self-contained
 
-Absorption coefficient sigma_abs,520 and MAC520; scattering, MSC and SSA at 550 nm.
-All four default jobs passed. All 11 hosted figure images match the revised reference pixels.
-Scientific inputs and figures are unchanged; the code archive includes integrity hardening.
-See HOSTED_VERIFICATION.json for the tested workflow and its scope.
+The automatic default completed in an actual local Chrome/Voila browser run. All four default jobs passed, all 11 displayed figure files matched reference bytes and decoded pixels, and the browser-downloaded results ZIP passed CRC and matched the server file. Nine dust numerical exports are byte-identical. See LOCAL-VERIFICATION.json for exact archive hashes used and the one nonblocking MathJax console error. The startup defect is repaired by Tornado 6.5.10; see BINDER-STARTUP-VERIFICATION.json. New hosted verification is recorded separately, after publication.
+
+The final codes.zip adds only 23 verification receipts/logs; every previously tested member is byte-identical, and data.zip is unchanged. FINAL-ARCHIVE-PIN-VERIFICATION.json records final SHA-256 pins and fresh size/hash/CRC/safe-extraction checks.

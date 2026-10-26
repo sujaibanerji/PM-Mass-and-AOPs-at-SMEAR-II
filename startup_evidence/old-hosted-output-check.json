@@ -1,0 +1,17 @@
+{
+  "outputs_http_status": 200,
+  "output_run_count": 1,
+  "verification_http_status": 200,
+  "launcher": {
+    "release_id": "binder-20261025-count-explanations",
+    "status": "passed",
+    "current_figures": "7 saved-input redraws plus exact current workflow asset",
+    "dust": "Python-only immutable-input numerical replay",
+    "historical_recomputed": false,
+    "full_raw_data_rerun": false,
+    "cloud_tested_by_preparer": false,
+    "main_figures": 8,
+    "supplementary_figures": 3,
+    "results_zip": "results.zip"
+  }
+}
