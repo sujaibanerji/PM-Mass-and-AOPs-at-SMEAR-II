@@ -1,7 +1,7 @@
 {
   "recorded_utc": "2026-10-26T23:18:15.920527+00:00",
   "package_revision": "20261027-self-contained",
-  "status": "startup_fix_and_full_current_default_verified_locally; new_hosted_verification_pending",
+  "status": "passed_local_and_fresh_hosted_browser",
   "old_hosted_commit": "ff218d82cecbc95833df982759320d6c58453bb3",
   "old_hosted_browser": {
     "static_http_errors": [
@@ -68,7 +68,7 @@
     ],
     "progress_and_retry_visible": true
   },
-  "new_hosted_verified": false,
+  "new_hosted_verified": true,
   "scientific_inputs_or_arrays_changed": false,
   "evidence_files": {
     "baseline-browser.json": "8751e1094d59523c407bfac8c5e85cafa6b2d30bd64105730268e8aa2ec4b552",
@@ -77,6 +77,8 @@
     "current-full-browser.png": "aa0e42d26dd2f4c2f2e65e14507c01a03b9fc350365be8716e478028d7eb7924",
     "fixed-browser.json": "32ff70aed4b2a354df82e94cc1d30ef54156e4ef179d469354afbda08d1fb39a",
     "fixed-browser.png": "e48c7b6975cf35b24aaee2fa60c3de050b25c57a3166a05ee5053d4909bdbc79",
+    "new-hosted-browser.json": "d150084cca67e447e8e45c04c7a6daf01988d793aa2386405a0337600d345daa",
+    "new-hosted-browser.png": "aa0e42d26dd2f4c2f2e65e14507c01a03b9fc350365be8716e478028d7eb7924",
     "old-hosted-browser.json": "5e5cf521240c57cc976699b2555370c25fa220ab03a0f1e86ab91f7197c9621c",
     "old-hosted-browser.png": "29e71d301b61383e7802ca8ac9354474d8790be3845278abdf72315f6cecb6c5",
     "old-hosted-output-check.json": "21b6f0ad22f9ca59e018946b53e6128f4eec3a34a421f5441464209f1aa6649b",
@@ -102,5 +104,12 @@
     }
   },
   "full_current_local_browser_report": "LOCAL-VERIFICATION.json",
-  "final_archive_pin_verification": "FINAL-ARCHIVE-PIN-VERIFICATION.json"
+  "final_archive_pin_verification": "FINAL-ARCHIVE-PIN-VERIFICATION.json",
+  "tested_source_commit": "96c0dea537ef43beff9663e712104d3689a0c7bd",
+  "binder_launch_url": "https://gesis.mybinder.org/v2/gh/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/96c0dea537ef43beff9663e712104d3689a0c7bd?urlpath=voila/render/One_click.ipynb",
+  "hosted_api_report": "HOSTED_VERIFICATION.json",
+  "hosted_browser_report": "HOSTED-BROWSER-VERIFICATION.json",
+  "hosted_visible_running_seconds": 6.8,
+  "hosted_visible_success_seconds": 82,
+  "hosted_browser_finished_seconds": 86.5
 }

@@ -1,11 +1,14 @@
 {
-  "source_commit": "ff218d82cecbc95833df982759320d6c58453bb3",
-  "release_id": "binder-20261026-520-verified",
+  "source_commit": "96c0dea537ef43beff9663e712104d3689a0c7bd",
+  "release_id": "binder-20261027-self-contained",
+  "verification_date_local": "2026-10-27",
+  "time_zone": "Europe/Helsinki",
   "host": "hub.gesis.mybinder.org",
-  "started_utc": "2026-10-26T03:18:58.026829+00:00",
-  "voila_http_status": 200,
+  "started_utc": "2026-10-26T23:45:17.892336+00:00",
+  "voila_opened_by": "separate browser verification, existing kernel reused",
   "launcher": {
     "release_id": "binder-20261025-count-explanations",
+    "local_revision": "20261027-self-contained",
     "status": "passed",
     "current_figures": "7 saved-input redraws plus exact current workflow asset",
     "dust": "Python-only immutable-input numerical replay",
@@ -21,20 +24,20 @@
     "archives": {
       "codes": {
         "filename": "codes.zip",
-        "bytes": 3107948,
-        "sha256": "dd2ccea7d5c09adafbfdf8c9428782bf49bc5e7fa72e102e6a31ea63c5a0a7fc",
-        "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261026-520-verified/codes.zip"
+        "bytes": 3288047,
+        "sha256": "f41e5e260e1063dcdf53b1a03dff0b5277aa651430b445a847decafe5cb0248e",
+        "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261027-self-contained/codes.zip"
       },
       "data": {
         "filename": "data.zip",
-        "bytes": 452410310,
-        "sha256": "170ec5819ac24a953e13e4b5bf337d857b525b5b75dea2bbb747dc0deec3b609",
-        "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261026-520-verified/data.zip"
+        "bytes": 458123047,
+        "sha256": "c62f6cdb818eaa48d59940a30eb6d900da45f6967de9f72ab49e038f42f3648a",
+        "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261027-self-contained/data.zip"
       }
     },
     "size_sha256_CRC_paths_checked": true
   },
-  "remote_source_commit": "ff218d82cecbc95833df982759320d6c58453bb3",
+  "remote_source_commit": "96c0dea537ef43beff9663e712104d3689a0c7bd",
   "optimization_level": 0,
   "automatic_ui_state": "succeeded",
   "automatic_ui_status": "<p><b>Processing finished.</b> Figures and downloads are below. No further action is required.</p>",
@@ -47,7 +50,8 @@
     "Pillow": "13.0.0",
     "openpyxl": "3.1.5",
     "voila": "0.5.13",
-    "ipywidgets": "8.1.9"
+    "ipywidgets": "8.1.9",
+    "tornado": "6.5.10"
   },
   "images": [
     {
@@ -151,17 +155,17 @@
     }
   ],
   "results_zip": {
-    "bytes": 39803851,
-    "sha256": "92994be9dc39781eef6dd4625181bcfaaa903a091e5b5c1343652d31474ea3f2",
+    "bytes": 39887029,
+    "sha256": "9615d14b640edc0ed965c62fb7fac553f8500a7619bcba43c7ce67df7280d248",
     "entries": 105,
     "CRC_passed": true
   },
   "default_jobs_passed": 4,
-  "finished_utc": "2026-10-26T03:21:59.339052+00:00",
+  "finished_utc": "2026-10-26T23:46:31.378348+00:00",
   "cloud_execution_verified": true,
   "absorption_wavelength_nm": 520,
   "mac_wavelength_nm": 520,
   "ssa_wavelength_nm": 550,
-  "local_revision": "20261026-absorption-and-mac-520",
+  "local_revision": "20261027-self-contained",
   "verification_method": "Hosted Voila HTTP auto-start; existing notebook controller inspected through Jupyter WebSocket; all 11 /files images compared to delivered reference pixels; results ZIP downloaded and CRC checked."
 }

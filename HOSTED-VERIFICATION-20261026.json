@@ -1,0 +1,167 @@
+{
+  "source_commit": "ff218d82cecbc95833df982759320d6c58453bb3",
+  "release_id": "binder-20261026-520-verified",
+  "host": "hub.gesis.mybinder.org",
+  "started_utc": "2026-10-26T03:18:58.026829+00:00",
+  "voila_http_status": 200,
+  "launcher": {
+    "release_id": "binder-20261025-count-explanations",
+    "status": "passed",
+    "current_figures": "7 saved-input redraws plus exact current workflow asset",
+    "dust": "Python-only immutable-input numerical replay",
+    "historical_recomputed": false,
+    "full_raw_data_rerun": false,
+    "cloud_tested_by_preparer": false,
+    "main_figures": 8,
+    "supplementary_figures": 3,
+    "results_zip": "results.zip"
+  },
+  "archive_integrity": {
+    "release_id": "binder-20261025-count-explanations",
+    "archives": {
+      "codes": {
+        "filename": "codes.zip",
+        "bytes": 3107948,
+        "sha256": "dd2ccea7d5c09adafbfdf8c9428782bf49bc5e7fa72e102e6a31ea63c5a0a7fc",
+        "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261026-520-verified/codes.zip"
+      },
+      "data": {
+        "filename": "data.zip",
+        "bytes": 452410310,
+        "sha256": "170ec5819ac24a953e13e4b5bf337d857b525b5b75dea2bbb747dc0deec3b609",
+        "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261026-520-verified/data.zip"
+      }
+    },
+    "size_sha256_CRC_paths_checked": true
+  },
+  "remote_source_commit": "ff218d82cecbc95833df982759320d6c58453bb3",
+  "optimization_level": 0,
+  "automatic_ui_state": "succeeded",
+  "automatic_ui_status": "<p><b>Processing finished.</b> Figures and downloads are below. No further action is required.</p>",
+  "python": "3.13.8 | packaged by conda-forge | (main, Oct 13 2025, 14:15:33) [GCC 14.3.0]",
+  "packages": {
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.0",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "Pillow": "13.0.0",
+    "openpyxl": "3.1.5",
+    "voila": "0.5.13",
+    "ipywidgets": "8.1.9"
+  },
+  "images": [
+    {
+      "name": "figure_1.png",
+      "http_status": 200,
+      "pixels_identical": true,
+      "size": [
+        5811,
+        6690
+      ]
+    },
+    {
+      "name": "figure_2.png",
+      "http_status": 200,
+      "pixels_identical": true,
+      "size": [
+        2711,
+        2775
+      ]
+    },
+    {
+      "name": "figure_3.png",
+      "http_status": 200,
+      "pixels_identical": true,
+      "size": [
+        2711,
+        1865
+      ]
+    },
+    {
+      "name": "figure_4.png",
+      "http_status": 200,
+      "pixels_identical": true,
+      "size": [
+        2711,
+        2005
+      ]
+    },
+    {
+      "name": "figure_5.png",
+      "http_status": 200,
+      "pixels_identical": true,
+      "size": [
+        2711,
+        3090
+      ]
+    },
+    {
+      "name": "figure_6.png",
+      "http_status": 200,
+      "pixels_identical": true,
+      "size": [
+        2520,
+        1715
+      ]
+    },
+    {
+      "name": "figure_7.png",
+      "http_status": 200,
+      "pixels_identical": true,
+      "size": [
+        2711,
+        3343
+      ]
+    },
+    {
+      "name": "figure_8.png",
+      "http_status": 200,
+      "pixels_identical": true,
+      "size": [
+        2711,
+        2310
+      ]
+    },
+    {
+      "name": "figure_S1.png",
+      "http_status": 200,
+      "pixels_identical": true,
+      "size": [
+        2160,
+        1350
+      ]
+    },
+    {
+      "name": "figure_S2.png",
+      "http_status": 200,
+      "pixels_identical": true,
+      "size": [
+        2160,
+        2160
+      ]
+    },
+    {
+      "name": "figure_S3.png",
+      "http_status": 200,
+      "pixels_identical": true,
+      "size": [
+        2160,
+        1560
+      ]
+    }
+  ],
+  "results_zip": {
+    "bytes": 39803851,
+    "sha256": "92994be9dc39781eef6dd4625181bcfaaa903a091e5b5c1343652d31474ea3f2",
+    "entries": 105,
+    "CRC_passed": true
+  },
+  "default_jobs_passed": 4,
+  "finished_utc": "2026-10-26T03:21:59.339052+00:00",
+  "cloud_execution_verified": true,
+  "absorption_wavelength_nm": 520,
+  "mac_wavelength_nm": 520,
+  "ssa_wavelength_nm": 550,
+  "local_revision": "20261026-absorption-and-mac-520",
+  "verification_method": "Hosted Voila HTTP auto-start; existing notebook controller inspected through Jupyter WebSocket; all 11 /files images compared to delivered reference pixels; results ZIP downloaded and CRC checked."
+}

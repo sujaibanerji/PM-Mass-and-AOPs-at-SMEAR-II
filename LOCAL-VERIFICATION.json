@@ -251,5 +251,7 @@
       "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261027-self-contained/data.zip"
     }
   },
-  "final_codes_only_adds_23_receipts_existing_payload_unchanged": true
+  "final_codes_only_adds_23_receipts_existing_payload_unchanged": true,
+  "subsequent_hosted_verification": "HOSTED_VERIFICATION.json",
+  "subsequent_hosted_browser_verification": "HOSTED-BROWSER-VERIFICATION.json"
 }

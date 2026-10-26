@@ -2,6 +2,8 @@
 
 Package revision: **20261027-self-contained**. Use this Binder folder with the matching `codes.zip` and `data.zip`; their exact sizes and SHA-256 hashes are recorded in `binder_release.json`.
 
+[Launch the verified Binder session](https://gesis.mybinder.org/v2/gh/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/96c0dea537ef43beff9663e712104d3689a0c7bd?urlpath=voila/render/One_click.ipynb). This exact GESIS-hosted source revision was verified on **27 October 2026 (Europe/Helsinki)**: visible automatic progress, four successful default jobs, all 11 reference-matching images, and a validated browser ZIP download. Keep the tab open until processing finishes.
+
 ## Run locally
 
 Keep the three ZIPs together and extract `binder.zip` into `binder/` beside `codes.zip` and `data.zip`. With Python 3.13, install the numerical requirements from `binder/.binder/requirements.txt`. To use the notebook interface, also install `binder/.binder/ui-requirements.txt` and `binder/.binder/security-requirements.txt`.
@@ -32,4 +34,4 @@ The previous dependency pin `tornado==6.5.9` caused Voilà 0.5.13 to reject its 
 
 The problem was reproduced in a fresh hosted session of commit `ff218d82cecbc95833df982759320d6c58453bb3` and locally in Chrome. The repaired local browser displayed progress while work continued and displayed an intentional failure with its retry control. `test_static_assets.py` exercises the actual HTTP handlers; `.binder/postBuild` runs this check before a new image is accepted. [Tornado 6.5.10 release notes](https://www.tornadoweb.org/en/stable/releases/v6.5.10.html) describe the Jupyter compatibility repair.
 
-`BINDER-STARTUP-VERIFICATION.json` records the new startup evidence. The older `HOSTED_VERIFICATION*.json` files are historical receipts for earlier packages; they do not verify the current browser or current archives. A new hosted receipt must identify the exact published source commit and matching archive hashes.
+`BINDER-STARTUP-VERIFICATION.json` records the defect and repair. The fresh `HOSTED_VERIFICATION.json` and `HOSTED-BROWSER-VERIFICATION.json` identify source `96c0dea537ef43beff9663e712104d3689a0c7bd` and the final archive hashes. The browser completed in 86.5 seconds in this test; build and processing times can vary. `HOSTED-VERIFICATION-20261026.json` and the other previous-release receipts remain historical. The current local run is documented in `LOCAL-VERIFICATION.json`; `FINAL-ARCHIVE-PIN-VERIFICATION.json` proves that the final code archive only adds 23 verification receipts/logs to the tested payload.
