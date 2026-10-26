@@ -1,4 +1,4 @@
 #!/bin/bash
 set -eu
-python -m pip install -r .binder/requirements.txt -r .binder/ui-requirements.txt
+python -m pip install -r .binder/requirements.txt -r .binder/ui-requirements.txt -r .binder/security-requirements.txt
 python -m pip check

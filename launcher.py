@@ -23,7 +23,7 @@ def run(output=None,archive_dir=None,allow_network=True,historical=False,progres
              '--output-dir',str(result)]
     if historical:
         command.append('--historical-recompute')
-    env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',MPLBACKEND='Agg')
+    env=dict(os.environ,PYTHONOPTIMIZE="0",PYTHONDONTWRITEBYTECODE='1',MPLBACKEND='Agg')
     with (output/'launcher.log').open('w',encoding='utf-8') as log:
         process=subprocess.Popen(command,cwd=runtime/'codes',env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,encoding='utf-8',errors='replace')
         for line in process.stdout:

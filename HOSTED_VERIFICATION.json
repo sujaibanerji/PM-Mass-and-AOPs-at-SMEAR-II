@@ -1,5 +1,5 @@
 {
   "cloud_execution_verified": false,
-  "release_tag": "binder-20261026-absorption-and-mac-520",
-  "status": "pending"
+  "release_tag": "binder-20261026-520-verified",
+  "status": "security_hardening_reverification_pending"
 }

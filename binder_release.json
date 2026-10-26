@@ -2,21 +2,21 @@
   "release_id": "binder-20261025-count-explanations",
   "repository": "sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II",
   "proposed_branch": "release/absorption-and-mac-520-20261026",
-  "release_tag": "binder-20261026-absorption-and-mac-520",
+  "release_tag": "binder-20261026-520-verified",
   "actual_commit_sha": null,
   "publication_state": "prepared_for_hosted_verification",
   "archives": {
     "codes": {
       "filename": "codes.zip",
-      "bytes": 3106095,
-      "sha256": "f28a23e0bc458f539213675e813eed6fd3f608d375d2537a8bd2c9b795349b22",
-      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261026-absorption-and-mac-520/codes.zip"
+      "bytes": 3107948,
+      "sha256": "dd2ccea7d5c09adafbfdf8c9428782bf49bc5e7fa72e102e6a31ea63c5a0a7fc",
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261026-520-verified/codes.zip"
     },
     "data": {
       "filename": "data.zip",
       "bytes": 452410310,
       "sha256": "170ec5819ac24a953e13e4b5bf337d857b525b5b75dea2bbb747dc0deec3b609",
-      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261026-absorption-and-mac-520/data.zip"
+      "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261026-520-verified/data.zip"
     }
   },
   "cloud_execution_verified": false,

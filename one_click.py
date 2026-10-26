@@ -99,7 +99,7 @@ def show():
       'Progress appears here once this page has loaded.</p>'
       '<p><b>Version: '+html.escape(config.get('release_tag',config['release_id']))+'</b>. Archives are size- and SHA-256-pinned; '
       'unavailable new archives cause an error, never an old-release fallback.</p>'
-      '<p>Absorption and MAC: 520 nm. Scattering, MSC and SSA: 550 nm.</p>'
+      '<p>&sigma;<sub>abs,520</sub> and MAC<sub>520</sub>. Scattering, MSC and SSA: 550 nm.</p>'
       '<p><b>Automatic default:</b> redraw current Figures 2–8 and S1–S3 from frozen saved/processed inputs; '
       'copy exact workflow Figure 1; recompute overlap, counts, medians and Cliff effects from the '
       'immutable dust snapshot. Saved uncertainty intervals are not recalculated. No original-instrument-data reconstruction.</p>'
