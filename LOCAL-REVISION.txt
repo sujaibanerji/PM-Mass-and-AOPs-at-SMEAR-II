@@ -1,0 +1,3 @@
+Current archives: absorption and MAC at 520 nm; scattering, MSC and SSA at 550 nm.
+Hosted release is prepared; see HOSTED_VERIFICATION.json for acceptance status.
+Archive release_id remains the historical internal schema identifier; local_revision and release_tag identify this revision.
