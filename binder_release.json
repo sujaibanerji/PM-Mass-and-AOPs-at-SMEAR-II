@@ -3,8 +3,8 @@
   "repository": "sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II",
   "proposed_branch": "release/absorption-and-mac-520-20261026",
   "release_tag": "binder-20261026-520-verified",
-  "actual_commit_sha": null,
-  "publication_state": "prepared_for_hosted_verification",
+  "actual_commit_sha": "ff218d82cecbc95833df982759320d6c58453bb3",
+  "publication_state": "published_and_hosted_verified",
   "archives": {
     "codes": {
       "filename": "codes.zip",
@@ -19,8 +19,8 @@
       "url": "https://github.com/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/releases/download/binder-20261026-520-verified/data.zip"
     }
   },
-  "cloud_execution_verified": false,
-  "binder_url": null,
+  "cloud_execution_verified": true,
+  "binder_url": "https://gesis.mybinder.org/v2/gh/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/ff218d82cecbc95833df982759320d6c58453bb3?urlpath=voila/render/One_click.ipynb",
   "verification_report": "HOSTED_VERIFICATION.json",
   "local_revision": "20261026-absorption-and-mac-520",
   "previous_hosted_release": {

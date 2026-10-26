@@ -1,1 +1,7 @@
-520 nm scientific results unchanged. Dependency and code-integrity hardening in progress; see HOSTED_VERIFICATION.json.
+Published and hosted-verified on 26 October 2026.
+https://gesis.mybinder.org/v2/gh/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/ff218d82cecbc95833df982759320d6c58453bb3?urlpath=voila/render/One_click.ipynb
+
+Absorption coefficient sigma_abs,520 and MAC520; scattering, MSC and SSA at 550 nm.
+All four default jobs passed. All 11 hosted figure images match the revised reference pixels.
+Scientific inputs and figures are unchanged; the code archive includes integrity hardening.
+See HOSTED_VERIFICATION.json for the tested workflow and its scope.

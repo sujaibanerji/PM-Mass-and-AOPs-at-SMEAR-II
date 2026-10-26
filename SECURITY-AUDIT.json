@@ -1,0 +1,27 @@
+{
+  "audit_date_utc": "2026-10-26T03:23:03.069981+00:00",
+  "source_commit": "ff218d82cecbc95833df982759320d6c58453bb3",
+  "status": "PASS_WITH_SCOPE_LIMITS",
+  "code_findings_fixed": 2,
+  "initial_dependency_advisories": 244,
+  "initial_affected_packages": 25,
+  "final_packages_audited": 145,
+  "final_reported_advisories": 0,
+  "skipped_packages": 0,
+  "security_regression_tests_passed": 3,
+  "existing_code_tests_passed": 24,
+  "launcher_tests_passed": 15,
+  "hosted_jobs_passed": 4,
+  "figures_with_identical_pixels": 11,
+  "fixes": [
+    "Explicit pixel and dust validation works under Python optimization; child interpreters retain validation.",
+    "Extracted input verification rejects unlisted files and symlink/junction paths before any renderer overlay.",
+    "Patched affected Python dependencies; verified installed versions from the actual hosted session."
+  ],
+  "limits": [
+    "Advisory database scan is not proof of absence of unknown vulnerabilities.",
+    "The Binder provider host OS, infrastructure, account security and browser were not audited or altered.",
+    "Default reproduction redraws frozen figure inputs and recalculates dust diagnostics; it is not a full raw-data or sensitivity rerun.",
+    "Historical optional pipeline is preserved; it is not claimed as independently security-certified."
+  ]
+}
