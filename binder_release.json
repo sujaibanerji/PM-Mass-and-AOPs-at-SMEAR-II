@@ -3,7 +3,7 @@
   "repository": "sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II",
   "proposed_branch": null,
   "release_tag": "binder-20261027-self-contained",
-  "actual_commit_sha": null,
+  "actual_commit_sha": "96c0dea537ef43beff9663e712104d3689a0c7bd",
   "publication_state": "published_and_hosted_verified",
   "archives": {
     "codes": {
@@ -20,7 +20,7 @@
     }
   },
   "cloud_execution_verified": true,
-  "binder_url": null,
+  "binder_url": "https://gesis.mybinder.org/v2/gh/sujaibanerji/PM-Mass-and-AOPs-at-SMEAR-II/96c0dea537ef43beff9663e712104d3689a0c7bd?urlpath=voila/render/One_click.ipynb",
   "verification_report": "LOCAL-VERIFICATION.json",
   "local_revision": "20261027-self-contained",
   "previous_hosted_release": {
@@ -87,3 +87,4 @@
   "verification_date_local": "2026-10-27",
   "time_zone": "Europe/Helsinki"
 }
+
